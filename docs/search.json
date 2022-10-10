@@ -1,0 +1,380 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ODSC-ggplot2-west",
+    "section": "",
+    "text": "Welcome to the ggplot2 workshop!\nBelow are some important links:"
+  },
+  {
+    "objectID": "index.html#workshop-materials",
+    "href": "index.html#workshop-materials",
+    "title": "ODSC-ggplot2-west",
+    "section": "Workshop Materials",
+    "text": "Workshop Materials\n\nSlides (coming soon!)\nRStudio.Cloud Exercises (coming soon!)"
+  },
+  {
+    "objectID": "slides/slides.html#raw-data-dont-communicate-well",
+    "href": "slides/slides.html#raw-data-dont-communicate-well",
+    "title": "Data Visualization with ggplot2",
+    "section": "Raw data don’t communicate well",
+    "text": "Raw data don’t communicate well\n\n\n\nIt’s hard to make sense of millions of rows and/or thousands of columns\n\n\n\n\n\nFortunately, we are excellent at seeing patterns:\n\n\n\n\n\n“the human brain has a superior ability to mentally manipulate animate and inanimate patterns into a myriad of intangible symbols that can then be recombined to produce new images of the world;”\n\n\n\n\n\n“we therefore live partly in worlds of our own mental creation, super-imposed upon or distinct from the natural world.”\n\n\n\n\n\n- Source: Superior pattern processing is the essence of the evolved human brain"
+  },
+  {
+    "objectID": "slides/slides.html#exploratory-data-analysis",
+    "href": "slides/slides.html#exploratory-data-analysis",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\n“Exploratory Data Analysis (EDA)” first coined by American mathematician John Tukey in 1977\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“The greatest value of a picture is when it forces us to notice what we never expected to see.”\n\n\n\n\n\n\n- John Tukey, 1977"
+  },
+  {
+    "objectID": "slides/slides.html#exploration-requires-a-bayesian-mindset-1-of-3",
+    "href": "slides/slides.html#exploration-requires-a-bayesian-mindset-1-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploration requires a Bayesian Mindset (1 of 3)",
+    "text": "Exploration requires a Bayesian Mindset (1 of 3)\n\n\nWe all have implicit beliefs, or priors, about the world\n\n\n\n\n\n\nWhat we think we know (i.e.,our expectations)"
+  },
+  {
+    "objectID": "slides/slides.html#exploration-requires-a-bayesian-mindset-2-of-3",
+    "href": "slides/slides.html#exploration-requires-a-bayesian-mindset-2-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploration requires a Bayesian Mindset (2 of 3)",
+    "text": "Exploration requires a Bayesian Mindset (2 of 3)\n\n\nWhen we encounter new information or data, our priors get updated\n\n\n\n\n\n\nOur expectations + new data (i.e., what we see)"
+  },
+  {
+    "objectID": "slides/slides.html#exploration-requires-a-bayesian-mindset-3-of-3",
+    "href": "slides/slides.html#exploration-requires-a-bayesian-mindset-3-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploration requires a Bayesian Mindset (3 of 3)",
+    "text": "Exploration requires a Bayesian Mindset (3 of 3)\n\n\nOur updated beliefs, or posteriors, depend on our priors and our perceptions of the new information\n\n\n\n\n\n\nWhat we expect + what we see = what we’ve learned"
+  },
+  {
+    "objectID": "slides/slides.html#graphs-can-confirm-our-expectations",
+    "href": "slides/slides.html#graphs-can-confirm-our-expectations",
+    "title": "Data Visualization with ggplot2",
+    "section": "Graphs can confirm our expectations",
+    "text": "Graphs can confirm our expectations\n\n\n\n\nWhat if our expectation was that X is related to Y?\n\n\n\n\n\n\n\n …then we graphed the data…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe would say our expectations have been confirmed"
+  },
+  {
+    "objectID": "slides/slides.html#graphs-can-refute-our-expectations",
+    "href": "slides/slides.html#graphs-can-refute-our-expectations",
+    "title": "Data Visualization with ggplot2",
+    "section": "Graphs can refute our expectations",
+    "text": "Graphs can refute our expectations\n\n\n\n\nWhat if our expectation was that X is related to Y?\n\n\n\n\n\n\n\n …then we graphed the data…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe would say our expectations have been refuted"
+  },
+  {
+    "objectID": "slides/slides.html#grammar",
+    "href": "slides/slides.html#grammar",
+    "title": "Data Visualization with ggplot2",
+    "section": "Grammar",
+    "text": "Grammar\n\n\nThe system of rules for any given language\n\n\n\nIncludes:\n\n\nWord meanings\nInternal structure\nWord arrangement"
+  },
+  {
+    "objectID": "slides/slides.html#syntax",
+    "href": "slides/slides.html#syntax",
+    "title": "Data Visualization with ggplot2",
+    "section": "Syntax",
+    "text": "Syntax\n\n\n\nThe form, structure and order for constructing statements\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[[students][[cook][and][serve grandparents]]]\n\n\n\n[[students][[cook and serve][grandparents]]]"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-a-layered-language-for-graphs",
+    "href": "slides/slides.html#ggplot2-a-layered-language-for-graphs",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: a layered language for graphs",
+    "text": "ggplot2: a layered language for graphs\n\n\nggplot2 is comprised of layers\n\n\n\n\nData\nMapping\nStatistics\nGeometric objects\n\nPosition adjustments"
+  },
+  {
+    "objectID": "slides/slides.html#templates-infinitely-extensible",
+    "href": "slides/slides.html#templates-infinitely-extensible",
+    "title": "Data Visualization with ggplot2",
+    "section": "Templates = infinitely extensible!",
+    "text": "Templates = infinitely extensible!\n\n\nThemes\nggplot(data = <DATA>) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    facet_* +\n    theme_*\n\n\nDon’t forget labels!\nggplot(data = <DATA>) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    facet_* +\n    theme_* +\n    labs()"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-1-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-1-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (1 of 4)",
+    "text": "RStudio.Cloud: Set up (1 of 4)\nIn your RStudio.Cloud, you will see the following:\nLog in with your GitHub credentials"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-2-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-2-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (2 of 4)",
+    "text": "RStudio.Cloud: Set up (2 of 4)\nOn the top of the RStudio IDE, you will see the following:\nClick on Save a Permanent Copy to add this project to your workspace"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-3-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-3-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (3 of 4)",
+    "text": "RStudio.Cloud: Set up (3 of 4)\nIn the Files pane, click on the inst.R file to open it"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-4-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-4-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (4 of 4)",
+    "text": "RStudio.Cloud: Set up (4 of 4)\nIn the Source pane, click on the Source icon to run inst.R\nThis sends the code in the Source pane to the Console"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-build-the-labels-first",
+    "href": "slides/slides.html#ggplot2-build-the-labels-first",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: build the labels first!",
+    "text": "ggplot2: build the labels first!\n\n\n\nCreate a title, subtitle (with data source), and x/y axis labels\n\n\n\n\n\n\nlabs_pengiuns <- ggplot2::labs(\n  title = \"Flipper vs. Bill Length\",\n  subtitle = \"source: palmerpenguins::penguins\",\n  x = \"flipper length (mm)\",\n  y = \"bill length (mm)\")\n\n\n\n\n\n<- expectations"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-build-graph-check-labels",
+    "href": "slides/slides.html#ggplot2-build-graph-check-labels",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: build graph, check labels",
+    "text": "ggplot2: build graph, check labels\n\n\n\nBuild labels, build graphs, then check labels!\n\n\n\n\n\n\n\n\nlabs_pengiuns <- ggplot2::labs(\n  title = \"Flipper vs. Bill Length\",\n  subtitle = \"source: palmerpenguins::penguins\",\n  x = \"flipper length (mm)\",\n  y = \"bill length (mm)\")\nggp_peng_point <- ggplot(data = penguins,\n    mapping = aes(x = bill_length_mm,\n                  y = flipper_length_mm)) +\n  labs_pengiuns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat’s wrong here?"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-build-graph-check-labels-revise",
+    "href": "slides/slides.html#ggplot2-build-graph-check-labels-revise",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: build graph, check labels, revise",
+    "text": "ggplot2: build graph, check labels, revise\n\n\n\nx and y are flipped!\n\n\n\n\n\n\n\n\nlabs_pengiuns <- ggplot2::labs(\n  title = \"Flipper vs. Bill Length\",\n  subtitle = \"source: palmerpenguins::penguins\",\n  x = \"flipper length (mm)\",\n  y = \"bill length (mm)\")\nggp_peng_point <- ggplot(data = penguins,\n    mapping = aes(x = flipper_length_mm, \n                  y = bill_length_mm)) +\n                labs_pengiuns \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFixed!"
+  },
+  {
+    "objectID": "slides/slides.html#on-the-importance-of-revision",
+    "href": "slides/slides.html#on-the-importance-of-revision",
+    "title": "Data Visualization with ggplot2",
+    "section": "On the importance of revision:",
+    "text": "On the importance of revision:\n\n\nRevision Sharpens Thinking:\n\n\n\n\n“More particularly, rewriting is the key to improved thinking. It demands a real open-mindedness and objectivity.”\n\n\n\n\n“It demands a willingness to cull verbiage so that ideas stand out clearly. And it demands a willingness to meet logical contradictions head on and trace them to the premises that have created them.”\n\n\n\n\n“In short, it forces a writer to get up his courage and expose his thinking process to his own intelligence.”\n\n\n\n\n\n- Source: — Marvin H. Swift, HBR Clear Writing Means Clear Thinking Means…"
+  },
+  {
+    "objectID": "slides/slides.html#viewing-data-1-of-2",
+    "href": "slides/slides.html#viewing-data-1-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "Viewing data (1 of 2)",
+    "text": "Viewing data (1 of 2)"
+  },
+  {
+    "objectID": "slides/slides.html#viewing-data-2-of-2",
+    "href": "slides/slides.html#viewing-data-2-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "Viewing data (2 of 2)",
+    "text": "Viewing data (2 of 2)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-01-labels",
+    "href": "slides/slides.html#graph-01-labels",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 01: LABELS!",
+    "text": "graph 01: LABELS!"
+  },
+  {
+    "objectID": "slides/slides.html#graph-01-initialize-plot-with-data",
+    "href": "slides/slides.html#graph-01-initialize-plot-with-data",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 01: Initialize plot with data",
+    "text": "graph 01: Initialize plot with data"
+  },
+  {
+    "objectID": "slides/slides.html#graph-02-map-variables-to-positions",
+    "href": "slides/slides.html#graph-02-map-variables-to-positions",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 02: Map variables to positions",
+    "text": "graph 02: Map variables to positions"
+  },
+  {
+    "objectID": "slides/slides.html#graph-03-adding-geoms",
+    "href": "slides/slides.html#graph-03-adding-geoms",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 03: Adding geoms",
+    "text": "graph 03: Adding geoms"
+  },
+  {
+    "objectID": "slides/slides.html#graph-04-dont-forget-the-labels",
+    "href": "slides/slides.html#graph-04-dont-forget-the-labels",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 04: Don’t forget the labels!",
+    "text": "graph 04: Don’t forget the labels!"
+  },
+  {
+    "objectID": "slides/slides.html#global-mapping",
+    "href": "slides/slides.html#global-mapping",
+    "title": "Data Visualization with ggplot2",
+    "section": "Global mapping",
+    "text": "Global mapping"
+  },
+  {
+    "objectID": "slides/slides.html#local-mapping",
+    "href": "slides/slides.html#local-mapping",
+    "title": "Data Visualization with ggplot2",
+    "section": "Local mapping",
+    "text": "Local mapping"
+  },
+  {
+    "objectID": "slides/slides.html#the-ggplot2-templates",
+    "href": "slides/slides.html#the-ggplot2-templates",
+    "title": "Data Visualization with ggplot2",
+    "section": "The ggplot2 templates",
+    "text": "The ggplot2 templates"
+  },
+  {
+    "objectID": "slides/slides.html#graph-05-convert-global-to-local-mappings",
+    "href": "slides/slides.html#graph-05-convert-global-to-local-mappings",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 05: Convert global to local mappings",
+    "text": "graph 05: Convert global to local mappings"
+  },
+  {
+    "objectID": "slides/slides.html#what-are-visual-encodings",
+    "href": "slides/slides.html#what-are-visual-encodings",
+    "title": "Data Visualization with ggplot2",
+    "section": "What are visual encodings?",
+    "text": "What are visual encodings?"
+  },
+  {
+    "objectID": "slides/slides.html#graph-06-adding-color-global",
+    "href": "slides/slides.html#graph-06-adding-color-global",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 06: Adding color (global)",
+    "text": "graph 06: Adding color (global)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-07-adding-color-local",
+    "href": "slides/slides.html#graph-07-adding-color-local",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 07: Adding color (local)",
+    "text": "graph 07: Adding color (local)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
+    "href": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 08: Color vs. Fill (1 of 2)",
+    "text": "graph 08: Color vs. Fill (1 of 2)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
+    "href": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 08: Color vs. Fill (2 of 2)",
+    "text": "graph 08: Color vs. Fill (2 of 2)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-09-bar-position",
+    "href": "slides/slides.html#graph-09-bar-position",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 09: Bar position",
+    "text": "graph 09: Bar position"
+  },
+  {
+    "objectID": "slides/slides.html#graph-10-histograms-special-bar-graphs",
+    "href": "slides/slides.html#graph-10-histograms-special-bar-graphs",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 10: Histograms (special bar-graphs)",
+    "text": "graph 10: Histograms (special bar-graphs)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-11-density-plots",
+    "href": "slides/slides.html#graph-11-density-plots",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 11: Density plots",
+    "text": "graph 11: Density plots"
+  },
+  {
+    "objectID": "slides/slides.html#mapping-vs.-setting-1-of-2",
+    "href": "slides/slides.html#mapping-vs.-setting-1-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "Mapping vs. setting (1 of 2)",
+    "text": "Mapping vs. setting (1 of 2)"
+  },
+  {
+    "objectID": "slides/slides.html#mapping-vs.-setting-2-of-2",
+    "href": "slides/slides.html#mapping-vs.-setting-2-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "Mapping vs. setting (2 of 2)",
+    "text": "Mapping vs. setting (2 of 2)"
+  },
+  {
+    "objectID": "slides/slides.html#graph-12-setting-graph-aesthetics",
+    "href": "slides/slides.html#graph-12-setting-graph-aesthetics",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 12: Setting graph aesthetics",
+    "text": "graph 12: Setting graph aesthetics"
+  },
+  {
+    "objectID": "slides/slides.html#graph-13-new-layer-new-data-no-problem",
+    "href": "slides/slides.html#graph-13-new-layer-new-data-no-problem",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 13: New layer, new data, no problem",
+    "text": "graph 13: New layer, new data, no problem"
+  },
+  {
+    "objectID": "slides/slides.html#our-label-dataset",
+    "href": "slides/slides.html#our-label-dataset",
+    "title": "Data Visualization with ggplot2",
+    "section": "Our label dataset",
+    "text": "Our label dataset"
+  },
+  {
+    "objectID": "slides/slides.html#graph-13-layer-1",
+    "href": "slides/slides.html#graph-13-layer-1",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 13: Layer 1",
+    "text": "graph 13: Layer 1"
+  },
+  {
+    "objectID": "slides/slides.html#graph-14-layer-2",
+    "href": "slides/slides.html#graph-14-layer-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 14: Layer 2",
+    "text": "graph 14: Layer 2"
+  },
+  {
+    "objectID": "slides/slides.html#graph-15-label-3-max-values",
+    "href": "slides/slides.html#graph-15-label-3-max-values",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 15: Label 3 (max values)",
+    "text": "graph 15: Label 3 (max values)"
+  },
+  {
+    "objectID": "slides/slides.html#small-multiples",
+    "href": "slides/slides.html#small-multiples",
+    "title": "Data Visualization with ggplot2",
+    "section": "Small multiples",
+    "text": "Small multiples"
+  },
+  {
+    "objectID": "slides/slides.html#facets-small-multiples",
+    "href": "slides/slides.html#facets-small-multiples",
+    "title": "Data Visualization with ggplot2",
+    "section": "Facets = small multiples",
+    "text": "Facets = small multiples"
+  },
+  {
+    "objectID": "slides/slides.html#graph-16-facet-by-sex",
+    "href": "slides/slides.html#graph-16-facet-by-sex",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 16: Facet by sex",
+    "text": "graph 16: Facet by sex"
+  },
+  {
+    "objectID": "slides/slides.html#graph-17-facet-by-species",
+    "href": "slides/slides.html#graph-17-facet-by-species",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 17: Facet by species",
+    "text": "graph 17: Facet by species"
+  },
+  {
+    "objectID": "slides/slides.html#what-weve-covered",
+    "href": "slides/slides.html#what-weve-covered",
+    "title": "Data Visualization with ggplot2",
+    "section": "What we’ve covered",
+    "text": "What we’ve covered"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]
