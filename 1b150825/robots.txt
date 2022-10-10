@@ -1,0 +1,1 @@
+Sitemap: https://mjfrigaard.github.io/odsc-west-ggplot2-2022/sitemap.xml
