@@ -1,0 +1,19 @@
+---
+title: "ODSC-ggplot2-west"
+---
+
+Welcome to the `ggplot2` workshop!
+
+Below are some important links:
+
+-   [Conference website](https://odsc.com/california/)
+
+-   [Workshop description](https://odsc.com/speakers/data-visualization-with-ggplot2/)
+
+-   [Medium post](https://odsc.medium.com/a-beginners-guide-to-ggplot2-82586d116c70)
+
+## Workshop Materials
+
+-   Slides (*coming soon!)*
+
+-   RStudio.Cloud Exercises (*coming soon!)*

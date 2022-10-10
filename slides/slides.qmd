@@ -1,0 +1,1134 @@
+---
+title: "Data Visualization with `ggplot2`"
+subtitle: "ODSC West"
+logo: "../img/ODSC_Logo_2020.png"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: [dark, slides.scss]
+    highlight-style: dracula
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    scrollable: true
+from: markdown+emoji
+editor: source
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(faux)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+# the following creates a sample that has 100 observations of 2
+# variables, drawn from a population where 
+# - X has a mean of 0 and SD of 1 
+# - Y has a mean of 20 and SD of 5
+# - X correlates with Y with r = 0.75
+cor90df <- rnorm_multi(n = 300, 
+                  mu = c(0, 20),
+                  sd = c(1, 5),
+                  r = c(0.90), 
+                  varnames = c("X", "Y"),
+                  empirical = FALSE)
+cor20df <- rnorm_multi(n = 300, 
+                  mu = c(0, 20),
+                  sd = c(1, 5),
+                  r = c(0.20), 
+                  varnames = c("X", "Y"),
+                  empirical = FALSE)
+```
+
+# Outline
+
+::: columns
+::: {.column width="45%"}
+::: incremental
+**Part 1**
+
+-   *Why do we need graphs?*
+
+-   *An exploratory mindset*
+
+-   *Surprise or confirm, then communicate*
+
+-   *The grammar of graphics*
+:::
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+::: incremental
+-   **Part 2**
+-   *RStudio Cloud*\
+-   *Exercises & solutions*\
+-   *Creating a graph (layer-by-layer)*\
+-   *Applying the grammar*
+:::
+:::
+:::
+
+# Part 1 {background-color="#1dfd07"}
+
+::: columns
+::: {.column width="25%"}
+:::
+
+::: {.column width="75%"}
+::: incremental
+-   Intros :wave:
+-   Workshop materials :arrow_down:
+-   Basic understand of `ggplot2` syntax :heavy_check_mark:
+-   Build your first graph! :heavy_check_mark:
+:::
+:::
+:::
+
+# Why do we need graphs? {.smaller}
+
+## Raw data don't communicate well {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+It's hard to make sense of millions of rows and/or thousands of columns
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+Fortunately, we are **excellent at seeing patterns**:
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.10em; color: #ffac00;"}
+"*the human brain has a superior ability to mentally manipulate animate
+and inanimate patterns into a myriad of intangible symbols that can then
+be recombined to produce new images of the world;* "
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.10em; color: #ffac00;"}
+"*we therefore live partly in worlds of our own mental creation,
+super-imposed upon or distinct from the natural world.*"
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 0.90em; color: #05ffa1;"}
+\- Source: [Superior pattern processing is the essence of the evolved
+human
+brain](https://www.frontiersin.org/articles/10.3389/fnins.2014.00265/full)
+:::
+
+# Graphs allow us to explore complexity with ***symbols*** and ***images*** {.smaller}
+
+## Exploratory Data Analysis
+
+<br>
+
+"Exploratory Data Analysis (EDA)" first coined by American mathematician
+John Tukey in 1977
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+```{r eda-tukey, echo=FALSE, fig.align='center', out.height='35%', out.width='35%'}
+knitr::include_graphics("../img/eda-tukey.jpg")
+```
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 1.25em; color: #ffac00;"}
+"*The greatest value of a picture is when it forces us to notice what we
+never expected to see.*"
+:::
+:::
+:::
+
+. . .
+
+::: {style="font-size: 0.95em; color: #05ffa1;"}
+\- John Tukey,
+[1977](http://www.ru.ac.bd/wp-content/uploads/sites/25/2019/03/102_05_01_Tukey-Exploratory-Data-Analysis-1977.pdf)
+:::
+
+# Exploration requires 'listening'
+
+<br><br>
+
+. . .
+
+::: {style="font-size: 1.50em; color: #ffac00;"}
+*"The role of the data analyst is to listen to the data in as many ways
+as possible until a plausible 'story' of the data is apparent"*
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 0.95em; color: #05ffa1;"}
+\- John T. Behrens, [Principles and Procedures of Exploratory Data
+Analysis](https://psycnet.apa.org/record/1997-06270-001)
+:::
+
+# Exploration is a 'state of mind'
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.10em; color: #ffac00;"}
+*"More than anything, EDA is a state of mind. During the initial phases
+of EDA you should feel free to investigate every idea that occurs to
+you. Some of these ideas will pan out, and some will be dead ends..."*
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.10em; color: #ffac00;"}
+*"As your exploration continues, you will hone in on a few particularly
+productive areas that you'll eventually write up and communicate to
+others."*
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 0.95em; color: #05ffa1;"}
+\- Hadley Wickham, [R for Data Science](https://r4ds.hadley.nz/eda)
+:::
+
+# An Exploratory Mindset
+
+## Exploration requires a Bayesian Mindset (1 of 3)
+
+. . .
+
+<br>
+
+We all have implicit beliefs, or priors, about the world
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="40%"}
+::: {style="font-size: 1.05em; color: #3D9CD8;"}
+*What we think we know (i.e.,our expectations)*
+:::
+:::
+
+::: {.column width="60%"}
+```{r bayesian-eda-prior-png, echo=FALSE, eval=TRUE, fig.align='center', out.height='65%', out.width='65%'}
+knitr::include_graphics("../img/bayesian-eda-priors.png")
+```
+:::
+:::
+
+## Exploration requires a Bayesian Mindset (2 of 3)
+
+. . .
+
+<br>
+
+When we encounter new information or data, our priors get updated
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="40%"}
+::: {style="font-size: 1.05em; color: #3D9CD8;"}
+*Our expectations + new data (i.e., what we see)*
+:::
+:::
+
+::: {.column width="60%"}
+```{r bayesian-eda-new-png, echo=FALSE, eval=TRUE, fig.align='center', out.height='65%', out.width='65%'}
+knitr::include_graphics("../img/bayesian-eda-new.png")
+```
+:::
+:::
+
+## Exploration requires a Bayesian Mindset (3 of 3)
+
+. . .
+
+<br>
+
+Our updated beliefs, or posteriors, depend on our priors ***and*** our
+perceptions of the new information
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="40%"}
+::: {style="font-size: 1.05em; color: #3D9CD8;"}
+*What we expect + what we see = what we've learned*
+:::
+:::
+
+::: {.column width="60%"}
+```{r bayesian-eda-posteriors.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='68%', out.width='68%'}
+knitr::include_graphics("../img/bayesian-eda-posteriors.png")
+```
+:::
+:::
+
+## Graphs can confirm our expectations {.smaller}
+
+. . .
+
+<br>
+
+::: question
+::: {style="font-size: 1.25em;"}
+*What if our expectation was that **X** is related to **Y**?*
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="20%"}
+::: {style="font-size: 1.25em;"}
+<br><br><br> *...then we graphed the data...*
+:::
+:::
+
+::: {.column width="80%"}
+```{r cor90df, fig.align='right', echo=FALSE}
+ggplot(data = cor90df, mapping = aes(x = X, y = Y)) + 
+  geom_point(size = 3)
+```
+:::
+:::
+
+. . .
+
+::: {style="font-size: 1.40em; color: #3D9CD8;"}
+*We would say our expectations have been **confirmed***
+:::
+
+## Graphs can refute our expectations {.smaller}
+
+. . .
+
+<br>
+
+::: question
+::: {style="font-size: 1.25em;"}
+*What if our expectation was that **X** is related to **Y**?*
+:::
+:::
+
+. . .
+
+::: columns
+::: {.column width="20%"}
+::: {style="font-size: 1.25em;"}
+<br><br><br> *...then we graphed the data...*
+:::
+:::
+
+::: {.column width="80%"}
+```{r cor20df, fig.align='right', echo=FALSE}
+ggplot(data = cor20df, mapping = aes(x = X, y = Y)) + 
+  geom_point(size = 3)
+```
+:::
+:::
+
+. . .
+
+::: {style="font-size: 1.45em; color: #3D9CD8;"}
+*We would say our expectations have been **refuted***
+:::
+
+# `ggplot2`: grammar & syntax
+
+## Grammar
+
+. . .
+
+<br>
+
+The system of rules for any given language
+
+. . .
+
+<br>
+
+Includes:
+
+::: incremental
+1.  Word meanings
+2.  Internal structure
+3.  Word arrangement
+:::
+
+## Syntax {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+The form, structure and order for constructing statements
+:::
+
+. . .
+
+<br>
+
+```{r grammar-exaample.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='45%', out.width='45%'}
+knitr::include_graphics("../img/grammar-example.png")
+```
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 0.80em;"}
+`[[students][[cook][and][serve grandparents]]]`
+:::
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 0.80em;"}
+`[[students][[cook and serve][grandparents]]]`
+:::
+:::
+:::
+
+# `ggplot2` : grammar & syntax {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+Built on top of the grammar & syntax of R
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+> "*In R, objects are like nouns, and functions (**fn**) are like
+> verbs*"
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+```{r fn-object, eval=FALSE, echo=TRUE}
+fn(object)
+```
+:::
+
+::: {.column width="50%"}
+:::
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+**functions** do things to *objects*
+:::
+
+## `ggplot2`: a layered language for graphs
+
+<br>
+
+. . .
+
+`ggplot2` is comprised of layers  
+
+::: columns
+::: {.column width="50%"}
+::: {.incremental}
+- Data 
+- Mapping 
+- Statistics 
+- Geometric objects  
+- Position adjustments  
+:::
+:::
+
+::: {.column width="50%"}
+```{r ggplot2-layers, echo=FALSE, eval=TRUE, fig.align='center', out.height='85%', out.width='85%'}
+knitr::include_graphics("../img/ggplot2-layers.png")
+```
+:::
+:::
+
+
+# `ggplot2`: data {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+The **data layer** consists of a rectangular object (like a spreadsheet) with columns and rows
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="45%"}
+```{r data-layer-code, eval=FALSE, echo=TRUE}
+ggplot(data = penguins)
+```
+
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="53%"}
+```{r data-layer, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/data-layer.png")
+```
+:::
+:::
+
+
+# `ggplot2`: mapping {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+The **mapping layer** assigns columns (variables) from the data to a visual property (i.e. graph '**`aes`**'thetic)
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="45%"}
+```{r mapping-layer-code, eval=FALSE, echo=TRUE}
+ggplot(data = penguins,
+  mapping = aes(x = flipper_length_mm, 
+                y = bill_length_mm))
+```
+
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="53%"}
+```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/mapping-layer.png")
+```
+:::
+:::
+
+# `ggplot2`: geoms {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+`geom_*()` functions include statistical transformations, shapes, and position adjustments for how to 'draw' the data on the graph
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="46%"}
+```{r geom-layer-code, eval=FALSE, echo=TRUE}
+ggplot(data = penguins,
+  mapping = aes(x = flipper_length_mm, 
+                y = bill_length_mm)) +
+  geom_point()
+```
+
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="52%"}
+```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/geom-layer.png")
+```
+:::
+:::
+
+# `ggplot2`: layers {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+We can have multiple layers (data, mappings, geoms) in a single graph
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="40%"}
+```{r layers-layer-code, eval=FALSE, echo=TRUE}
+ggplot(data = penguins,
+ # layer 1
+  mapping = aes(
+    x = flipper_length_mm, 
+    y = bill_length_mm)) +
+  geom_point()
+# layer 2
+  geom_smooth(
+    mapping = aes(
+      x = flipper_length_mm,
+      y = bill_length_mm,
+      color = species))
+```
+
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="58%"}
+```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/layers-layer.png")
+```
+:::
+:::
+
+# Layers = infinitely extensible {.smaller}
+
+<br>
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+`ggplot2` is a system for,
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+
+> “*making infinite use of finite means*” - [Wilhelm von Humboldt](https://en.wikipedia.org/wiki/Wilhelm_von_Humboldt)
+
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.40em;"}
+***With a finite number of objects & functions, we can combine `ggplot2`'s grammar and syntax to create an infinite number of graphs!***
+:::
+
+# `ggplot2`: templates {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+**Basic Template**: [Data,]{.fragment .fade-in} [aesthetic mappings,]{.fragment .fade-in} [geom]{.fragment .fade-in}
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="58%"}
+```r
+ggplot(data = <DATA>) +
+  geom_*(mapping = aes(<AESTHETIC MAPPINGS>))
+```
+:::
+
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="40%"}
+```{r ggplot2-layers-dark, echo=FALSE, eval=TRUE, fig.align='right', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/ggplot2-layers-dark.png")
+```
+:::
+:::
+
+# `ggplot2`: more templates {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+**Template + 1 Layer**: [more geoms]{.fragment .fade-in} [and more aesthetic mappings]{.fragment .fade-in}
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="58%"}
+```r
+ggplot(data = <DATA>) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>))
+```
+:::
+
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="40%"}
+```{r ggplot2-2layers-dark, echo=FALSE, eval=TRUE, fig.align='center', out.height='65%', out.width='65%'}
+knitr::include_graphics("../img/ggplot2-2layers-dark.png")
+```
+:::
+:::
+
+# `ggplot2`: even more! {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.25em;"}
+**Template + 1 Layer + Facet Layer**: [template,]{.fragment .fade-in} [more aesthetic mappings,]{.fragment .fade-in} [and facets!]{.fragment .fade-in}
+:::
+
+
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="58%"}
+```r
+ggplot(data = <DATA>) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    facet_*
+```
+:::
+
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="40%"}
+```{r ggplot2-3layers-dark, echo=FALSE, eval=TRUE, fig.align='center', out.height='60%', out.width='60%'}
+knitr::include_graphics("../img/ggplot2-3layers-dark.png")
+```
+:::
+:::
+
+## Templates = infinitely extensible! {.smaller}
+
+<br><br><br>
+
+. . .
+
+
+**Themes**
+```r
+ggplot(data = <DATA>) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    facet_* +
+    theme_*
+```
+
+. . .
+
+**Don't forget labels!**
+```r
+ggplot(data = <DATA>) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
+    facet_* +
+    theme_* +
+    labs()
+```
+
+# Part 2 {background-color="#1dfd07"}
+
+::: columns
+::: {.column width="25%"}
+:::
+
+::: {.column width="75%"}
+::: incremental
+-   RStudio Cloud :heavy_check_mark:
+-   Exercises & solutions :heavy_check_mark:
+-   Creating a graph (layer-by-layer) :heavy_check_mark:
+-   Applying the grammar :heavy_check_mark:
+:::
+:::
+:::
+
+# RStudio.Cloud 
+
+## RStudio.Cloud: Set up (1 of 4)
+
+In your RStudio.Cloud, you will see the following:
+
+Log in with your GitHub credentials
+
+## RStudio.Cloud: Set up (2 of 4)
+
+On the top of the RStudio IDE, you will see the following:
+
+Click on *Save a Permanent Copy* to add this project to your workspace
+
+## RStudio.Cloud: Set up (3 of 4)
+
+In the Files pane, click on the `inst.R` file to open it
+
+## RStudio.Cloud: Set up (4 of 4)
+
+In the Source pane, click on the Source icon to run `inst.R`
+
+This sends the code in the **Source** pane to the **Console**
+
+# RStudio.Cloud: Exercises 
+
+The exercises are in the `graphs/` folder
+
+# RStudio.Cloud: Solutions
+
+Each exercise has a solution file in `solutions/` folder
+
+# Quick Tip 
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.20em; color: #d107fd;"}
+*Tip: writing code can be frustrating, especially in the beginning...*
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.20em; color: #d107fd;"}
+*...it doesn't always produce a tangible result...*
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.20em; color: #d107fd;"}
+*...but creating visualizations is rewarding!!!*
+:::
+
+## `ggplot2`: build the labels first!
+
+. . .
+
+<br>
+
+- Create a `title`, `subtitle` (with data source), and `x`/`y` axis labels
+
+. . .
+
+::: columns
+::: {.column width="79%"}
+```{r labs_pengiuns, eval=TRUE, echo=TRUE}
+labs_pengiuns <- ggplot2::labs(
+  title = "Flipper vs. Bill Length",
+  subtitle = "source: palmerpenguins::penguins",
+  x = "flipper length (mm)",
+  y = "bill length (mm)")
+```
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="19%"}
+::: {style="font-size: 0.90em; color: #ff0202;"}
+**<- expectations**
+:::
+:::
+:::
+
+## `ggplot2`: build graph, check labels {.smaller}
+
+<br>
+
+. . .
+
+::: {style="font-size: 1.20em;"}
+Build labels, [build graphs,]{.fragment .fade-in} [then check labels!]{.fragment .fade-in .highlight-red}
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="41%"}
+::: {style="font-size: 0.70em;"}
+```{r ggp_peng_point, eval=TRUE, echo=TRUE}
+labs_pengiuns <- ggplot2::labs(
+  title = "Flipper vs. Bill Length",
+  subtitle = "source: palmerpenguins::penguins",
+  x = "flipper length (mm)",
+  y = "bill length (mm)")
+ggp_peng_point <- ggplot(data = penguins,
+    mapping = aes(x = bill_length_mm,
+                  y = flipper_length_mm)) +
+  labs_pengiuns
+```
+:::
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="57%"}
+```{r render-ggp_peng_point, eval=TRUE, echo=FALSE}
+ggp_peng_point
+```
+:::
+:::
+
+. . .
+
+::: {style="font-size: 01.50em; color: #ff0202;"}
+*What's wrong here?*
+:::
+
+## `ggplot2`: build graph, check labels, *revise* {.smaller}
+
+<br>
+
+. . .
+
+::: {style="font-size: 1.25em;"}
+`x` and `y` are flipped! 
+:::
+
+. . .
+
+<br>
+
+::: columns
+::: {.column width="41%"}
+::: {style="font-size: 0.70em;"}
+```{r revise_ggp_peng_point, eval=TRUE, echo=TRUE}
+#| code-line-numbers: "7-8"
+labs_pengiuns <- ggplot2::labs(
+  title = "Flipper vs. Bill Length",
+  subtitle = "source: palmerpenguins::penguins",
+  x = "flipper length (mm)",
+  y = "bill length (mm)")
+ggp_peng_point <- ggplot(data = penguins,
+    mapping = aes(x = flipper_length_mm, 
+                  y = bill_length_mm)) +
+                labs_pengiuns 
+```
+:::
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="57%"}
+```{r render-revise_ggp_peng_point, eval=TRUE, echo=FALSE}
+ggp_peng_point
+```
+:::
+:::
+
+. . .
+
+::: {style="font-size: 01.50em; color: #45ff00;"}
+*Fixed!*
+:::
+
+## On the importance of revision:
+
+::: {.fragment fragment-index=1}
+::: {style="font-size: 1.10em; color: #ffac00;"}
+Revision Sharpens Thinking: 
+:::
+:::
+
+::: {.fragment fragment-index=2}
+::: {style="font-size: 1.10em; color: #ffac00;"}
+*"More particularly, rewriting is the key to ***improved thinking***. It demands a real open-mindedness and objectivity."* 
+:::
+:::
+
+::: {.fragment fragment-index=3}
+::: {style="font-size: 1.10em; color: #ffac00;"}
+*"It demands a willingness to cull verbiage so that ***ideas stand out clearly***. And it demands a willingness to meet logical contradictions head on and trace them to the premises that have created them."*
+:::
+:::
+
+
+::: {.fragment fragment-index=4}
+::: {style="font-size: 1.10em; color: #ffac00;"}
+*"In short, it forces a writer to get up his courage and ***expose his thinking process to his own intelligence.***"*
+:::
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 0.90em; color: #05ffa1;"}
+\- Source: [\— Marvin H. Swift, HBR Clear Writing Means Clear Thinking Means…](https://hbr.org/1973/01/clear-writing-means-clear-thinking-means)
+:::
+
+# The data
+
+## Viewing data (1 of 2)
+
+## Viewing data (2 of 2)
+
+# Build from scratch, layer-by-layer
+
+## `graph 01`: LABELS!
+
+## `graph 01`: Initialize plot with data
+
+## `graph 02`: Map variables to positions
+
+## `graph 03`: Adding geoms
+
+## `graph 04`: Don't forget the labels!
+
+# Global vs. local mapping
+
+## Global mapping 
+
+## Local mapping 
+
+## The `ggplot2` templates
+
+## `graph 05`: Convert global to local mappings
+
+# Visual encodings
+
+## What are visual encodings?
+
+## `graph 06`: Adding color (global)
+
+## `graph 07`: Adding color (local)
+
+## `graph 08`: Color vs. Fill (1 of 2)
+
+## `graph 08`: Color vs. Fill (2 of 2)
+
+## `graph 09`: Bar position
+
+## `graph 10`: Histograms (special bar-graphs)
+
+## `graph 11`: Density plots
+
+# Mapping vs. setting aesthetics
+
+## Mapping vs. setting (1 of 2)
+
+## Mapping vs. setting (2 of 2)
+
+## `graph 12`: Setting graph aesthetics
+
+# Combining layers
+
+## `graph 13`: New layer, new data, no problem
+
+## Our label dataset
+
+## `graph 13`: Layer 1
+
+## `graph 14`: Layer 2  
+
+## `graph 15`: Label 3 (max values)
+
+# Facets
+
+## Small multiples 
+
+## Facets = small multiples
+
+## `graph 16`: Facet by sex
+
+## `graph 17`: Facet by species
+
+# Recap
+
+## What we've covered
+
+# Thanks!
+
+
+
+

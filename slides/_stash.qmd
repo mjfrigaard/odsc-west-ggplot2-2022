@@ -1,0 +1,124 @@
+---
+title: "stash"
+subtitle: "ODSC West"
+logo: "../img/ODSC_Logo_2020.png"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: [dark, slides.scss]
+    highlight-style: dracula
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    scrollable: true
+from: markdown+emoji
+editor: source
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE, eval=TRUE}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(faux)
+library(palmerpenguins)
+penguins <- palmerpenguins::penguins
+# the following creates a sample that has 100 observations of 2
+# variables, drawn from a population where 
+# - X has a mean of 0 and SD of 1 
+# - Y has a mean of 20 and SD of 5
+# - X correlates with Y with r = 0.75
+cor90df <- rnorm_multi(n = 300, 
+                  mu = c(0, 20),
+                  sd = c(1, 5),
+                  r = c(0.90), 
+                  varnames = c("X", "Y"),
+                  empirical = FALSE)
+cor20df <- rnorm_multi(n = 300, 
+                  mu = c(0, 20),
+                  sd = c(1, 5),
+                  r = c(0.20), 
+                  varnames = c("X", "Y"),
+                  empirical = FALSE)
+```
+
+
+# 2 Column Slide
+
+::: columns
+::: {.column width="50%"}
+Left Column
+:::
+
+::: {.column width="50%"}
+Right column
+:::
+:::
+
+# 3 Column Slide
+
+::: columns
+::: {.column width="33%"}
+Left column
+:::
+
+::: {.column width="33%"}
+Middle column
+:::
+
+::: {.column width="33%"}
+Right column
+:::
+:::
+
+# Tabsets
+
+::: panel-tabset
+### Tab A
+
+Content for `Tab A`
+
+### Tab B
+
+Content for `Tab B`
+:::
+
+# Question
+
+::: question
+1.  What are the drawbacks of this code?
+
+2.  How would you do it instead?
+:::
+
+# Fragments 
+
+This is an [important sentence!]{.fragment .highlight-red}
+
+# Column Layout, arbitrary fragment
+
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
+
+### These appear first
+
+::: {.incremental}
+- Make
+- Your 
+- List
+:::
+:::
+::::
+:::: {.column width="50%"}
+::: {.fragment}
+
+### Then this
+```{r}
+#| echo: fenced
+head(mtcars)
+```
+
+:::
+::::
+:::::
