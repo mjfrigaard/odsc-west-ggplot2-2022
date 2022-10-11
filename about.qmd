@@ -2,6 +2,10 @@
 title: "About"
 ---
 
-This is a Quarto website.
+## Website
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+## Slides
+
+I built the slides following the [excellent tutorial by Thomas Mock](https://jthomasmock.github.io/quarto-2hr-webinar/), and the very [thorough documentation](https://quarto.org/docs/reference/projects/websites.html). The themes were inspired by [Mine Çetinkaya-Rundel's post](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/).

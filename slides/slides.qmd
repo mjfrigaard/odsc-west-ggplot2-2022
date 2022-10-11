@@ -829,33 +829,142 @@ ggplot(data = <DATA>) +
 
 ## RStudio.Cloud: Set up (1 of 4)
 
-In your RStudio.Cloud, you will see the following:
+<br>
 
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
+::: {.incremental}
+Head to [RStudio.Cloud](https://rstudio.cloud/), you will see the following:
+```{r rscloud-landing, echo=FALSE, eval=TRUE, fig.align='center', out.height='50%', out.width='50%'}
+knitr::include_graphics("../img/rscloud-landing.png")
+```
+:::
+:::
+::::
+:::: {.column width="50%"}
+::: {.fragment}
+<br><br><br>
 Log in with your GitHub credentials
+:::
+::::
+:::::
 
 ## RStudio.Cloud: Set up (2 of 4)
 
-On the top of the RStudio IDE, you will see the following:
+<br>
 
-Click on *Save a Permanent Copy* to add this project to your workspace
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
+::: {.incremental}
+On the top of the RStudio IDE, you will see the following:
+```{r rscloud-env, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-env.png")
+```
+:::
+:::
+::::
+:::: {.column width="50%"}
+::: {.fragment}
+<br><br><br><br><br><br>
+Click on ***Save a Permanent Copy*** to add this project to your workspace
+:::
+::::
+:::::
 
 ## RStudio.Cloud: Set up (3 of 4)
 
+<br>
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
 In the Files pane, click on the `inst.R` file to open it
+:::
+:::
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+<br><br><br>
+```{r rscloud-open-inst, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-open-inst.png")
+```
+:::
+::::
+:::::
+
+
 
 ## RStudio.Cloud: Set up (4 of 4)
 
-In the Source pane, click on the Source icon to run `inst.R`
+<br>
 
-This sends the code in the **Source** pane to the **Console**
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+In the Source pane, click on the Source icon to run `inst.R`
+:::
+:::
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+<br>
+```{r rscloud-source-inst, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-source-inst.png")
+```
+This sends the code in `inst.R` to the **Console**
+:::
+::::
+:::::
 
 # RStudio.Cloud: Exercises 
 
-The exercises are in the `graphs/` folder
+::::: {.columns}
+:::: {.column width="25%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.75em;"}
+<br><br><br><br>
+The exercises are in the `exercises/` folder
+:::
+:::
+:::
+::::
+:::: {.column width="75%"}
+::: {.fragment}
+<br>
+```{r rscloud-exercises, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-exercises.png")
+```
+:::
+::::
+:::::
 
 # RStudio.Cloud: Solutions
 
+::::: {.columns}
+:::: {.column width="25%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.75em;"}
+<br><br><br><br>
 Each exercise has a solution file in `solutions/` folder
+:::
+:::
+:::
+::::
+:::: {.column width="75%"}
+::: {.fragment}
+<br>
+```{r rscloud-solutions, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-solutions.png")
+```
+:::
+::::
+:::::
 
 # Quick Tip 
 
@@ -909,7 +1018,7 @@ labs_pengiuns <- ggplot2::labs(
 :::
 
 ::: {.column width="19%"}
-::: {style="font-size: 0.90em; color: #ff0202;"}
+::: {style="font-size: 0.75em; color: #ff0202;"}
 **<- expectations**
 :::
 :::
@@ -1051,47 +1160,796 @@ Revision Sharpens Thinking:
 
 ## Viewing data (1 of 2)
 
+. . .
+
+<br> 
+
+`View()` opens the RStudio data viewer
+
+. . .
+
+<br>
+
+```{r rscloud-view-peng, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-view-peng.png")
+```
+
 ## Viewing data (2 of 2)
+
+. . .
+
+<br>
+
+`glimpse()` and `str()` are displayed in the console
+
+<br>
+
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.fragment}
+::: {.incremental}
+```{r rscloud-glimpse, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-glimpse.png")
+```
+:::
+:::
+::::
+:::: {.column width="50%"}
+::: {.fragment}
+```{r rscloud-str, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/rscloud-str.png")
+```
+:::
+::::
+:::::
+
+
 
 # Build from scratch, layer-by-layer
 
 ## `graph 01`: LABELS!
 
+. . .
+
+<br>
+
+We want to build the labels first:
+
+<br>
+
+::::: {.columns}
+:::: {.column width="28%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.70em;"}
+- **title** = "Bill and flipper length of Palmer penguins"  
+- **subtitle** = "Size measurements for adult foraging penguins"   
+- **x** = "Bill length (mm)"  
+- **y** = "Flipper length (mm)" 
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="70%"}
+::: {.fragment}
+::: {style="font-size: 0.70em; color: #05ffa1;"}
+```{r labs_bill_vs_flippper, eval=TRUE, echo=TRUE}
+# build labels
+labs_bill_vs_flippper <- ggplot2::labs(
+  title = "Bill and flipper length of Palmer penguins",
+  subtitle = "Size measurements for adult foraging penguins",
+  x = "Bill length (mm)",
+  y = "Flipper length (mm)")
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 01`: Initialize plot with data
+
+<br>
+
+. . .
+
+The `ggplot2::ggplot()` function initializes the plot:
+
+<br>
+
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Place `penguins` in the `data` argument
+```{r g1-ex, eval=FALSE, echo=TRUE}
+ggplot(data = penguins)
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+This gives us a blank canvas!
+```{r g1-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins)
+```
+:::
+:::
+::::
+:::::
+
+<br>
+
 
 ## `graph 02`: Map variables to positions
 
+<br>
+
+. . .
+
+We have our data and labels--we just need to add our variables!
+
+<br>
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Map `bill_length_mm` to `x`
+```{r g2-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "2"
+ggplot(data = penguins,
+    mapping = aes(x = bill_length_mm, 
+  
+            ))
+```
+<br> 
+Map `flipper_length_mm` to `y`
+```{r g2-ex-2, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "2-3"
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm))
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+
+Now our canvas has `x` and `y` axes
+
+```{r g2-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm))
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 03`: Adding geoms
 
+. . .
+
+<br>
+
+Add the `geom_point()` function with the `+` symbol
+
+<br>
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+```{r g3-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "4"
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) +
+  geom_point()
+```
+
+<br>
+
+Don't confuse this with the pipes (`|>` or `%>%`)  
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+
+The `geom_point()` function tells R we want to see the points (or dots) on our canvas: 
+
+```{r g3-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) +
+  geom_point()
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 04`: Don't forget the labels!
+
+. . .
+
+<br>
+
+Finally, we want to add the labels we created (`labs_bill_vs_flippper`) 
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Add labels with `+` 
+
+```{r g4-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "5"
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) +
+  geom_point() +
+  labs_bill_vs_flippper
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+
+And we have our first graph!
+
+```{r g4-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) +
+  geom_point() +
+  labs_bill_vs_flippper
+```
+:::
+:::
+::::
+:::::
 
 # Global vs. local mapping
 
 ## Global mapping 
 
+. . .
+
+<br>
+
+::: {style="font-size: 0.85em;"}
+We've just created a graph by setting global aesthetics
+:::
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+
+**Global** = aesthetics are mapped when the graph is initialized with `ggplot()`:
+
+```{r global-aes-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "2-3"
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.60em;"}
+
+Recall the layers from Part 1:
+
+```{r globals-aes-sol, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/global-aes.png")
+```
+
+If we map aesthetics in `ggplot()`, all the following `geom_*()` layers will inherit these aesthetics
+
+:::
+:::
+::::
+:::::
+
 ## Local mapping 
 
-## The `ggplot2` templates
+. . .
+
+<br>
+
+::: {style="font-size: 0.85em;"}
+Mapping aesthetics globally and then adding the `geom_*()` function results in the same graph as when we map aesthetics locally (inside the `geom_*()` function)
+:::
+
+
+
+::::: {.columns}
+:::: {.column width="49%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+```{r local-map-ex, eval=TRUE, echo=TRUE}
+#| code-line-numbers: "2-3"
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) +
+    geom_point() +
+    labs_bill_vs_flippper
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="49%"}
+::: {.fragment}
+::: {style="font-size: 0.60em;"}
+```{r local-map-sol, eval=TRUE, echo=TRUE}
+#| code-line-numbers: "3-4"
+ggplot(data = penguins) +
+  geom_point(mapping = 
+      aes(x = bill_length_mm,
+          y = flipper_length_mm)) +
+  labs_bill_vs_flippper
+```
+:::
+:::
+::::
+:::::
+
+## The `ggplot2` templates (refresher)
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+The template from part 1 uses local mappings (i.e. aesthetic mappings are set inside the `geom_*` function).
+:::
+
+. . .
+
+```{r ggp2-temp, eval=FALSE, echo=TRUE}
+# Recall our template from Part 1
+ggplot(data = <DATA>) +
+  geom_*(mapping = aes(<AESTHETIC MAPPINGS>))
+```
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+Below we've adjusted the template to include global mappings (and the option to include aesthetic mappings locally)
+:::
+
+. . .
+
+```{r adj-ggp2-temp, eval=FALSE, echo=TRUE}
+# Adjusted template
+ggplot(data = <DATA>,
+  mapping = aes(<AESTHETIC MAPPINGS>)) + # global mappings
+  geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) # local mappings
+```
+
+::: {style="font-size: 0.85em;"}
+Read more [here.](https://ggplot2-book.org/collective-geoms.html#different-groups-on-different-layers)
+:::
+
+
 
 ## `graph 05`: Convert global to local mappings
 
+<br>
+
+. . .
+
+For `graph-05.R`, convert the global aesthetics to local aesthetics inside the `geom_point()` function
+
+<br>
+
+::::: {.columns}
+:::: {.column width="49%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+Global
+```{r g5-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "2-3"
+ggplot(data = penguins,
+  mapping = aes(x = bill_length_mm,
+                y = flipper_length_mm)) +
+  geom_point() +
+  labs_bill_vs_flippper
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="49%"}
+::: {.fragment}
+::: {style="font-size: 0.60em;"}
+Local
+```{r g5-sol, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "2-4"
+ggplot(data = penguins) +
+geom_point(mapping = 
+    aes(x = bill_length_mm,
+        y = flipper_length_mm)) +
+      labs_bill_vs_flippper
+```
+:::
+:::
+::::
+:::::
+
 # Visual encodings
 
-## What are visual encodings?
+## What are visual encodings? {.smaller}
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.10em;"}
+Visual encodings are what we see on the graph
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size: 1.10em;"}
+Things like position, size, shape, color, etc.
+:::
+
+. . .
+
+```{r visual-encodings, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+knitr::include_graphics("../img/visual-encodings.png")
+```
+
+. . .
+
+::: {style="font-size: 1.10em;"}
+*Ranked by accuracy*
+:::
 
 ## `graph 06`: Adding color (global)
 
+. . .
+
+<br>
+
+Map `color` to the `species` variable using **global** aesthetic mapping:
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.70em;"}
+*Inside* the `aes()` function:
+```{r , eval=FALSE, echo=TRUE}
+#| code-line-numbers: "5"
+ggplot(data = penguins,
+  mapping =
+    aes(x = bill_length_mm,
+        y = flipper_length_mm,
+        color = species)) +
+  geom_point() +
+  labs_bill_vs_flippper
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="50%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+```{r , eval=TRUE, echo=FALSE}
+ggplot(data = penguins,
+  mapping =
+    aes(x = bill_length_mm,
+        y = flipper_length_mm,
+        color = species)) +
+  geom_point() +
+  labs_bill_vs_flippper
+```
+
+`ggplot2` includes a legend by default
+:::
+:::
+::::
+:::::
+
 ## `graph 07`: Adding color (local)
+
+. . .
+
+<br>
+
+Map `color` to the `species` variable using ***local*** aesthetic mapping
+
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+The `x` and `y` aesthetics are inherited from the `ggplot()` function...
+```{r , eval=FALSE, echo=TRUE}
+#| code-line-numbers: "6"
+ggplot(data = penguins,
+  mapping =
+    aes(x = bill_length_mm,
+        y = flipper_length_mm)) +
+  geom_point(
+    aes(color = species)) +
+  labs_bill_vs_flippper
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.60em;"}
+```{r , eval=TRUE, echo=FALSE}
+ggplot(data = penguins,
+  mapping =
+    aes(x = bill_length_mm,
+        y = flipper_length_mm)) +
+  geom_point(
+    aes(color = species)) +
+  labs_bill_vs_flippper
+```
+...but the `color` aesthetic comes from the `geom_point()` layer
+:::
+:::
+::::
+:::::
 
 ## `graph 08`: Color vs. Fill (1 of 2)
 
+. . .
+
+::: {style="font-size: 0.85em;"}
+Below we'll look at the counts of `sex` vs. `species` of Palmer penguins
+:::
+
+
+::::: {.columns}
+:::: {.column width="55%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+First create labels! 
+```{r , eval=TRUE, echo=TRUE}
+labs_sex_vs_species <- ggplot2::labs(
+  title = "Sex by species of Palmer penguins",
+  subtitle = "Counts for adult foraging penguins",
+  x = "Sex",
+  fill = "Species")
+```
+<br> 
+Create `penguins_no_miss` by removing missing values
+```{r , eval=TRUE, echo=TRUE}
+penguins_no_miss <- drop_na(data = penguins)
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="43%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+View our data:
+```{r , eval=TRUE, echo=TRUE}
+rmarkdown::paged_table(
+  head(penguins_no_miss, 5))
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 08`: Color vs. Fill (2 of 2)
+
+. . .
+
+<br>
+
+::: {style="font-size: 0.85em;"}
+Some `geom_*()`functions take the `fill` argument instead of `color`
+:::
+
+<br>
+
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+Build a bar-graph using `geom_bar()` by locally mapping `sex` to the `x` axis and `y` to `fill`  
+```{r , eval=FALSE, echo=TRUE}
+#| code-line-numbers: "4"
+ggplot(data = penguins_no_miss) +
+  geom_bar(
+    mapping = aes(x = sex,
+                  fill = species)) +
+    labs_sex_vs_species
+```
+<br> 
+Don't forget the labels!
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+```{r , eval=TRUE, echo=FALSE}
+ggplot(data = penguins_no_miss) +
+  geom_bar(
+    mapping = aes(x = sex,
+                  fill = species)) +
+    labs_sex_vs_species
+```
+:::
+:::
+::::
+:::::
 
 ## `graph 09`: Bar position
 
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 10`: Histograms (special bar-graphs)
 
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 11`: Density plots
+
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
 
 # Mapping vs. setting aesthetics
 
@@ -1101,17 +1959,182 @@ Revision Sharpens Thinking:
 
 ## `graph 12`: Setting graph aesthetics
 
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
+
 # Combining layers
 
 ## `graph 13`: New layer, new data, no problem
+
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
 
 ## Our label dataset
 
 ## `graph 13`: Layer 1
 
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 14`: Layer 2  
 
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 15`: Label 3 (max values)
+
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
 
 # Facets
 
@@ -1121,7 +2144,73 @@ Revision Sharpens Thinking:
 
 ## `graph 16`: Facet by sex
 
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
+
 ## `graph 17`: Facet by species
+
+::::: {.columns}
+:::: {.column width="38%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+<br>
+Some text 
+```{r , eval=FALSE, echo=TRUE}
+# some code 
+```
+<br> 
+More text 
+```{r , eval=FALSE, echo=TRUE}
+# more code 
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="60%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Result 
+```{r , eval=TRUE, echo=FALSE}
+# solution/result (no code, display only!)
+```
+:::
+:::
+::::
+:::::
 
 # Recap
 

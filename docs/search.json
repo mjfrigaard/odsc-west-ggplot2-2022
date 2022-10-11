@@ -4,14 +4,28 @@
     "href": "index.html",
     "title": "ODSC-ggplot2-west",
     "section": "",
-    "text": "Welcome to the ggplot2 workshop!\nBelow are some important links:"
+    "text": "Welcome to the ggplot2 workshop!"
+  },
+  {
+    "objectID": "index.html#important-links",
+    "href": "index.html#important-links",
+    "title": "ODSC-ggplot2-west",
+    "section": "Important links:",
+    "text": "Important links:\n\nConference website\nWorkshop description\nMedium post"
   },
   {
     "objectID": "index.html#workshop-materials",
     "href": "index.html#workshop-materials",
     "title": "ODSC-ggplot2-west",
     "section": "Workshop Materials",
-    "text": "Workshop Materials\n\nSlides (coming soon!)\nRStudio.Cloud Exercises (coming soon!)"
+    "text": "Workshop Materials\nThe exercises and solutions in the slides will be available on RStudio.Cloud. We recommend logging in with a GitHub account:"
+  },
+  {
+    "objectID": "index.html#rstudio.cloud-setup",
+    "href": "index.html#rstudio.cloud-setup",
+    "title": "ODSC-ggplot2-west",
+    "section": "RStudio.Cloud setup",
+    "text": "RStudio.Cloud setup\n\n\n1. Head over to GitHub and set up a free account\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. Create your RStudio.Cloud account (also free!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. Use your GitHub credentials to log into RStudio.Cloud"
   },
   {
     "objectID": "slides/slides.html#raw-data-dont-communicate-well",
@@ -95,28 +109,28 @@
     "href": "slides/slides.html#rstudio.cloud-set-up-1-of-4",
     "title": "Data Visualization with ggplot2",
     "section": "RStudio.Cloud: Set up (1 of 4)",
-    "text": "RStudio.Cloud: Set up (1 of 4)\nIn your RStudio.Cloud, you will see the following:\nLog in with your GitHub credentials"
+    "text": "RStudio.Cloud: Set up (1 of 4)\n\n\n\n\n\nHead to RStudio.Cloud, you will see the following:\n\n\n\n\n\n\n\n\n\n\n\n\n\n Log in with your GitHub credentials"
   },
   {
     "objectID": "slides/slides.html#rstudio.cloud-set-up-2-of-4",
     "href": "slides/slides.html#rstudio.cloud-set-up-2-of-4",
     "title": "Data Visualization with ggplot2",
     "section": "RStudio.Cloud: Set up (2 of 4)",
-    "text": "RStudio.Cloud: Set up (2 of 4)\nOn the top of the RStudio IDE, you will see the following:\nClick on Save a Permanent Copy to add this project to your workspace"
+    "text": "RStudio.Cloud: Set up (2 of 4)\n\n\n\n\n\nOn the top of the RStudio IDE, you will see the following:\n\n\n\n\n\n\n\n\n\n\n\n\n\n Click on Save a Permanent Copy to add this project to your workspace"
   },
   {
     "objectID": "slides/slides.html#rstudio.cloud-set-up-3-of-4",
     "href": "slides/slides.html#rstudio.cloud-set-up-3-of-4",
     "title": "Data Visualization with ggplot2",
     "section": "RStudio.Cloud: Set up (3 of 4)",
-    "text": "RStudio.Cloud: Set up (3 of 4)\nIn the Files pane, click on the inst.R file to open it"
+    "text": "RStudio.Cloud: Set up (3 of 4)\n\n\n\n\n\nIn the Files pane, click on the inst.R file to open it"
   },
   {
     "objectID": "slides/slides.html#rstudio.cloud-set-up-4-of-4",
     "href": "slides/slides.html#rstudio.cloud-set-up-4-of-4",
     "title": "Data Visualization with ggplot2",
     "section": "RStudio.Cloud: Set up (4 of 4)",
-    "text": "RStudio.Cloud: Set up (4 of 4)\nIn the Source pane, click on the Source icon to run inst.R\nThis sends the code in the Source pane to the Console"
+    "text": "RStudio.Cloud: Set up (4 of 4)\n\n\n\n\n\nIn the Source pane, click on the Source icon to run inst.R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis sends the code in inst.R to the Console"
   },
   {
     "objectID": "slides/slides.html#ggplot2-build-the-labels-first",
@@ -151,133 +165,133 @@
     "href": "slides/slides.html#viewing-data-1-of-2",
     "title": "Data Visualization with ggplot2",
     "section": "Viewing data (1 of 2)",
-    "text": "Viewing data (1 of 2)"
+    "text": "Viewing data (1 of 2)\n\n\nView() opens the RStudio data viewer"
   },
   {
     "objectID": "slides/slides.html#viewing-data-2-of-2",
     "href": "slides/slides.html#viewing-data-2-of-2",
     "title": "Data Visualization with ggplot2",
     "section": "Viewing data (2 of 2)",
-    "text": "Viewing data (2 of 2)"
+    "text": "Viewing data (2 of 2)\n\n\nglimpse() and str() are displayed in the console"
   },
   {
     "objectID": "slides/slides.html#graph-01-labels",
     "href": "slides/slides.html#graph-01-labels",
     "title": "Data Visualization with ggplot2",
     "section": "graph 01: LABELS!",
-    "text": "graph 01: LABELS!"
+    "text": "graph 01: LABELS!\n\n\nWe want to build the labels first:\n\n\n\n\n\n\n\ntitle = “Bill and flipper length of Palmer penguins”\n\nsubtitle = “Size measurements for adult foraging penguins”\n\nx = “Bill length (mm)”\n\ny = “Flipper length (mm)”\n\n\n\n\n\n\n\n\n\n\n# build labels\nlabs_bill_vs_flippper <- ggplot2::labs(\n  title = \"Bill and flipper length of Palmer penguins\",\n  subtitle = \"Size measurements for adult foraging penguins\",\n  x = \"Bill length (mm)\",\n  y = \"Flipper length (mm)\")"
   },
   {
     "objectID": "slides/slides.html#graph-01-initialize-plot-with-data",
     "href": "slides/slides.html#graph-01-initialize-plot-with-data",
     "title": "Data Visualization with ggplot2",
     "section": "graph 01: Initialize plot with data",
-    "text": "graph 01: Initialize plot with data"
+    "text": "graph 01: Initialize plot with data\n\n\nThe ggplot2::ggplot() function initializes the plot:\n\n\n\n\n\n\n Place penguins in the data argument\n\nggplot(data = penguins)\n\n\n\n\n\n\n\n\n\nThis gives us a blank canvas!"
   },
   {
     "objectID": "slides/slides.html#graph-02-map-variables-to-positions",
     "href": "slides/slides.html#graph-02-map-variables-to-positions",
     "title": "Data Visualization with ggplot2",
     "section": "graph 02: Map variables to positions",
-    "text": "graph 02: Map variables to positions"
+    "text": "graph 02: Map variables to positions\n\n\nWe have our data and labels–we just need to add our variables!\n\n\n\n\n\n\n Map bill_length_mm to x\n\nggplot(data = penguins,\n    mapping = aes(x = bill_length_mm, \n  \n            ))\n\n Map flipper_length_mm to y\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm))\n\n\n\n\n\n\n\n\n\nNow our canvas has x and y axes"
   },
   {
     "objectID": "slides/slides.html#graph-03-adding-geoms",
     "href": "slides/slides.html#graph-03-adding-geoms",
     "title": "Data Visualization with ggplot2",
     "section": "graph 03: Adding geoms",
-    "text": "graph 03: Adding geoms"
+    "text": "graph 03: Adding geoms\n\n\nAdd the geom_point() function with the + symbol\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm)) +\n  geom_point()\n\n\nDon’t confuse this with the pipes (|> or %>%)\n\n\n\n\n\n\n\n\nThe geom_point() function tells R we want to see the points (or dots) on our canvas:"
   },
   {
     "objectID": "slides/slides.html#graph-04-dont-forget-the-labels",
     "href": "slides/slides.html#graph-04-dont-forget-the-labels",
     "title": "Data Visualization with ggplot2",
     "section": "graph 04: Don’t forget the labels!",
-    "text": "graph 04: Don’t forget the labels!"
+    "text": "graph 04: Don’t forget the labels!\n\n\nFinally, we want to add the labels we created (labs_bill_vs_flippper)\n\n\n\n\n\n Add labels with +\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm)) +\n  geom_point() +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\nAnd we have our first graph!"
   },
   {
     "objectID": "slides/slides.html#global-mapping",
     "href": "slides/slides.html#global-mapping",
     "title": "Data Visualization with ggplot2",
     "section": "Global mapping",
-    "text": "Global mapping"
+    "text": "Global mapping\n\n\n\nWe’ve just created a graph by setting global aesthetics\n\n\n\n\n\n\nGlobal = aesthetics are mapped when the graph is initialized with ggplot():\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm)) \n\n\n\n\n\n\n\n\n\nRecall the layers from Part 1:\n\n\n\n\n\n\n\n\n\nIf we map aesthetics in ggplot(), all the following geom_*() layers will inherit these aesthetics"
   },
   {
     "objectID": "slides/slides.html#local-mapping",
     "href": "slides/slides.html#local-mapping",
     "title": "Data Visualization with ggplot2",
     "section": "Local mapping",
-    "text": "Local mapping"
+    "text": "Local mapping\n\n\n\nMapping aesthetics globally and then adding the geom_*() function results in the same graph as when we map aesthetics locally (inside the geom_*() function)\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm)) +\n    geom_point() +\n    labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins) +\n  geom_point(mapping = \n      aes(x = bill_length_mm,\n          y = flipper_length_mm)) +\n  labs_bill_vs_flippper"
   },
   {
-    "objectID": "slides/slides.html#the-ggplot2-templates",
-    "href": "slides/slides.html#the-ggplot2-templates",
+    "objectID": "slides/slides.html#the-ggplot2-templates-refresher",
+    "href": "slides/slides.html#the-ggplot2-templates-refresher",
     "title": "Data Visualization with ggplot2",
-    "section": "The ggplot2 templates",
-    "text": "The ggplot2 templates"
+    "section": "The ggplot2 templates (refresher)",
+    "text": "The ggplot2 templates (refresher)\n\n\nThe template from part 1 uses local mappings (i.e. aesthetic mappings are set inside the geom_* function).\n\n\n\n\n# Recall our template from Part 1\nggplot(data = <DATA>) +\n  geom_*(mapping = aes(<AESTHETIC MAPPINGS>))\n\n\n\n\nBelow we’ve adjusted the template to include global mappings (and the option to include aesthetic mappings locally)\n\n\n\n\n# Adjusted template\nggplot(data = <DATA>,\n  mapping = aes(<AESTHETIC MAPPINGS>)) + # global mappings\n  geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) # local mappings\n\n\nRead more here."
   },
   {
     "objectID": "slides/slides.html#graph-05-convert-global-to-local-mappings",
     "href": "slides/slides.html#graph-05-convert-global-to-local-mappings",
     "title": "Data Visualization with ggplot2",
     "section": "graph 05: Convert global to local mappings",
-    "text": "graph 05: Convert global to local mappings"
+    "text": "graph 05: Convert global to local mappings\n\n\nFor graph-05.R, convert the global aesthetics to local aesthetics inside the geom_point() function\n\n\n\n\n\n\nGlobal\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm)) +\n  geom_point() +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\nLocal\n\nggplot(data = penguins) +\ngeom_point(mapping = \n    aes(x = bill_length_mm,\n        y = flipper_length_mm)) +\n      labs_bill_vs_flippper"
   },
   {
     "objectID": "slides/slides.html#what-are-visual-encodings",
     "href": "slides/slides.html#what-are-visual-encodings",
     "title": "Data Visualization with ggplot2",
     "section": "What are visual encodings?",
-    "text": "What are visual encodings?"
+    "text": "What are visual encodings?\n\n\n\nVisual encodings are what we see on the graph\n\n\n\n\n\nThings like position, size, shape, color, etc.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanked by accuracy"
   },
   {
     "objectID": "slides/slides.html#graph-06-adding-color-global",
     "href": "slides/slides.html#graph-06-adding-color-global",
     "title": "Data Visualization with ggplot2",
     "section": "graph 06: Adding color (global)",
-    "text": "graph 06: Adding color (global)"
+    "text": "graph 06: Adding color (global)\n\n\nMap color to the species variable using global aesthetic mapping:\n\n\n\n\n\nInside the aes() function:\n\nggplot(data = penguins,\n  mapping =\n    aes(x = bill_length_mm,\n        y = flipper_length_mm,\n        color = species)) +\n  geom_point() +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 includes a legend by default"
   },
   {
     "objectID": "slides/slides.html#graph-07-adding-color-local",
     "href": "slides/slides.html#graph-07-adding-color-local",
     "title": "Data Visualization with ggplot2",
     "section": "graph 07: Adding color (local)",
-    "text": "graph 07: Adding color (local)"
+    "text": "graph 07: Adding color (local)\n\n\nMap color to the species variable using local aesthetic mapping\n\n\n\n\n\nThe x and y aesthetics are inherited from the ggplot() function…\n\nggplot(data = penguins,\n  mapping =\n    aes(x = bill_length_mm,\n        y = flipper_length_mm)) +\n  geom_point(\n    aes(color = species)) +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n…but the color aesthetic comes from the geom_point() layer"
   },
   {
     "objectID": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
     "href": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
     "title": "Data Visualization with ggplot2",
     "section": "graph 08: Color vs. Fill (1 of 2)",
-    "text": "graph 08: Color vs. Fill (1 of 2)"
+    "text": "graph 08: Color vs. Fill (1 of 2)\n\n\nBelow we’ll look at the counts of sex vs. species of Palmer penguins\n\n\n\n\n\n\nFirst create labels!\n\nlabs_sex_vs_species <- ggplot2::labs(\n  title = \"Sex by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Sex\",\n  fill = \"Species\")\n\n Create penguins_no_miss by removing missing values\n\npenguins_no_miss <- drop_na(data = penguins)\n\n\n\n\n\n\n\n\n\nView our data:\n\nrmarkdown::paged_table(\n  head(penguins_no_miss, 5))"
   },
   {
     "objectID": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
     "href": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
     "title": "Data Visualization with ggplot2",
     "section": "graph 08: Color vs. Fill (2 of 2)",
-    "text": "graph 08: Color vs. Fill (2 of 2)"
+    "text": "graph 08: Color vs. Fill (2 of 2)\n\n\n\nSome geom_*()functions take the fill argument instead of color\n\n\n\n\n\n\n\nBuild a bar-graph using geom_bar() by locally mapping sex to the x axis and y to fill\n\nggplot(data = penguins_no_miss) +\n  geom_bar(\n    mapping = aes(x = sex,\n                  fill = species)) +\n    labs_sex_vs_species\n\n Don’t forget the labels!"
   },
   {
     "objectID": "slides/slides.html#graph-09-bar-position",
     "href": "slides/slides.html#graph-09-bar-position",
     "title": "Data Visualization with ggplot2",
     "section": "graph 09: Bar position",
-    "text": "graph 09: Bar position"
+    "text": "graph 09: Bar position\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#graph-10-histograms-special-bar-graphs",
     "href": "slides/slides.html#graph-10-histograms-special-bar-graphs",
     "title": "Data Visualization with ggplot2",
     "section": "graph 10: Histograms (special bar-graphs)",
-    "text": "graph 10: Histograms (special bar-graphs)"
+    "text": "graph 10: Histograms (special bar-graphs)\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#graph-11-density-plots",
     "href": "slides/slides.html#graph-11-density-plots",
     "title": "Data Visualization with ggplot2",
     "section": "graph 11: Density plots",
-    "text": "graph 11: Density plots"
+    "text": "graph 11: Density plots\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#mapping-vs.-setting-1-of-2",
@@ -298,14 +312,14 @@
     "href": "slides/slides.html#graph-12-setting-graph-aesthetics",
     "title": "Data Visualization with ggplot2",
     "section": "graph 12: Setting graph aesthetics",
-    "text": "graph 12: Setting graph aesthetics"
+    "text": "graph 12: Setting graph aesthetics\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#graph-13-new-layer-new-data-no-problem",
     "href": "slides/slides.html#graph-13-new-layer-new-data-no-problem",
     "title": "Data Visualization with ggplot2",
     "section": "graph 13: New layer, new data, no problem",
-    "text": "graph 13: New layer, new data, no problem"
+    "text": "graph 13: New layer, new data, no problem\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#our-label-dataset",
@@ -319,21 +333,21 @@
     "href": "slides/slides.html#graph-13-layer-1",
     "title": "Data Visualization with ggplot2",
     "section": "graph 13: Layer 1",
-    "text": "graph 13: Layer 1"
+    "text": "graph 13: Layer 1\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#graph-14-layer-2",
     "href": "slides/slides.html#graph-14-layer-2",
     "title": "Data Visualization with ggplot2",
     "section": "graph 14: Layer 2",
-    "text": "graph 14: Layer 2"
+    "text": "graph 14: Layer 2\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#graph-15-label-3-max-values",
     "href": "slides/slides.html#graph-15-label-3-max-values",
     "title": "Data Visualization with ggplot2",
     "section": "graph 15: Label 3 (max values)",
-    "text": "graph 15: Label 3 (max values)"
+    "text": "graph 15: Label 3 (max values)\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#small-multiples",
@@ -354,14 +368,14 @@
     "href": "slides/slides.html#graph-16-facet-by-sex",
     "title": "Data Visualization with ggplot2",
     "section": "graph 16: Facet by sex",
-    "text": "graph 16: Facet by sex"
+    "text": "graph 16: Facet by sex\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#graph-17-facet-by-species",
     "href": "slides/slides.html#graph-17-facet-by-species",
     "title": "Data Visualization with ggplot2",
     "section": "graph 17: Facet by species",
-    "text": "graph 17: Facet by species"
+    "text": "graph 17: Facet by species\n\n\n\n\n\n Some text\n\n# some code \n\n More text\n\n# more code \n\n\n\n\n\n\n\n\n\nResult"
   },
   {
     "objectID": "slides/slides.html#what-weve-covered",
@@ -375,6 +389,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html#slides",
+    "href": "about.html#slides",
+    "title": "About",
+    "section": "Slides",
+    "text": "Slides\nI built the slides following the excellent tutorial by Thomas Mock, and the very thorough documentation. The themes were inspired by Mine Çetinkaya-Rundel’s post."
   }
 ]

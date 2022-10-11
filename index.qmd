@@ -4,7 +4,7 @@ title: "ODSC-ggplot2-west"
 
 Welcome to the `ggplot2` workshop!
 
-Below are some important links:
+## Important links:
 
 -   [Conference website](https://odsc.com/california/)
 
@@ -14,6 +14,36 @@ Below are some important links:
 
 ## Workshop Materials
 
--   Slides (*coming soon!)*
+The exercises and solutions in the slides will be available on [RStudio.Cloud](https://rstudio.cloud/). We recommend logging in with a GitHub account:
 
--   RStudio.Cloud Exercises (*coming soon!)*
+## RStudio.Cloud setup
+
+<br>
+
+### 1. Head over to [GitHub](https://github.com/) and set up a free account
+
+<br>
+
+```{r github-signup-png, echo=FALSE, fig.align='right', out.height='50%', out.height='50%'}
+knitr::include_graphics("img/github-signup.png")
+```
+
+<br>
+
+### 2. Create your [RStudio.Cloud account](https://rstudio.cloud/plans/free) (also free!)
+
+<br>
+
+```{r rstudio-cloud-signup-png, echo=FALSE, fig.align='right', out.height='50%', out.height='50%'}
+knitr::include_graphics("img/rstudio-cloud-signup.png")
+```
+
+<br>
+
+### 3. Use your GitHub credentials to [log into RStudio.Cloud](https://client.login.rstudio.cloud/oauth/register?redirect=https%3A%2F%2Fclient.login.rstudio.cloud%2Foauth%2Flogin%3Fshow_auth%3D0%26show_login%3D0) 
+
+<br>
+
+```{r rscloud-github-cred-png, echo=FALSE, fig.align='center', out.height='100%', out.height='100%'}
+knitr::include_graphics("img/rscloud-github-cred.png")
+```
