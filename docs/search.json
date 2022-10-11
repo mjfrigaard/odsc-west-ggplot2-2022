@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ODSC-ggplot2-west",
     "section": "",
-    "text": "Welcome to the ggplot2 workshop!\nBelow are some important links:"
+    "text": "Welcome to the ggplot2 workshop!"
   },
   {
     "objectID": "index.html#important-links",
@@ -18,7 +18,7 @@
     "href": "index.html#workshop-materials",
     "title": "ODSC-ggplot2-west",
     "section": "Workshop Materials",
-    "text": "Workshop Materials\n\nSlides (coming soon!)\nRStudio.Cloud Exercises (coming soon!)"
+    "text": "Workshop Materials\nThe exercises and solutions in the slides will be available on RStudio.Cloud. We recommend logging in with a GitHub account:"
   },
   {
     "objectID": "index.html#rstudio.cloud-setup",
