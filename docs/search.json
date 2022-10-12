@@ -95,7 +95,7 @@
     "href": "slides/slides.html#ggplot2-mapping",
     "title": "Data Visualization with ggplot2",
     "section": "ggplot2: mapping",
-    "text": "ggplot2: mapping\n\n\n\nThe mapping layer assigns columns (variables) from the data to a visual property (i.e. graph ’aes’thetic)\n\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = aes(x = flipper_length_mm, \n                y = bill_length_mm))"
+    "text": "ggplot2: mapping\n\n\n\nThe mapping layer assigns columns (variables) from the data to a visual property (i.e. graph ’aes’thetic)\n\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = \n    aes(x = flipper_length_mm, \n      y = bill_length_mm))"
   },
   {
     "objectID": "slides/slides.html#ggplot2-geoms",

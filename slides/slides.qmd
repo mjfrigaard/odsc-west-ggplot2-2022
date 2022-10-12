@@ -559,11 +559,12 @@ The **mapping layer** assigns columns (variables) from the data to a visual prop
 :::: {.column width="39%"}
 ::: {.fragment}
 ::: {.incremental}
-::: {style="font-size: 0.60em;"}
+::: {style="font-size: 0.50em;"}
 ```{r mapping-layer-code, eval=FALSE, echo=TRUE}
 ggplot(data = penguins,
-  mapping = aes(x = flipper_length_mm, 
-                y = bill_length_mm))
+  mapping = 
+    aes(x = flipper_length_mm, 
+      y = bill_length_mm))
 ```
 :::
 :::
@@ -576,7 +577,7 @@ ggplot(data = penguins,
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
+```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='70%', out.width='70%'}
 knitr::include_graphics("../img/mapping-layer.png")
 ```
 :::
@@ -618,7 +619,7 @@ ggplot(data = penguins,
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
+```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='70%', out.width='70%'}
 knitr::include_graphics("../img/geom-layer.png")
 ```
 :::
@@ -668,7 +669,7 @@ ggplot(data = penguins,
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
+```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='70%', out.width='70%'}
 knitr::include_graphics("../img/layers-layer.png")
 ```
 :::
@@ -731,7 +732,7 @@ ggplot(data = <DATA>) +
 :::
 
 ::: {.column width="49%"}
-```{r ggplot2-layers-dark, echo=FALSE, eval=TRUE, fig.align='right', out.height='100%', out.width='100%'}
+```{r ggplot2-layers-dark, echo=FALSE, eval=TRUE, fig.align='right', out.height='80%', out.width='80%'}
 knitr::include_graphics("../img/ggplot2-layers-dark.png")
 ```
 :::
