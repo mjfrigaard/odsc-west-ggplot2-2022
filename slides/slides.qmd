@@ -497,127 +497,143 @@ knitr::include_graphics("../img/ggplot2-layers.png")
 :::
 
 
-# `ggplot2`: data {.smaller}
+## `ggplot2`: data 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.40em;"}
+::: {style="font-size: 0.75em;"}
 The **data layer** consists of a rectangular object (like a spreadsheet) with columns and rows
 :::
 
-. . .
-
 <br>
 
-::: columns
-::: {.column width="45%"}
+::::: {.columns}
+:::: {.column width="39%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
 ```{r data-layer-code, eval=FALSE, echo=TRUE}
 ggplot(data = penguins)
 ```
-
 :::
-
-::: {.column width="2%"}
-
 :::
+:::
+::::
 
-::: {.column width="53%"}
-```{r data-layer, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+:::: {.column width="2%"}
+
+::::
+
+:::: {.column width="59%"}
+::: {.fragment}
+```{r data-layer, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
 knitr::include_graphics("../img/data-layer.png")
 ```
 :::
-:::
+::::
+:::::
 
 
-# `ggplot2`: mapping {.smaller}
+## `ggplot2`: mapping 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.40em;"}
+::: {style="font-size: 0.75em;"}
 The **mapping layer** assigns columns (variables) from the data to a visual property (i.e. graph '**`aes`**'thetic)
 :::
 
-. . .
-
 <br>
 
-::: columns
-::: {.column width="45%"}
+::::: {.columns}
+:::: {.column width="39%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
 ```{r mapping-layer-code, eval=FALSE, echo=TRUE}
 ggplot(data = penguins,
   mapping = aes(x = flipper_length_mm, 
                 y = bill_length_mm))
 ```
-
 :::
-
-::: {.column width="2%"}
-
 :::
+:::
+::::
 
-::: {.column width="53%"}
-```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+:::: {.column width="2%"}
+
+::::
+
+:::: {.column width="59%"}
+::: {.fragment}
+```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
 knitr::include_graphics("../img/mapping-layer.png")
 ```
 :::
-:::
+::::
+:::::
 
-# `ggplot2`: geoms {.smaller}
+## `ggplot2`: geoms 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.40em;"}
+::: {style="font-size: 0.75em;"}
 `geom_*()` functions include statistical transformations, shapes, and position adjustments for how to 'draw' the data on the graph
 :::
 
-. . .
-
 <br>
 
-::: columns
-::: {.column width="46%"}
+::::: {.columns}
+:::: {.column width="39%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
 ```{r geom-layer-code, eval=FALSE, echo=TRUE}
 ggplot(data = penguins,
   mapping = aes(x = flipper_length_mm, 
                 y = bill_length_mm)) +
   geom_point()
 ```
-
 :::
-
-::: {.column width="2%"}
-
 :::
+:::
+::::
 
-::: {.column width="52%"}
-```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+:::: {.column width="2%"}
+
+::::
+
+:::: {.column width="59%"}
+::: {.fragment}
+```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
 knitr::include_graphics("../img/geom-layer.png")
 ```
 :::
-:::
+::::
+:::::
 
-# `ggplot2`: layers {.smaller}
+## `ggplot2`: layers 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.40em;"}
+::: {style="font-size: 0.75em;"}
 We can have multiple layers (data, mappings, geoms) in a single graph
 :::
 
-. . .
-
 <br>
 
-::: columns
-::: {.column width="40%"}
+::::: {.columns}
+:::: {.column width="39%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
 ```{r layers-layer-code, eval=FALSE, echo=TRUE}
 ggplot(data = penguins,
  # layer 1
@@ -632,29 +648,31 @@ ggplot(data = penguins,
       y = bill_length_mm,
       color = species))
 ```
-
 :::
-
-::: {.column width="2%"}
-
 :::
+:::
+::::
 
-::: {.column width="58%"}
-```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+:::: {.column width="2%"}
+
+::::
+
+:::: {.column width="59%"}
+::: {.fragment}
+```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
 knitr::include_graphics("../img/layers-layer.png")
 ```
 :::
-:::
+::::
+:::::
 
-# Layers = infinitely extensible {.smaller}
-
-<br>
+# Layers = infinitely extensible 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.40em;"}
+::: {style="font-size: 0.85em;"}
 `ggplot2` is a system for,
 :::
 
@@ -662,27 +680,25 @@ knitr::include_graphics("../img/layers-layer.png")
 
 <br>
 
-::: {style="font-size: 1.40em;"}
-
+::: {style="font-size: 1.20em;"}
 > “*making infinite use of finite means*” - [Wilhelm von Humboldt](https://en.wikipedia.org/wiki/Wilhelm_von_Humboldt)
-
 :::
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.40em;"}
+::: {style="font-size: 0.85em;"}
 ***With a finite number of objects & functions, we can combine `ggplot2`'s grammar and syntax to create an infinite number of graphs!***
 :::
 
-# `ggplot2`: templates {.smaller}
+# `ggplot2`: templates 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.25em;"}
+::: {style="font-size: 0.75em;"}
 **Basic Template**: [Data,]{.fragment .fade-in} [aesthetic mappings,]{.fragment .fade-in} [geom]{.fragment .fade-in}
 :::
 
@@ -691,11 +707,13 @@ knitr::include_graphics("../img/layers-layer.png")
 <br>
 
 ::: columns
-::: {.column width="58%"}
-```r
+::: {.column width="49%"}
+::: {style="font-size: 0.62em;"}
+```{r , eval=FALSE, echo=TRUE}
 ggplot(data = <DATA>) +
   geom_*(mapping = aes(<AESTHETIC MAPPINGS>))
 ```
+:::
 :::
 
 
@@ -703,20 +721,20 @@ ggplot(data = <DATA>) +
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="49%"}
 ```{r ggplot2-layers-dark, echo=FALSE, eval=TRUE, fig.align='right', out.height='100%', out.width='100%'}
 knitr::include_graphics("../img/ggplot2-layers-dark.png")
 ```
 :::
 :::
 
-# `ggplot2`: more templates {.smaller}
+# `ggplot2`: more templates 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.25em;"}
+::: {style="font-size: 0.75em;"}
 **Template + 1 Layer**: [more geoms]{.fragment .fade-in} [and more aesthetic mappings]{.fragment .fade-in}
 :::
 
@@ -726,11 +744,13 @@ knitr::include_graphics("../img/ggplot2-layers-dark.png")
 
 ::: columns
 ::: {.column width="58%"}
-```r
+::: {style="font-size: 0.65em;"}
+```{r , eval=FALSE, echo=TRUE}
 ggplot(data = <DATA>) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>))
 ```
+:::
 :::
 
 
@@ -744,13 +764,13 @@ knitr::include_graphics("../img/ggplot2-2layers-dark.png")
 :::
 :::
 
-# `ggplot2`: even more! {.smaller}
+# `ggplot2`: even more! 
 
 . . .
 
 <br>
 
-::: {style="font-size: 1.25em;"}
+::: {style="font-size: 0.75em;"}
 **Template + 1 Layer + Facet Layer**: [template,]{.fragment .fade-in} [more aesthetic mappings,]{.fragment .fade-in} [and facets!]{.fragment .fade-in}
 :::
 
@@ -762,12 +782,14 @@ knitr::include_graphics("../img/ggplot2-2layers-dark.png")
 
 ::: columns
 ::: {.column width="58%"}
-```r
+::: {style="font-size: 0.65em;"}
+```{r , eval=FALSE, echo=TRUE}
 ggplot(data = <DATA>) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
     facet_*
 ```
+:::
 :::
 
 
@@ -781,26 +803,31 @@ knitr::include_graphics("../img/ggplot2-3layers-dark.png")
 :::
 :::
 
-## Templates = infinitely extensible! {.smaller}
+## Templates = infinitely extensible! 
 
-<br><br><br>
+<br>
 
 . . .
 
 
 **Themes**
-```r
+
+::: {style="font-size: 0.75em;"}
+```{r , eval=FALSE, echo=TRUE}
 ggplot(data = <DATA>) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
     facet_* +
     theme_*
 ```
+:::
 
 . . .
 
 **Don't forget labels!**
-```r
+
+::: {style="font-size: 0.75em;"}
+```{r , eval=FALSE, echo=TRUE}
 ggplot(data = <DATA>) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
     geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +
@@ -808,6 +835,7 @@ ggplot(data = <DATA>) +
     theme_* +
     labs()
 ```
+:::
 
 # Part 2 {background-color="#1dfd07"}
 
@@ -1158,7 +1186,7 @@ Revision Sharpens Thinking:
 
 # The data
 
-## Viewing data (1 of 2)
+## Viewing data (1 of 3)
 
 . . .
 
@@ -1170,11 +1198,11 @@ Revision Sharpens Thinking:
 
 <br>
 
-```{r rscloud-view-peng, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+```{r rscloud-view-peng, echo=FALSE, eval=TRUE, fig.align='center', out.height='70%', out.width='70%'}
 knitr::include_graphics("../img/rscloud-view-peng.png")
 ```
 
-## Viewing data (2 of 2)
+## Viewing data (2 of 3)
 
 . . .
 
@@ -1185,20 +1213,78 @@ knitr::include_graphics("../img/rscloud-view-peng.png")
 <br>
 
 ::::: {.columns}
-:::: {.column width="50%"}
+:::: {.column width="20%"}
 ::: {.fragment}
 ::: {.incremental}
-```{r rscloud-glimpse, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+::: {style="font-size: 0.60em;"}
+```{r glimpse-code, echo=TRUE, eval=FALSE}
+glimpse(penguins)
+```
+:::
+:::
+:::
+::::
+
+:::: {.column width="1%"}
+
+::::
+
+:::: {.column width="79%"}
+::: {.fragment}
+::: {style="font-size: 0.50em;"}
+
+```{r rscloud-glimpse, echo=FALSE, eval=FALSE, fig.align='center', out.height='100%', out.width='100%'}
 knitr::include_graphics("../img/rscloud-glimpse.png")
+```
+
+```{r glimpse-code-penguins, echo=FALSE, eval=TRUE}
+glimpse(penguins)
 ```
 :::
 :::
 ::::
-:::: {.column width="50%"}
+:::::
+
+## Viewing data (3 of 3)
+
+. . .
+
+<br>
+
+`glimpse()` and `str()` are displayed in the console
+
+<br>
+
+
+::::: {.columns}
+:::: {.column width="19%"}
 ::: {.fragment}
-```{r rscloud-str, echo=FALSE, eval=TRUE, fig.align='center', out.height='100%', out.width='100%'}
+::: {.incremental}
+::: {style="font-size: 0.60em;"}
+```{r str-code, echo=TRUE, eval=FALSE}
+str(penguins)
+```
+:::
+:::
+:::
+::::
+
+:::: {.column width="1%"}
+
+::::
+
+:::: {.column width="80%"}
+::: {.fragment}
+::: {style="font-size: 0.50em;"}
+
+```{r rscloud-str, echo=FALSE, eval=FALSE, fig.align='center', out.height='100%', out.width='100%'}
 knitr::include_graphics("../img/rscloud-str.png")
 ```
+
+```{r str-code-penguins, echo=FALSE, eval=TRUE}
+str(penguins)
+```
+:::
 :::
 ::::
 :::::
@@ -1254,7 +1340,9 @@ labs_bill_vs_flippper <- ggplot2::labs(
 
 . . .
 
+::: {style="font-size: 0.80em;"}
 The `ggplot2::ggplot()` function initializes the plot:
+:::
 
 <br>
 
@@ -1286,8 +1374,6 @@ ggplot(data = penguins)
 ::::
 :::::
 
-<br>
-
 
 ## `graph 02`: Map variables to positions
 
@@ -1295,7 +1381,9 @@ ggplot(data = penguins)
 
 . . .
 
+::: {style="font-size: 0.80em;"}
 We have our data and labels--we just need to add our variables!
+:::
 
 <br>
 
@@ -1349,7 +1437,9 @@ ggplot(data = penguins,
 
 <br>
 
+::: {style="font-size: 0.80em;"}
 Add the `geom_point()` function with the `+` symbol
+:::
 
 <br>
 
@@ -1398,7 +1488,9 @@ ggplot(data = penguins,
 
 <br>
 
+::: {style="font-size: 0.80em;"}
 Finally, we want to add the labels we created (`labs_bill_vs_flippper`) 
+:::
 
 ::::: {.columns}
 :::: {.column width="40%"}
@@ -1449,7 +1541,7 @@ ggplot(data = penguins,
 <br>
 
 ::: {style="font-size: 0.85em;"}
-We've just created a graph by setting global aesthetics
+The previous graphs mapped aesthetics globally
 :::
 
 ::::: {.columns}
@@ -1459,6 +1551,8 @@ We've just created a graph by setting global aesthetics
 ::: {style="font-size: 0.60em;"}
 
 **Global** = aesthetics are mapped when the graph is initialized with `ggplot()`:
+
+<br>
 
 ```{r global-aes-ex, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "2-3"
@@ -1540,34 +1634,42 @@ ggplot(data = penguins) +
 
 . . .
 
-::: {style="font-size: 0.85em;"}
+<br>
+
+::: {style="font-size: 0.75em;"}
 The template from part 1 uses local mappings (i.e. aesthetic mappings are set inside the `geom_*` function).
 :::
 
 . . .
 
+::: {style="font-size: 0.75em;"}
 ```{r ggp2-temp, eval=FALSE, echo=TRUE}
 # Recall our template from Part 1
 ggplot(data = <DATA>) +
   geom_*(mapping = aes(<AESTHETIC MAPPINGS>))
 ```
+:::
 
 . . .
 
-::: {style="font-size: 0.85em;"}
+<br>
+
+::: {style="font-size: 0.75em;"}
 Below we've adjusted the template to include global mappings (and the option to include aesthetic mappings locally)
 :::
 
 . . .
 
+::: {style="font-size: 0.75em;"}
 ```{r adj-ggp2-temp, eval=FALSE, echo=TRUE}
 # Adjusted template
 ggplot(data = <DATA>,
   mapping = aes(<AESTHETIC MAPPINGS>)) + # global mappings
   geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) # local mappings
 ```
+:::
 
-::: {style="font-size: 0.85em;"}
+::: {style="font-size: 0.65em;"}
 Read more [here.](https://ggplot2-book.org/collective-geoms.html#different-groups-on-different-layers)
 :::
 
@@ -1579,7 +1681,9 @@ Read more [here.](https://ggplot2-book.org/collective-geoms.html#different-group
 
 . . .
 
+::: {style="font-size: 0.85em;"}
 For `graph-05.R`, convert the global aesthetics to local aesthetics inside the `geom_point()` function
+:::
 
 <br>
 
@@ -1658,7 +1762,10 @@ knitr::include_graphics("../img/visual-encodings.png")
 
 <br>
 
+::: {style="font-size: 0.85em;"}
 Map `color` to the `species` variable using **global** aesthetic mapping:
+
+:::
 
 ::::: {.columns}
 :::: {.column width="40%"}
@@ -1666,7 +1773,7 @@ Map `color` to the `species` variable using **global** aesthetic mapping:
 ::: {.incremental}
 ::: {style="font-size: 0.70em;"}
 *Inside* the `aes()` function:
-```{r , eval=FALSE, echo=TRUE}
+```{r g6-ex, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "5"
 ggplot(data = penguins,
   mapping =
@@ -1685,7 +1792,7 @@ ggplot(data = penguins,
 :::: {.column width="50%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-```{r , eval=TRUE, echo=FALSE}
+```{r g6-sol, eval=TRUE, echo=FALSE}
 ggplot(data = penguins,
   mapping =
     aes(x = bill_length_mm,
@@ -1707,7 +1814,9 @@ ggplot(data = penguins,
 
 <br>
 
+::: {style="font-size: 0.85em;"}
 Map `color` to the `species` variable using ***local*** aesthetic mapping
+:::
 
 
 ::::: {.columns}
@@ -1716,7 +1825,7 @@ Map `color` to the `species` variable using ***local*** aesthetic mapping
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
 The `x` and `y` aesthetics are inherited from the `ggplot()` function...
-```{r , eval=FALSE, echo=TRUE}
+```{r g7-ex, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "6"
 ggplot(data = penguins,
   mapping =
@@ -1735,7 +1844,7 @@ ggplot(data = penguins,
 :::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.60em;"}
-```{r , eval=TRUE, echo=FALSE}
+```{r g7-sol, eval=TRUE, echo=FALSE}
 ggplot(data = penguins,
   mapping =
     aes(x = bill_length_mm,
@@ -1754,6 +1863,8 @@ ggplot(data = penguins,
 
 . . .
 
+<br>
+
 ::: {style="font-size: 0.85em;"}
 Below we'll look at the counts of `sex` vs. `species` of Palmer penguins
 :::
@@ -1765,7 +1876,7 @@ Below we'll look at the counts of `sex` vs. `species` of Palmer penguins
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
 First create labels! 
-```{r , eval=TRUE, echo=TRUE}
+```{r g8-ex-1, eval=TRUE, echo=TRUE}
 labs_sex_vs_species <- ggplot2::labs(
   title = "Sex by species of Palmer penguins",
   subtitle = "Counts for adult foraging penguins",
@@ -1774,7 +1885,7 @@ labs_sex_vs_species <- ggplot2::labs(
 ```
 <br> 
 Create `penguins_no_miss` by removing missing values
-```{r , eval=TRUE, echo=TRUE}
+```{r g8-ex-2, eval=TRUE, echo=TRUE}
 penguins_no_miss <- drop_na(data = penguins)
 ```
 :::
@@ -1787,7 +1898,7 @@ penguins_no_miss <- drop_na(data = penguins)
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
 View our data:
-```{r , eval=TRUE, echo=TRUE}
+```{r g8-sol, eval=TRUE, echo=TRUE}
 rmarkdown::paged_table(
   head(penguins_no_miss, 5))
 ```
@@ -1815,7 +1926,7 @@ Some `geom_*()`functions take the `fill` argument instead of `color`
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
 Build a bar-graph using `geom_bar()` by locally mapping `sex` to the `x` axis and `y` to `fill`  
-```{r , eval=FALSE, echo=TRUE}
+```{r g8-ex-3, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "4"
 ggplot(data = penguins_no_miss) +
   geom_bar(
@@ -1834,7 +1945,7 @@ Don't forget the labels!
 :::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-```{r , eval=TRUE, echo=FALSE}
+```{r g8-sol-1, eval=TRUE, echo=FALSE}
 ggplot(data = penguins_no_miss) +
   geom_bar(
     mapping = aes(x = sex,
@@ -1848,20 +1959,29 @@ ggplot(data = penguins_no_miss) +
 
 ## `graph 09`: Bar position
 
+. . .
+
+<br>
+
+::: {style="font-size: 0.85em;"}
+Stacked bar-graphs make it difficult to do side-by-side comparisons using the `y` axis
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Using the same code as graph 08, add the `position = "dodge"` argument outside the `aes()` function
+```{r g9-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "4"
+ggplot(data = penguins_no_miss) +
+  geom_bar(mapping = aes(x = sex,
+    fill = species),
+    position = "dodge") +
+  labs_sex_vs_species
 ```
 :::
 :::
@@ -1869,12 +1989,15 @@ More text
 ::::
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g9-sol-2, eval=TRUE, echo=FALSE}
+ggplot(data = penguins_no_miss) +
+  geom_bar(mapping = aes(x = sex,
+    fill = species),
+    position = "dodge") +
+  labs_sex_vs_species
 ```
 :::
 :::
@@ -1883,55 +2006,104 @@ Result
 
 ## `graph 10`: Histograms (special bar-graphs)
 
+<br>
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+The `geom_histogram()` function uses 'bins' to represent counts for each value
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
+
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Create new labels
+:::
+
+::: {style="font-size: 0.40em;"}
+```{r g10-ex-1, eval=TRUE, echo=TRUE}
+labs_bodymass_vs_species <- ggplot2::labs(
+  title = "Body mass by species of Palmer penguins",
+  subtitle = "Counts for adult foraging penguins",
+  x = "Body Mass (grams)",
+  fill = "Species")
 ```
 :::
+
+::: {style="font-size: 0.60em;"}
+Create a histogram of `body_mass_g`, colored (filled) by
+`species`
+```{r g10-ex-2, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "4-5"
+ggplot(data = penguins) +
+  geom_histogram(
+    mapping = aes(
+      x = body_mass_g,
+      fill = species)) +
+    labs_bodymass_vs_species
+```
+:::
+
 :::
 :::
 ::::
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
 Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g10-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins) +
+  geom_histogram(
+    mapping = aes(
+      x = body_mass_g,
+      fill = species)) +
+    labs_bodymass_vs_species
 ```
 :::
 :::
 ::::
+
 :::::
 
 ## `graph 11`: Density plots
 
+<br>
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+Density plots are also great for comparing overlapping distributions
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Create a density plot with `geom_density()` 
+
+Change the color saturation by setting `alpha` to `1/2`
+
+```{r g11-ex, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "6"
+ggplot(data = penguins) +
+  geom_density(
+  mapping = 
+      aes(x = body_mass_g,
+          fill = species),
+          alpha = 1/2) +
+    labs_bodymass_vs_species
 ```
 :::
 :::
@@ -1939,13 +2111,21 @@ More text
 ::::
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g11-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins) +
+  geom_density(
+  mapping = 
+      aes(x = body_mass_g,
+          fill = species),
+          alpha = 1/2) +
+    labs_bodymass_vs_species
 ```
+
+Also check out [ridgeline plots](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html)
+
 :::
 :::
 ::::
@@ -1955,38 +2135,143 @@ Result
 
 ## Mapping vs. setting (1 of 2)
 
+<br>
+
+::::: {.columns}
+:::: {.column width="49%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.70em;"}
+Variables are mapped to aesthetics *inside* `aes()`
+:::
+::: {style="font-size: 0.50em;"}
+```{r map-vs-set-1, eval=TRUE, echo=TRUE, fig.align='left'}
+#| code-line-numbers: "6"
+ggplot(data = penguins_no_miss) +
+  geom_point(
+    mapping = 
+      aes(x = bill_length_mm,
+          y = flipper_length_mm,
+          color = sex)) + # inside
+      labs_bill_vs_flippper
+```
+:::
+:::
+:::
+::::
+
+:::: {.column width="2%"}
+
+::::
+
+:::: {.column width="49%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+Values are set outside the `aes()` function 
+:::
+::: {style="font-size: 0.50em;"}
+```{r map-vs-set-2, eval=TRUE, echo=TRUE, fig.align='right'}
+#| code-line-numbers: "6"
+ggplot(data = penguins_no_miss) +
+  geom_point(
+    mapping = 
+      aes(x = bill_length_mm,
+          y = flipper_length_mm),
+          color = "dodgerblue") + # outside
+      labs_bill_vs_flippper
+```
+:::
+:::
+::::
+:::::
+
 ## Mapping vs. setting (2 of 2)
+
+<br>
+
+::: {style="font-size: 1.05em;"}
+From [ggplot2 book](https://ggplot2-book.org/layers.html#setting-mapping)
+:::
+
+. . .
+
+<br><br>
+
+> "*If you want appearance to be governed by a variable, put the specification inside `aes()`; if you want override the default size or colour, put the value outside of `aes()`.*"
+
 
 ## `graph 12`: Setting graph aesthetics
 
+<br>
+
+::: {style="font-size: 0.85em;"}
+Change the code below to make the points `"firebrick"` red
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
+
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Create labels
+:::
+
+::: {style="font-size: 0.40em;"}
+```{r g12-ex-1, eval=TRUE, echo=TRUE}
+labs_body_mass_vs_bill_depth <- ggplot2::labs(
+  title = "Body mass and bill depth of Palmer penguins",
+  subtitle = "Size measurements for adult foraging penguins",
+  x = "Body mass (mm)",
+  y = "Bill depth (mm)")
 ```
 :::
+
+
+::: {style="font-size: 0.60em;"}
+What color will the points be on this graph?
+:::
+
+::: {style="font-size: 0.60em;"}
+```{r g12-ex-2, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "6"
+ggplot(data = penguins) +
+  geom_point(
+    mapping = aes(
+      x = body_mass_g,
+      y = bill_depth_mm,
+      color = "firebrick")) +
+    labs_body_mass_vs_bill_depth
+```
+:::
+
 :::
 :::
 ::::
+
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g12-sol, eval=TRUE, echo=FALSE}
+ggplot(data = penguins) +
+  geom_point(
+    mapping = aes(
+      x = body_mass_g,
+      y = bill_depth_mm,
+      color = "firebrick")) +
+    labs_body_mass_vs_bill_depth
 ```
+
+::: {style="font-size: 0.80em;"}
+*TIP: the legend tells us `geom_point()` is looking for a mapped variable in the penguins dataset named `"firebrick"`*
+:::
+
 :::
 :::
 ::::
@@ -1996,33 +2281,59 @@ Result
 
 ## `graph 13`: New layer, new data, no problem
 
+. . .
+
+<br>
+
+::: {style="font-size: 0.80em;"}
+Each `geom_*()` function also has a `data` argument, so we can supply new data at each layer
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="49%"}
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Create a dataset of the max bill length and depth, body mass and flipper length (`big_penguins`):
+```{r big_penguins, eval=TRUE, echo=TRUE}
+big_penguins <- bind_rows(
+  slice_max(penguins, bill_length_mm, n = 1),
+  slice_max(penguins, bill_depth_mm, n = 1),
+  slice_max(penguins, flipper_length_mm, n = 1),
+  slice_max(penguins, body_mass_g, n = 1)
+)
 ```
 :::
 :::
 :::
 ::::
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+
+:::: {.column width="49%"}
 ::: {.fragment}
-::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+::: {style="font-size: 0.60em;"}
+Create data `label` and `source`
+:::
+::: {style="font-size: 0.40em;"}
+```{r label-source, eval=TRUE, echo=TRUE}
+big_penguins <- mutate(big_penguins,
+  label = case_when(
+    bill_length_mm == 59.6 ~ paste0("long bill = ", bill_length_mm),
+    bill_depth_mm == 21.5 ~ paste0("deep bill = ", bill_depth_mm),
+    flipper_length_mm == 231 ~ paste0("big flipper = ", flipper_length_mm),
+    body_mass_g == 6300 ~ paste0("big bird = ", body_mass_g)
+  ),
+  source = case_when(
+    bill_length_mm == 59.6 ~ "max bill length",
+    bill_depth_mm == 21.5 ~ "max bill depth",
+    flipper_length_mm == 231 ~ "max flipper length",
+    body_mass_g == 6300 ~ "max body mass"
+  )
+)
 ```
 :::
 :::
@@ -2031,35 +2342,94 @@ Result
 
 ## Our label dataset
 
+<br>
+
+::: {style="font-size: 0.85em;"}
+**Objective:** Create a scatter-plot to show the relationship between body
+mass, flipper length, and bill length.
+:::
+
+. . .
+
+```{r paged_table-big_penguins, eval=TRUE, echo=FALSE}
+rmarkdown::paged_table(big_penguins)
+```
+
+
 ## `graph 13`: Layer 1
 
+<br>
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+Create layer 1 with `penguins_no_miss` data and `geom_point()`
+:::
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
+
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Create labels
+:::
+
+::: {style="font-size: 0.43em;"}
+```{r g13-ex-1, eval=TRUE, echo=TRUE}
+labs_bodymass_bill_depth_flipper_length <- labs(
+  title = "Body mass, flipper length & bill depth",
+  subtitle = "Size measures Palmer penguins",
+  x = "Bill depth (mm)",
+  y = "Flipper length (mm)",
+  size = "Body mass (g)")
 ```
 :::
+
+::: {style="font-size: 0.60em;"}
+Assign `x`, `y`, `size`, and `alpha`
+:::
+
+::: {style="font-size: 0.50em;"}
+```{r g13-ex-2, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "5|6|7|8"
+ggp_13 <- ggplot(data = penguins_no_miss) +
+  # layer 1
+  geom_point(
+    mapping = 
+      aes(x = bill_depth_mm,
+          y = flipper_length_mm,
+          size = body_mass_g),
+      alpha = 1/2)
+ggp_13 +
+    # labels
+    labs_bodymass_bill_depth_flipper_length
+```
+:::
+
 :::
 :::
 ::::
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g13-sol, eval=TRUE, echo=FALSE}
+#| code-line-numbers: "5|6|7|8"
+ggp_13 <- ggplot(data = penguins_no_miss) +
+  # layer 1
+  geom_point(
+    mapping = 
+      aes(x = bill_depth_mm,
+          y = flipper_length_mm,
+          size = body_mass_g),
+      alpha = 1/2)
+ggp_13 +
+    # labels
+    labs_bodymass_bill_depth_flipper_length
 ```
 :::
 :::
@@ -2068,33 +2438,70 @@ Result
 
 ## `graph 14`: Layer 2  
 
+<br>
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+Create layer 2 with another `geom_point()` using `color` and `size`
+:::
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Use `scale_size()` to adjust point scaling
+:::
+
+::: {style="font-size: 0.55em;"}
+```{r g14-ex-1, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "9|10|12"
+ggp14 <- ggp_13 +
+  # layer 2
+  geom_point(
+    data = big_penguins,
+    mapping = aes(
+      x = bill_depth_mm,
+      y = flipper_length_mm,
+      # color by source
+      color = source,
+      size = body_mass_g)) +
+  # re-scale
+  scale_size(range = c(1, 5)) 
+ggp14 +
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
+
 :::
 :::
 ::::
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g14-sol, eval=TRUE, echo=FALSE}
+#| code-line-numbers: "9|10|12"
+ggp14 <- ggp_13 +
+  # layer 2
+  geom_point(
+    data = big_penguins,
+    mapping = aes(
+      x = bill_depth_mm,
+      y = flipper_length_mm,
+      # color by source
+      color = source,
+      size = body_mass_g)) +
+  # re-scale
+  scale_size(range = c(1, 5)) 
+ggp14 +
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
 :::
@@ -2103,20 +2510,38 @@ Result
 
 ## `graph 15`: Label 3 (max values)
 
+. . .
+
+<br>
+
+::: {style="font-size: 0.85em;"}
+Add layer 3 with the `geom_label_repel()` function from [`ggrepel`](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html)
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Add layer for `label`s in `big_penguins`
+:::
+
+::: {style="font-size: 0.55em;"}
+```{r g15-ex-1, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "|5|8"
+library(ggrepel)
+ggp15 <- ggp14 +
+  # layer 3
+  ggrepel::geom_label_repel(
+    data = big_penguins,
+    mapping = aes(x = bill_depth_mm,
+      y = flipper_length_mm,
+      label = label)) 
+ggp15 +
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
 :::
@@ -2124,12 +2549,22 @@ More text
 ::::
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g15-sol, eval=TRUE, echo=FALSE}
+#| code-line-numbers: "|5|8"
+library(ggrepel)
+ggp15 <- ggp14 +
+  # layer 3
+  ggrepel::geom_label_repel(
+    data = big_penguins,
+    mapping = aes(x = bill_depth_mm,
+      y = flipper_length_mm,
+      label = label)) 
+ggp15 +
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
 :::
@@ -2140,24 +2575,62 @@ Result
 
 ## Small multiples 
 
+<br>
+
+. . .
+
+From [ggplot2 book](https://ggplot2-book.org/facet.html)
+
+<br>
+
+. . .
+
+> "*Small multiples are a powerful tool for exploratory data analysis: you can rapidly compare patterns in different parts of the data and see whether they are the same or different.*"
+
 ## Facets = small multiples
 
-## `graph 16`: Facet by sex
+<br>
+
+::: {style="font-size: 0.85em;"}
+In the previous graph, we used multiple aesthetics (color, size, shape)
+:::
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+*Can we explore these relationships by sex or species?*
+:::
 
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
+Store graph 15 in `ggp_penguin_measures`
+:::
+::: {style="font-size: 0.55em;"}
+```{r g16-ex-1, eval=TRUE, echo=TRUE}
+ggp15_l1 <- ggplot(data = penguins_no_miss) +
+  geom_point(
+    mapping = aes(x = bill_depth_mm,
+      y = flipper_length_mm,
+      size = body_mass_g),
+    alpha = 1 / 3) 
 ```
+:::
+
+::: {style="font-size: 0.55em;"}
 <br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+```{r g16-ex-2, eval=TRUE, echo=TRUE}
+ggp_penguin_measures <- ggp15_l1 +
+  geom_point(data = big_penguins,
+    mapping = aes(
+      x = bill_depth_mm,
+      y = flipper_length_mm,
+      color = source,
+      size = body_mass_g), 
+    show.legend = FALSE) +
+  scale_size(range = c(1, 5))
 ```
 :::
 :::
@@ -2165,12 +2638,73 @@ More text
 ::::
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g16-sol, eval=TRUE, echo=FALSE}
+ggp_penguin_measures
+```
+:::
+:::
+::::
+:::::
+
+## `graph 16`: Facet by sex
+
+<br>
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+Use `facet_wrap()` to view our previous graph by `sex`
+:::
+
+<br>
+
+::::: {.columns}
+:::: {.column width="40%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 0.54em;"}
+
+`facet_wrap()` uses `. ~ [var]`
+
+```{r g16-ex-3, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "9"
+ggp_penguin_measures +
+  ggrepel::geom_label_repel(
+    data = big_penguins,
+    mapping = aes(
+      x = bill_depth_mm,
+      y = flipper_length_mm,
+      label = label),
+    size = 2) + # adjust size
+  facet_wrap(. ~ sex) + # facet by sex
+  # labels
+  labs_bodymass_bill_depth_flipper_length
+```
+:::
+:::
+:::
+::::
+:::: {.column width="2%"}
+::::
+:::: {.column width="58%"}
+::: {.fragment}
+::: {style="font-size: 0.70em;"}
+```{r g16-sol-2, eval=TRUE, echo=FALSE}
+#| code-line-numbers: "9"
+ggp_penguin_measures +
+  ggrepel::geom_label_repel(
+    data = big_penguins,
+    mapping = aes(
+      x = bill_depth_mm,
+      y = flipper_length_mm,
+      label = label),
+    size = 2) + # adjust size
+  facet_wrap(. ~ sex) + # facet by sex
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
 :::
@@ -2179,33 +2713,70 @@ Result
 
 ## `graph 17`: Facet by species
 
+<br>
+
+. . .
+
+::: {style="font-size: 0.85em;"}
+Change `facet_wrap()` to build graphs by `species` and add theme
+:::
+
+<br>
+
 ::::: {.columns}
-:::: {.column width="38%"}
+:::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
+
 ::: {style="font-size: 0.60em;"}
-<br>
-Some text 
-```{r , eval=FALSE, echo=TRUE}
-# some code 
-```
-<br> 
-More text 
-```{r , eval=FALSE, echo=TRUE}
-# more code 
+Change `facet_wrap()` to `~ species`  
+Add `theme_minimal()`  and labels  
+:::
+
+::: {style="font-size: 0.50em;"}
+```{r g17-ex-1, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "|9|11|13"
+ggp_penguin_measures +
+  ggrepel::geom_label_repel(
+    data = big_penguins,
+    mapping = aes(x = bill_depth_mm,
+      y = flipper_length_mm,
+      label = label),
+    size = 2) +
+  # change to species
+  facet_wrap(. ~ species) +
+  # add theme
+  theme_minimal() +
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
+
 :::
 :::
 ::::
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="60%"}
+
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
-```{r , eval=TRUE, echo=FALSE}
-# solution/result (no code, display only!)
+```{r g17-sol, eval=TRUE, echo=FALSE}
+ggp_penguin_measures +
+  ggrepel::geom_label_repel(
+    data = big_penguins,
+    mapping = aes(x = bill_depth_mm,
+      y = flipper_length_mm,
+      label = label),
+    size = 2
+  ) +
+  # change to species
+  facet_wrap(. ~ species) +
+  # add theme
+  theme_minimal() +
+  # labels
+  labs_bodymass_bill_depth_flipper_length
 ```
 :::
 :::
@@ -2214,10 +2785,47 @@ Result
 
 # Recap
 
-## What we've covered
+## What we've covered {.smaller}
+
+<br><br>
+
+::::: {.columns}
+:::: {.column width=50%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 1.25em;"}
+
+1. Build labels (*set your expectations*)    
+2. View data before building any graphs    
+3. Building graphs layer-by-layer (*data, mapping, geoms*)   
+  
+:::
+:::
+:::
+::::
+
+:::: {.column width="50%"}
+::: {.fragment}
+::: {.incremental}
+::: {style="font-size: 1.25em;"}
+
+4. Mapping variables to graph elements (*color, position, size, etc.*)       
+5. Extending graphs by combining layers      
+6. Using facets to explore relationships    
+
+:::
+:::
+:::
+::::
+:::::
 
 # Thanks!
 
+[Twitter @mjfrigaard](http://twitter.com/mjfrigaard)
+
+[GitHub @mjfrigaard](http://github.com/mjfrigaard)
+
+[Email @mjfrigaard](mailto:mjfrigaard@pm.me)
 
 
 

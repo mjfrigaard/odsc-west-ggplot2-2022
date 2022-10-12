@@ -9,3 +9,19 @@ This is a Quarto website. To learn more about Quarto websites visit <https://qua
 ## Slides
 
 I built the slides following the [excellent tutorial by Thomas Mock](https://jthomasmock.github.io/quarto-2hr-webinar/), and the very [thorough documentation](https://quarto.org/docs/reference/projects/websites.html). The themes were inspired by [Mine Çetinkaya-Rundel's post](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/).
+
+## Packages used:
+
+[`ggplot2`:](https://ggplot2.tidyverse.org/) For data visualizations
+
+[`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/) : for data
+
+[`dplyr`](https://dplyr.tidyverse.org/) : for data manipulations
+
+[`ggrepel`](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html) : labeling data points
+
+### Worth mentioning 
+
+[`patchwork`](https://patchwork.data-imaginist.com/) : for combining plots
+
+[`ggridges`](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html) : better density plots

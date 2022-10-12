@@ -837,30 +837,35 @@
 </div>
 </div>
 </div>
-</section></section>
-<section id="ggplot2-data" class="title-slide slide level1 smaller center">
-<h1><code>ggplot2</code>: data</h1>
+</section>
+<section id="ggplot2-data" class="slide level2">
+<h2><code>ggplot2</code>: data</h2>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 0.75em;">
 <p>The <strong>data layer</strong> consists of a rectangular object (like a spreadsheet) with columns and rows</p>
 </div>
-</div>
-<div class="fragment">
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:39%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.60em;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:53%;">
+</div><div class="column" style="width:59%;">
+<div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/data-layer.png" style="width:100.0%;height:100.0%"></p>
+<p><img data-src="../img/data-layer.png" style="width:95.0%;height:95.0%"></p>
 </figure>
 </div>
 </div>
@@ -868,33 +873,38 @@
 </div>
 </div>
 </div>
+</div>
 </section>
-
-<section id="ggplot2-mapping" class="title-slide slide level1 smaller center">
-<h1><code>ggplot2</code>: mapping</h1>
+<section id="ggplot2-mapping" class="slide level2">
+<h2><code>ggplot2</code>: mapping</h2>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 0.75em;">
 <p>The <strong>mapping layer</strong> assigns columns (variables) from the data to a visual property (i.e.&nbsp;graph ’<strong><code>aes</code></strong>’thetic)</p>
 </div>
-</div>
-<div class="fragment">
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:45%;">
+<div class="column" style="width:39%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.60em;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
 <span id="cb3-2"><a href="#cb3-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, </span>
 <span id="cb3-3"><a href="#cb3-3"></a>                <span class="at">y =</span> bill_length_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:53%;">
+</div><div class="column" style="width:59%;">
+<div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/mapping-layer.png" style="width:100.0%;height:100.0%"></p>
+<p><img data-src="../img/mapping-layer.png" style="width:95.0%;height:95.0%"></p>
 </figure>
 </div>
 </div>
@@ -902,34 +912,39 @@
 </div>
 </div>
 </div>
+</div>
 </section>
-
-<section id="ggplot2-geoms" class="title-slide slide level1 smaller center">
-<h1><code>ggplot2</code>: geoms</h1>
+<section id="ggplot2-geoms" class="slide level2">
+<h2><code>ggplot2</code>: geoms</h2>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 0.75em;">
 <p><code>geom_*()</code> functions include statistical transformations, shapes, and position adjustments for how to ‘draw’ the data on the graph</p>
 </div>
-</div>
-<div class="fragment">
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:46%;">
+<div class="column" style="width:39%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.60em;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
 <span id="cb4-2"><a href="#cb4-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, </span>
 <span id="cb4-3"><a href="#cb4-3"></a>                <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
 <span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:52%;">
+</div><div class="column" style="width:59%;">
+<div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/geom-layer.png" style="width:100.0%;height:100.0%"></p>
+<p><img data-src="../img/geom-layer.png" style="width:95.0%;height:95.0%"></p>
 </figure>
 </div>
 </div>
@@ -937,20 +952,21 @@
 </div>
 </div>
 </div>
+</div>
 </section>
-
-<section id="ggplot2-layers" class="title-slide slide level1 smaller center">
-<h1><code>ggplot2</code>: layers</h1>
+<section id="ggplot2-layers" class="slide level2">
+<h2><code>ggplot2</code>: layers</h2>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 0.75em;">
 <p>We can have multiple layers (data, mappings, geoms) in a single graph</p>
 </div>
-</div>
-<div class="fragment">
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:39%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.60em;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
 <span id="cb5-2"><a href="#cb5-2"></a> <span class="co"># layer 1</span></span>
@@ -965,14 +981,18 @@
 <span id="cb5-11"><a href="#cb5-11"></a>      <span class="at">y =</span> bill_length_mm,</span>
 <span id="cb5-12"><a href="#cb5-12"></a>      <span class="at">color =</span> species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:58%;">
+</div><div class="column" style="width:59%;">
+<div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/layers-layer.png" style="width:100.0%;height:100.0%"></p>
+<p><img data-src="../img/layers-layer.png" style="width:95.0%;height:95.0%"></p>
 </figure>
 </div>
 </div>
@@ -980,20 +1000,19 @@
 </div>
 </div>
 </div>
-</section>
-
-<section id="layers-infinitely-extensible" class="title-slide slide level1 smaller center">
+</div>
+</section></section>
+<section id="layers-infinitely-extensible" class="title-slide slide level1 center">
 <h1>Layers = infinitely extensible</h1>
-<p><br></p>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 0.85em;">
 <p><code>ggplot2</code> is a system for,</p>
 </div>
 </div>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 1.20em;">
 <blockquote>
 <p>“<em>making infinite use of finite means</em>” - <a href="https://en.wikipedia.org/wiki/Wilhelm_von_Humboldt">Wilhelm von Humboldt</a></p>
 </blockquote>
@@ -1001,29 +1020,33 @@
 </div>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.40em;">
+<div style="font-size: 0.85em;">
 <p><strong><em>With a finite number of objects &amp; functions, we can combine <code>ggplot2</code>’s grammar and syntax to create an infinite number of graphs!</em></strong></p>
 </div>
 </div>
 </section>
 
-<section id="ggplot2-templates" class="title-slide slide level1 smaller center">
+<section id="ggplot2-templates" class="title-slide slide level1 center">
 <h1><code>ggplot2</code>: templates</h1>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.25em;">
+<div style="font-size: 0.75em;">
 <p><strong>Basic Template</strong>: <span class="fragment fade-in">Data,</span> <span class="fragment fade-in">aesthetic mappings,</span> <span class="fragment fade-in">geom</span></p>
 </div>
 </div>
 <div class="fragment">
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:58%;">
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
+<div class="column" style="width:49%;">
+<div style="font-size: 0.62em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:49%;">
 <div class="cell" data-layout-align="right">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-right">
@@ -1038,11 +1061,11 @@
 </div>
 </section>
 
-<section id="ggplot2-more-templates" class="title-slide slide level1 smaller center">
+<section id="ggplot2-more-templates" class="title-slide slide level1 center">
 <h1><code>ggplot2</code>: more templates</h1>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.25em;">
+<div style="font-size: 0.75em;">
 <p><strong>Template + 1 Layer</strong>: <span class="fragment fade-in">more geoms</span> <span class="fragment fade-in">and more aesthetic mappings</span></p>
 </div>
 </div>
@@ -1050,9 +1073,13 @@
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:58%;">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
+<div style="font-size: 0.65em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:40%;">
@@ -1071,11 +1098,11 @@
 </section>
 
 <section>
-<section id="ggplot2-even-more" class="title-slide slide level1 smaller center">
+<section id="ggplot2-even-more" class="title-slide slide level1 center">
 <h1><code>ggplot2</code>: even more!</h1>
 <div class="fragment">
 <p><br></p>
-<div style="font-size: 1.25em;">
+<div style="font-size: 0.75em;">
 <p><strong>Template + 1 Layer + Facet Layer</strong>: <span class="fragment fade-in">template,</span> <span class="fragment fade-in">more aesthetic mappings,</span> <span class="fragment fade-in">and facets!</span></p>
 </div>
 </div>
@@ -1083,10 +1110,14 @@
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:58%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
+<div style="font-size: 0.65em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb8-4"><a href="#cb8-4"></a>    facet_<span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:40%;">
@@ -1103,25 +1134,33 @@
 </div>
 </div>
 </section>
-<section id="templates-infinitely-extensible" class="slide level2 smaller">
+<section id="templates-infinitely-extensible" class="slide level2">
 <h2>Templates = infinitely extensible!</h2>
-<p><br><br><br></p>
+<p><br></p>
 <div class="fragment">
 <p><strong>Themes</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb9-4"><a href="#cb9-4"></a>    facet_<span class="sc">*</span> <span class="sc">+</span></span>
 <span id="cb9-5"><a href="#cb9-5"></a>    theme_<span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+</div>
 <div class="fragment">
 <p><strong>Don’t forget labels!</strong></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
+<div style="font-size: 0.75em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>    geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a>    facet_<span class="sc">*</span> <span class="sc">+</span></span>
 <span id="cb10-5"><a href="#cb10-5"></a>    theme_<span class="sc">*</span> <span class="sc">+</span></span>
 <span id="cb10-6"><a href="#cb10-6"></a>    <span class="fu">labs</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </div>
 </section></section>
 <section id="part-2" class="title-slide slide level1 center" data-background-color="#1dfd07">
@@ -1476,8 +1515,8 @@
 <h1>The data</h1>
 
 </section>
-<section id="viewing-data-1-of-2" class="slide level2">
-<h2>Viewing data (1 of 2)</h2>
+<section id="viewing-data-1-of-3" class="slide level2">
+<h2>Viewing data (1 of 3)</h2>
 <div class="fragment">
 <p><br></p>
 <p><code>View()</code> opens the RStudio data viewer</p>
@@ -1488,42 +1527,94 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/rscloud-view-peng.png" style="width:100.0%;height:100.0%"></p>
+<p><img data-src="../img/rscloud-view-peng.png" style="width:70.0%;height:70.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="viewing-data-2-of-2" class="slide level2">
-<h2>Viewing data (2 of 2)</h2>
+<section id="viewing-data-2-of-3" class="slide level2">
+<h2>Viewing data (2 of 3)</h2>
 <div class="fragment">
 <p><br></p>
 <p><code>glimpse()</code> and <code>str()</code> are displayed in the console</p>
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:20%;">
 <div class="fragment">
 <div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img/rscloud-glimpse.png" style="width:100.0%;height:100.0%"></p>
-</figure>
+<div style="font-size: 0.60em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">glimpse</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:79%;">
 <div class="fragment">
+<div style="font-size: 0.50em;">
 <div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img/rscloud-str.png" style="width:100.0%;height:100.0%"></p>
-</figure>
+
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="viewing-data-3-of-3" class="slide level2">
+<h2>Viewing data (3 of 3)</h2>
+<div class="fragment">
+<p><br></p>
+<p><code>glimpse()</code> and <code>str()</code> are displayed in the console</p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:19%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.60em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">str</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:80%;">
+<div class="fragment">
+<div style="font-size: 0.50em;">
+<div class="cell" data-layout-align="center">
+
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
+ $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
+ $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+ $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+ $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+ $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+ $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
+ $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
 </div>
 </div>
 </div>
@@ -1566,12 +1657,12 @@
 <div class="fragment">
 <div style="font-size: 0.70em; color: #05ffa1;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># build labels</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>labs_bill_vs_flippper <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="at">title =</span> <span class="st">"Bill and flipper length of Palmer penguins"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4"></a>  <span class="at">subtitle =</span> <span class="st">"Size measurements for adult foraging penguins"</span>,</span>
-<span id="cb14-5"><a href="#cb14-5"></a>  <span class="at">x =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb14-6"><a href="#cb14-6"></a>  <span class="at">y =</span> <span class="st">"Flipper length (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># build labels</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>labs_bill_vs_flippper <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="at">title =</span> <span class="st">"Bill and flipper length of Palmer penguins"</span>,</span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="at">subtitle =</span> <span class="st">"Size measurements for adult foraging penguins"</span>,</span>
+<span id="cb18-5"><a href="#cb18-5"></a>  <span class="at">x =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb18-6"><a href="#cb18-6"></a>  <span class="at">y =</span> <span class="st">"Flipper length (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1583,7 +1674,9 @@
 <h2><code>graph 01</code>: Initialize plot with data</h2>
 <p><br></p>
 <div class="fragment">
+<div style="font-size: 0.80em;">
 <p>The <code>ggplot2::ggplot()</code> function initializes the plot:</p>
+</div>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:38%;">
@@ -1592,7 +1685,7 @@
 <div style="font-size: 0.60em;">
 <p><br> Place <code>penguins</code> in the <code>data</code> argument</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1612,14 +1705,15 @@
 </div>
 </div>
 </div>
-<p><br></p>
 </div>
 </section>
 <section id="graph-02-map-variables-to-positions" class="slide level2">
 <h2><code>graph 02</code>: Map variables to positions</h2>
 <p><br></p>
 <div class="fragment">
+<div style="font-size: 0.80em;">
 <p>We have our data and labels–we just need to add our variables!</p>
+</div>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1628,16 +1722,16 @@
 <div style="font-size: 0.60em;">
 <p><br> Map <code>bill_length_mm</code> to <code>x</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb16-2"><a href="#cb16-2"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, </span>
-<span id="cb16-3"><a href="#cb16-3"></a>  </span>
-<span id="cb16-4"><a href="#cb16-4"></a>            ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb20-2"><a href="#cb20-2"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, </span>
+<span id="cb20-3"><a href="#cb20-3"></a>  </span>
+<span id="cb20-4"><a href="#cb20-4"></a>            ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br> Map <code>flipper_length_mm</code> to <code>y</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb17-3"><a href="#cb17-3"></a>                <span class="at">y =</span> flipper_length_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb21-3"><a href="#cb21-3"></a>                <span class="at">y =</span> flipper_length_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1663,7 +1757,9 @@
 <h2><code>graph 03</code>: Adding geoms</h2>
 <div class="fragment">
 <p><br></p>
+<div style="font-size: 0.80em;">
 <p>Add the <code>geom_point()</code> function with the <code>+</code> symbol</p>
+</div>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1671,10 +1767,10 @@
 <div>
 <div style="font-size: 0.60em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb18-2"><a href="#cb18-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb18-3"><a href="#cb18-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb22-3"><a href="#cb22-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Don’t confuse this with the pipes (<code>|&gt;</code> or <code>%&gt;%</code>)</p>
@@ -1702,7 +1798,9 @@
 <h2><code>graph 04</code>: Don’t forget the labels!</h2>
 <div class="fragment">
 <p><br></p>
+<div style="font-size: 0.80em;">
 <p>Finally, we want to add the labels we created (<code>labs_bill_vs_flippper</code>)</p>
+</div>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="fragment">
@@ -1710,11 +1808,11 @@
 <div style="font-size: 0.60em;">
 <p><br> Add labels with <code>+</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb19-3"><a href="#cb19-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb23-3"><a href="#cb23-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1746,7 +1844,7 @@
 <div class="fragment">
 <p><br></p>
 <div style="font-size: 0.85em;">
-<p>We’ve just created a graph by setting global aesthetics</p>
+<p>The previous graphs mapped aesthetics globally</p>
 </div>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1754,10 +1852,11 @@
 <div>
 <div style="font-size: 0.60em;">
 <p><strong>Global</strong> = aesthetics are mapped when the graph is initialized with <code>ggplot()</code>:</p>
+<p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb20-3"><a href="#cb20-3"></a>                <span class="at">y =</span> flipper_length_mm)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb24-3"><a href="#cb24-3"></a>                <span class="at">y =</span> flipper_length_mm)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1797,11 +1896,11 @@
 <div>
 <div style="font-size: 0.60em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb21-3"><a href="#cb21-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a>    labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb25-3"><a href="#cb25-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>    labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="slides_files/figure-revealjs/local-map-ex-1.png" width="960"></p>
 </div>
@@ -1815,11 +1914,11 @@
 <div class="fragment">
 <div style="font-size: 0.60em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> </span>
-<span id="cb22-3"><a href="#cb22-3"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb22-4"><a href="#cb22-4"></a>          <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb22-5"><a href="#cb22-5"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> </span>
+<span id="cb26-3"><a href="#cb26-3"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb26-4"><a href="#cb26-4"></a>          <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="slides_files/figure-revealjs/local-map-sol-1.png" width="960"></p>
 </div>
@@ -1833,30 +1932,36 @@
 <section id="the-ggplot2-templates-refresher" class="slide level2">
 <h2>The <code>ggplot2</code> templates (refresher)</h2>
 <div class="fragment">
-<div style="font-size: 0.85em;">
+<p><br></p>
+<div style="font-size: 0.75em;">
 <p>The template from part 1 uses local mappings (i.e.&nbsp;aesthetic mappings are set inside the <code>geom_*</code> function).</p>
 </div>
 </div>
 <div class="fragment">
+<div style="font-size: 0.75em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Recall our template from Part 1</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a>  geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="co"># Recall our template from Part 1</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>  geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <div class="fragment">
-<div style="font-size: 0.85em;">
+<p><br></p>
+<div style="font-size: 0.75em;">
 <p>Below we’ve adjusted the template to include global mappings (and the option to include aesthetic mappings locally)</p>
 </div>
 </div>
 <div class="fragment">
+<div style="font-size: 0.75em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># Adjusted template</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>,</span>
-<span id="cb24-3"><a href="#cb24-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span> <span class="co"># global mappings</span></span>
-<span id="cb24-4"><a href="#cb24-4"></a>  geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="co"># local mappings</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="co"># Adjusted template</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="sc">&lt;</span>DATA<span class="sc">&gt;</span>,</span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="sc">+</span> <span class="co"># global mappings</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>  geom_<span class="sc">*</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="sc">&lt;</span>AESTHETIC MAPPINGS<span class="sc">&gt;</span>)) <span class="co"># local mappings</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div style="font-size: 0.85em;">
+</div>
+<div style="font-size: 0.65em;">
 <p>Read more <a href="https://ggplot2-book.org/collective-geoms.html#different-groups-on-different-layers">here.</a></p>
 </div>
 </div>
@@ -1865,7 +1970,9 @@
 <h2><code>graph 05</code>: Convert global to local mappings</h2>
 <p><br></p>
 <div class="fragment">
+<div style="font-size: 0.85em;">
 <p>For <code>graph-05.R</code>, convert the global aesthetics to local aesthetics inside the <code>geom_point()</code> function</p>
+</div>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:49%;">
@@ -1874,11 +1981,11 @@
 <div style="font-size: 0.60em;">
 <p>Global</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb25-2"><a href="#cb25-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb25-3"><a href="#cb25-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb25-5"><a href="#cb25-5"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb29-3"><a href="#cb29-3"></a>                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb29-5"><a href="#cb29-5"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1890,11 +1997,11 @@
 <div style="font-size: 0.60em;">
 <p>Local</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">geom_point</span>(<span class="at">mapping =</span> </span>
-<span id="cb26-3"><a href="#cb26-3"></a>    <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb26-4"><a href="#cb26-4"></a>        <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb26-5"><a href="#cb26-5"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="fu">geom_point</span>(<span class="at">mapping =</span> </span>
+<span id="cb30-3"><a href="#cb30-3"></a>    <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb30-4"><a href="#cb30-4"></a>        <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1942,7 +2049,9 @@
 <h2><code>graph 06</code>: Adding color (global)</h2>
 <div class="fragment">
 <p><br></p>
+<div style="font-size: 0.85em;">
 <p>Map <code>color</code> to the <code>species</code> variable using <strong>global</strong> aesthetic mapping:</p>
+</div>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="fragment">
@@ -1950,13 +2059,13 @@
 <div style="font-size: 0.70em;">
 <p><em>Inside</em> the <code>aes()</code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="at">mapping =</span></span>
-<span id="cb27-3"><a href="#cb27-3"></a>    <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb27-4"><a href="#cb27-4"></a>        <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb27-5"><a href="#cb27-5"></a>        <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb27-6"><a href="#cb27-6"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb27-7"><a href="#cb27-7"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb31-2"><a href="#cb31-2"></a>  <span class="at">mapping =</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>    <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb31-4"><a href="#cb31-4"></a>        <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb31-5"><a href="#cb31-5"></a>        <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb31-7"><a href="#cb31-7"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1968,7 +2077,7 @@
 <div style="font-size: 0.70em;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="slides_files/figure-revealjs/g6-sol-1.png" width="960"></p>
 </div>
 </div>
 <p><code>ggplot2</code> includes a legend by default</p>
@@ -1982,7 +2091,9 @@
 <h2><code>graph 07</code>: Adding color (local)</h2>
 <div class="fragment">
 <p><br></p>
+<div style="font-size: 0.85em;">
 <p>Map <code>color</code> to the <code>species</code> variable using <strong><em>local</em></strong> aesthetic mapping</p>
+</div>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="fragment">
@@ -1990,13 +2101,13 @@
 <div style="font-size: 0.60em;">
 <p>The <code>x</code> and <code>y</code> aesthetics are inherited from the <code>ggplot()</code> function…</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
-<span id="cb28-2"><a href="#cb28-2"></a>  <span class="at">mapping =</span></span>
-<span id="cb28-3"><a href="#cb28-3"></a>    <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb28-4"><a href="#cb28-4"></a>        <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb28-5"><a href="#cb28-5"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb28-6"><a href="#cb28-6"></a>    <span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb28-7"><a href="#cb28-7"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
+<span id="cb32-2"><a href="#cb32-2"></a>  <span class="at">mapping =</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a>    <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb32-4"><a href="#cb32-4"></a>        <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb32-6"><a href="#cb32-6"></a>    <span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb32-7"><a href="#cb32-7"></a>  labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2008,7 +2119,7 @@
 <div style="font-size: 0.60em;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<p><img data-src="slides_files/figure-revealjs/g7-sol-1.png" width="960"></p>
 </div>
 </div>
 <p>…but the <code>color</code> aesthetic comes from the <code>geom_point()</code> layer</p>
@@ -2021,6 +2132,7 @@
 <section id="graph-08-color-vs.-fill-1-of-2" class="slide level2">
 <h2><code>graph 08</code>: Color vs.&nbsp;Fill (1 of 2)</h2>
 <div class="fragment">
+<p><br></p>
 <div style="font-size: 0.85em;">
 <p>Below we’ll look at the counts of <code>sex</code> vs.&nbsp;<code>species</code> of Palmer penguins</p>
 </div>
@@ -2031,15 +2143,15 @@
 <div style="font-size: 0.60em;">
 <p>First create labels!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>labs_sex_vs_species <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
-<span id="cb29-2"><a href="#cb29-2"></a>  <span class="at">title =</span> <span class="st">"Sex by species of Palmer penguins"</span>,</span>
-<span id="cb29-3"><a href="#cb29-3"></a>  <span class="at">subtitle =</span> <span class="st">"Counts for adult foraging penguins"</span>,</span>
-<span id="cb29-4"><a href="#cb29-4"></a>  <span class="at">x =</span> <span class="st">"Sex"</span>,</span>
-<span id="cb29-5"><a href="#cb29-5"></a>  <span class="at">fill =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>labs_sex_vs_species <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb33-2"><a href="#cb33-2"></a>  <span class="at">title =</span> <span class="st">"Sex by species of Palmer penguins"</span>,</span>
+<span id="cb33-3"><a href="#cb33-3"></a>  <span class="at">subtitle =</span> <span class="st">"Counts for adult foraging penguins"</span>,</span>
+<span id="cb33-4"><a href="#cb33-4"></a>  <span class="at">x =</span> <span class="st">"Sex"</span>,</span>
+<span id="cb33-5"><a href="#cb33-5"></a>  <span class="at">fill =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br> Create <code>penguins_no_miss</code> by removing missing values</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>penguins_no_miss <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>penguins_no_miss <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2051,8 +2163,8 @@
 <div style="font-size: 0.70em;">
 <p>View our data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(</span>
-<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">head</span>(penguins_no_miss, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(</span>
+<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">head</span>(penguins_no_miss, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div data-pagedtable="false">
@@ -2083,11 +2195,11 @@
 <div style="font-size: 0.60em;">
 <p>Build a bar-graph using <code>geom_bar()</code> by locally mapping <code>sex</code> to the <code>x</code> axis and <code>y</code> to <code>fill</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">geom_bar</span>(</span>
-<span id="cb32-3"><a href="#cb32-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
-<span id="cb32-4"><a href="#cb32-4"></a>                  <span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb32-5"><a href="#cb32-5"></a>    labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">geom_bar</span>(</span>
+<span id="cb36-3"><a href="#cb36-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
+<span id="cb36-4"><a href="#cb36-4"></a>                  <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb36-5"><a href="#cb36-5"></a>    labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br> Don’t forget the labels!</p>
 </div>
@@ -2100,7 +2212,7 @@
 <div style="font-size: 0.70em;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="slides_files/figure-revealjs/g8-sol-1-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -2111,30 +2223,38 @@
 </section>
 <section id="graph-09-bar-position" class="slide level2">
 <h2><code>graph 09</code>: Bar position</h2>
+<div class="fragment">
+<p><br></p>
+<div style="font-size: 0.85em;">
+<p>Stacked bar-graphs make it difficult to do side-by-side comparisons using the <code>y</code> axis</p>
+</div>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
+<p>Using the same code as graph 08, add the <code>position = "dodge"</code> argument outside the <code>aes()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br> More text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
+<span id="cb37-3"><a href="#cb37-3"></a>    <span class="at">fill =</span> species),</span>
+<span id="cb37-4"><a href="#cb37-4"></a>    <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a>  labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g9-sol-2-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2143,30 +2263,52 @@
 </section>
 <section id="graph-10-histograms-special-bar-graphs" class="slide level2">
 <h2><code>graph 10</code>: Histograms (special bar-graphs)</h2>
+<p><br></p>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p>The <code>geom_histogram()</code> function uses ‘bins’ to represent counts for each value</p>
+</div>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create new labels</p>
 </div>
-<p><br> More text</p>
+<div style="font-size: 0.40em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>labs_bodymass_vs_species <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="at">title =</span> <span class="st">"Body mass by species of Palmer penguins"</span>,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="at">subtitle =</span> <span class="st">"Counts for adult foraging penguins"</span>,</span>
+<span id="cb38-4"><a href="#cb38-4"></a>  <span class="at">x =</span> <span class="st">"Body Mass (grams)"</span>,</span>
+<span id="cb38-5"><a href="#cb38-5"></a>  <span class="at">fill =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div style="font-size: 0.60em;">
+<p>Create a histogram of <code>body_mass_g</code>, colored (filled) by <code>species</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb39-3"><a href="#cb39-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb39-4"><a href="#cb39-4"></a>      <span class="at">x =</span> body_mass_g,</span>
+<span id="cb39-5"><a href="#cb39-5"></a>      <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb39-6"><a href="#cb39-6"></a>    labs_bodymass_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
 <p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g10-sol-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2175,30 +2317,42 @@
 </section>
 <section id="graph-11-density-plots" class="slide level2">
 <h2><code>graph 11</code>: Density plots</h2>
+<p><br></p>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p>Density plots are also great for comparing overlapping distributions</p>
+</div>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
+<p>Create a density plot with <code>geom_density()</code></p>
+<p>Change the color saturation by setting <code>alpha</code> to <code>1/2</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br> More text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb40-3"><a href="#cb40-3"></a>  <span class="at">mapping =</span> </span>
+<span id="cb40-4"><a href="#cb40-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g,</span>
+<span id="cb40-5"><a href="#cb40-5"></a>          <span class="at">fill =</span> species),</span>
+<span id="cb40-6"><a href="#cb40-6"></a>          <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb40-7"><a href="#cb40-7"></a>    labs_bodymass_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g11-sol-1.png" width="960"></p>
+</div>
+</div>
+<p>Also check out <a href="https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html">ridgeline plots</a></p>
 </div>
 </div>
 </div>
@@ -2212,36 +2366,127 @@
 </section>
 <section id="mapping-vs.-setting-1-of-2" class="slide level2">
 <h2>Mapping vs.&nbsp;setting (1 of 2)</h2>
-</section>
-<section id="mapping-vs.-setting-2-of-2" class="slide level2">
-<h2>Mapping vs.&nbsp;setting (2 of 2)</h2>
-</section>
-<section id="graph-12-setting-graph-aesthetics" class="slide level2">
-<h2><code>graph 12</code>: Setting graph aesthetics</h2>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:49%;">
 <div class="fragment">
 <div>
-<div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div style="font-size: 0.70em;">
+<p>Variables are mapped to aesthetics <em>inside</em> <code>aes()</code></p>
 </div>
-<p><br> More text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div style="font-size: 0.50em;">
+<div class="cell" data-layout-align="left">
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb41-3"><a href="#cb41-3"></a>    <span class="at">mapping =</span> </span>
+<span id="cb41-4"><a href="#cb41-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb41-5"><a href="#cb41-5"></a>          <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb41-6"><a href="#cb41-6"></a>          <span class="at">color =</span> sex)) <span class="sc">+</span> <span class="co"># inside</span></span>
+<span id="cb41-7"><a href="#cb41-7"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="slides_files/figure-revealjs/map-vs-set-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:49%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
+<p>Values are set outside the <code>aes()</code> function</p>
+</div>
+<div style="font-size: 0.50em;">
+<div class="cell" data-layout-align="right">
+<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb42-3"><a href="#cb42-3"></a>    <span class="at">mapping =</span> </span>
+<span id="cb42-4"><a href="#cb42-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb42-5"><a href="#cb42-5"></a>          <span class="at">y =</span> flipper_length_mm),</span>
+<span id="cb42-6"><a href="#cb42-6"></a>          <span class="at">color =</span> <span class="st">"dodgerblue"</span>) <span class="sc">+</span> <span class="co"># outside</span></span>
+<span id="cb42-7"><a href="#cb42-7"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="slides_files/figure-revealjs/map-vs-set-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="mapping-vs.-setting-2-of-2" class="slide level2">
+<h2>Mapping vs.&nbsp;setting (2 of 2)</h2>
+<p><br></p>
+<div style="font-size: 1.05em;">
+<p>From <a href="https://ggplot2-book.org/layers.html#setting-mapping">ggplot2 book</a></p>
+</div>
+<div class="fragment">
+<p><br><br></p>
+<blockquote>
+<p>“<em>If you want appearance to be governed by a variable, put the specification inside <code>aes()</code>; if you want override the default size or colour, put the value outside of <code>aes()</code>.</em>”</p>
+</blockquote>
+</div>
+</section>
+<section id="graph-12-setting-graph-aesthetics" class="slide level2">
+<h2><code>graph 12</code>: Setting graph aesthetics</h2>
+<p><br></p>
+<div style="font-size: 0.85em;">
+<p>Change the code below to make the points <code>"firebrick"</code> red</p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.60em;">
+<p>Create labels</p>
+</div>
+<div style="font-size: 0.40em;">
 <div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>labs_body_mass_vs_bill_depth <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb43-2"><a href="#cb43-2"></a>  <span class="at">title =</span> <span class="st">"Body mass and bill depth of Palmer penguins"</span>,</span>
+<span id="cb43-3"><a href="#cb43-3"></a>  <span class="at">subtitle =</span> <span class="st">"Size measurements for adult foraging penguins"</span>,</span>
+<span id="cb43-4"><a href="#cb43-4"></a>  <span class="at">x =</span> <span class="st">"Body mass (mm)"</span>,</span>
+<span id="cb43-5"><a href="#cb43-5"></a>  <span class="at">y =</span> <span class="st">"Bill depth (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div style="font-size: 0.60em;">
+<p>What color will the points be on this graph?</p>
+</div>
+<div style="font-size: 0.60em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb44-3"><a href="#cb44-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb44-4"><a href="#cb44-4"></a>      <span class="at">x =</span> body_mass_g,</span>
+<span id="cb44-5"><a href="#cb44-5"></a>      <span class="at">y =</span> bill_depth_mm,</span>
+<span id="cb44-6"><a href="#cb44-6"></a>      <span class="at">color =</span> <span class="st">"firebrick"</span>)) <span class="sc">+</span></span>
+<span id="cb44-7"><a href="#cb44-7"></a>    labs_body_mass_vs_bill_depth</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:2%;">
 
+</div><div class="column" style="width:58%;">
+<div class="fragment">
+<div style="font-size: 0.70em;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g12-sol-1.png" width="960"></p>
+</div>
+</div>
+<div style="font-size: 0.80em;">
+<p><em>TIP: the legend tells us <code>geom_point()</code> is looking for a mapped variable in the penguins dataset named <code>"firebrick"</code></em></p>
 </div>
 </div>
 </div>
@@ -2255,30 +2500,53 @@
 </section>
 <section id="graph-13-new-layer-new-data-no-problem" class="slide level2">
 <h2><code>graph 13</code>: New layer, new data, no problem</h2>
+<div class="fragment">
+<p><br></p>
+<div style="font-size: 0.80em;">
+<p>Each <code>geom_*()</code> function also has a <code>data</code> argument, so we can supply new data at each layer</p>
+</div>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:49%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
+<p>Create a dataset of the max bill length and depth, body mass and flipper length (<code>big_penguins</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br> More text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>big_penguins <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">slice_max</span>(penguins, bill_length_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
+<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">slice_max</span>(penguins, bill_depth_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
+<span id="cb45-4"><a href="#cb45-4"></a>  <span class="fu">slice_max</span>(penguins, flipper_length_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
+<span id="cb45-5"><a href="#cb45-5"></a>  <span class="fu">slice_max</span>(penguins, body_mass_g, <span class="at">n =</span> <span class="dv">1</span>)</span>
+<span id="cb45-6"><a href="#cb45-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:49%;">
 <div class="fragment">
-<div style="font-size: 0.70em;">
-<p>Result</p>
+<div style="font-size: 0.60em;">
+<p>Create data <code>label</code> and <code>source</code></p>
+</div>
+<div style="font-size: 0.40em;">
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>big_penguins <span class="ot">&lt;-</span> <span class="fu">mutate</span>(big_penguins,</span>
+<span id="cb46-2"><a href="#cb46-2"></a>  <span class="at">label =</span> <span class="fu">case_when</span>(</span>
+<span id="cb46-3"><a href="#cb46-3"></a>    bill_length_mm <span class="sc">==</span> <span class="fl">59.6</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"long bill = "</span>, bill_length_mm),</span>
+<span id="cb46-4"><a href="#cb46-4"></a>    bill_depth_mm <span class="sc">==</span> <span class="fl">21.5</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"deep bill = "</span>, bill_depth_mm),</span>
+<span id="cb46-5"><a href="#cb46-5"></a>    flipper_length_mm <span class="sc">==</span> <span class="dv">231</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"big flipper = "</span>, flipper_length_mm),</span>
+<span id="cb46-6"><a href="#cb46-6"></a>    body_mass_g <span class="sc">==</span> <span class="dv">6300</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"big bird = "</span>, body_mass_g)</span>
+<span id="cb46-7"><a href="#cb46-7"></a>  ),</span>
+<span id="cb46-8"><a href="#cb46-8"></a>  <span class="at">source =</span> <span class="fu">case_when</span>(</span>
+<span id="cb46-9"><a href="#cb46-9"></a>    bill_length_mm <span class="sc">==</span> <span class="fl">59.6</span> <span class="sc">~</span> <span class="st">"max bill length"</span>,</span>
+<span id="cb46-10"><a href="#cb46-10"></a>    bill_depth_mm <span class="sc">==</span> <span class="fl">21.5</span> <span class="sc">~</span> <span class="st">"max bill depth"</span>,</span>
+<span id="cb46-11"><a href="#cb46-11"></a>    flipper_length_mm <span class="sc">==</span> <span class="dv">231</span> <span class="sc">~</span> <span class="st">"max flipper length"</span>,</span>
+<span id="cb46-12"><a href="#cb46-12"></a>    body_mass_g <span class="sc">==</span> <span class="dv">6300</span> <span class="sc">~</span> <span class="st">"max body mass"</span></span>
+<span id="cb46-13"><a href="#cb46-13"></a>  )</span>
+<span id="cb46-14"><a href="#cb46-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -2287,33 +2555,77 @@
 </section>
 <section id="our-label-dataset" class="slide level2">
 <h2>Our label dataset</h2>
+<p><br></p>
+<div style="font-size: 0.85em;">
+<p><strong>Objective:</strong> Create a scatter-plot to show the relationship between body mass, flipper length, and bill length.</p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["species"],"name":[1],"type":["fct"],"align":["left"]},{"label":["island"],"name":[2],"type":["fct"],"align":["left"]},{"label":["bill_length_mm"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["bill_depth_mm"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["flipper_length_mm"],"name":[5],"type":["int"],"align":["right"]},{"label":["body_mass_g"],"name":[6],"type":["int"],"align":["right"]},{"label":["sex"],"name":[7],"type":["fct"],"align":["left"]},{"label":["year"],"name":[8],"type":["int"],"align":["right"]},{"label":["label"],"name":[9],"type":["chr"],"align":["left"]},{"label":["source"],"name":[10],"type":["chr"],"align":["left"]}],"data":[{"1":"Gentoo","2":"Biscoe","3":"59.6","4":"17.0","5":"230","6":"6050","7":"male","8":"2007","9":"long bill = 59.6","10":"max bill length"},{"1":"Adelie","2":"Torgersen","3":"46.0","4":"21.5","5":"194","6":"4200","7":"male","8":"2007","9":"deep bill = 21.5","10":"max bill depth"},{"1":"Gentoo","2":"Biscoe","3":"54.3","4":"15.7","5":"231","6":"5650","7":"male","8":"2008","9":"big flipper = 231","10":"max flipper length"},{"1":"Gentoo","2":"Biscoe","3":"49.2","4":"15.2","5":"221","6":"6300","7":"male","8":"2007","9":"big bird = 6300","10":"max body mass"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="graph-13-layer-1" class="slide level2">
 <h2><code>graph 13</code>: Layer 1</h2>
+<p><br></p>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p>Create layer 1 with <code>penguins_no_miss</code> data and <code>geom_point()</code></p>
+</div>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create labels</p>
 </div>
-<p><br> More text</p>
+<div style="font-size: 0.43em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>labs_bodymass_bill_depth_flipper_length <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
+<span id="cb47-2"><a href="#cb47-2"></a>  <span class="at">title =</span> <span class="st">"Body mass, flipper length &amp; bill depth"</span>,</span>
+<span id="cb47-3"><a href="#cb47-3"></a>  <span class="at">subtitle =</span> <span class="st">"Size measures Palmer penguins"</span>,</span>
+<span id="cb47-4"><a href="#cb47-4"></a>  <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>,</span>
+<span id="cb47-5"><a href="#cb47-5"></a>  <span class="at">y =</span> <span class="st">"Flipper length (mm)"</span>,</span>
+<span id="cb47-6"><a href="#cb47-6"></a>  <span class="at">size =</span> <span class="st">"Body mass (g)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div style="font-size: 0.60em;">
+<p>Assign <code>x</code>, <code>y</code>, <code>size</code>, and <code>alpha</code></p>
+</div>
+<div style="font-size: 0.50em;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48" data-code-line-numbers="5|6|7|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>ggp_13 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>  <span class="co"># layer 1</span></span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb48-4"><a href="#cb48-4"></a>    <span class="at">mapping =</span> </span>
+<span id="cb48-5"><a href="#cb48-5"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb48-6"><a href="#cb48-6"></a>          <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb48-7"><a href="#cb48-7"></a>          <span class="at">size =</span> body_mass_g),</span>
+<span id="cb48-8"><a href="#cb48-8"></a>      <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb48-9"><a href="#cb48-9"></a>ggp_13 <span class="sc">+</span></span>
+<span id="cb48-10"><a href="#cb48-10"></a>    <span class="co"># labels</span></span>
+<span id="cb48-11"><a href="#cb48-11"></a>    labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g13-sol-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2322,30 +2634,49 @@
 </section>
 <section id="graph-14-layer-2" class="slide level2">
 <h2><code>graph 14</code>: Layer 2</h2>
+<p><br></p>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p>Create layer 2 with another <code>geom_point()</code> using <code>color</code> and <code>size</code></p>
+</div>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use <code>scale_size()</code> to adjust point scaling</p>
 </div>
-<p><br> More text</p>
+<div style="font-size: 0.55em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="9|10|12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>ggp14 <span class="ot">&lt;-</span> ggp_13 <span class="sc">+</span></span>
+<span id="cb49-2"><a href="#cb49-2"></a>  <span class="co"># layer 2</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb49-4"><a href="#cb49-4"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb49-5"><a href="#cb49-5"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb49-6"><a href="#cb49-6"></a>      <span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb49-7"><a href="#cb49-7"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb49-8"><a href="#cb49-8"></a>      <span class="co"># color by source</span></span>
+<span id="cb49-9"><a href="#cb49-9"></a>      <span class="at">color =</span> source,</span>
+<span id="cb49-10"><a href="#cb49-10"></a>      <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb49-11"><a href="#cb49-11"></a>  <span class="co"># re-scale</span></span>
+<span id="cb49-12"><a href="#cb49-12"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>)) </span>
+<span id="cb49-13"><a href="#cb49-13"></a>ggp14 <span class="sc">+</span></span>
+<span id="cb49-14"><a href="#cb49-14"></a>  <span class="co"># labels</span></span>
+<span id="cb49-15"><a href="#cb49-15"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g14-sol-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2354,30 +2685,46 @@
 </section>
 <section id="graph-15-label-3-max-values" class="slide level2">
 <h2><code>graph 15</code>: Label 3 (max values)</h2>
+<div class="fragment">
+<p><br></p>
+<div style="font-size: 0.85em;">
+<p>Add layer 3 with the <code>geom_label_repel()</code> function from <a href="https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html"><code>ggrepel</code></a></p>
+</div>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add layer for <code>label</code>s in <code>big_penguins</code></p>
 </div>
-<p><br> More text</p>
+<div style="font-size: 0.55em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb50-2"><a href="#cb50-2"></a>ggp15 <span class="ot">&lt;-</span> ggp14 <span class="sc">+</span></span>
+<span id="cb50-3"><a href="#cb50-3"></a>  <span class="co"># layer 3</span></span>
+<span id="cb50-4"><a href="#cb50-4"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
+<span id="cb50-5"><a href="#cb50-5"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb50-6"><a href="#cb50-6"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb50-7"><a href="#cb50-7"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb50-8"><a href="#cb50-8"></a>      <span class="at">label =</span> label)) </span>
+<span id="cb50-9"><a href="#cb50-9"></a>ggp15 <span class="sc">+</span></span>
+<span id="cb50-10"><a href="#cb50-10"></a>  <span class="co"># labels</span></span>
+<span id="cb50-11"><a href="#cb50-11"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g15-sol-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2391,36 +2738,116 @@
 </section>
 <section id="small-multiples" class="slide level2">
 <h2>Small multiples</h2>
+<p><br></p>
+<div class="fragment">
+<p>From <a href="https://ggplot2-book.org/facet.html">ggplot2 book</a></p>
+<p><br></p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>“<em>Small multiples are a powerful tool for exploratory data analysis: you can rapidly compare patterns in different parts of the data and see whether they are the same or different.</em>”</p>
+</blockquote>
+</div>
 </section>
 <section id="facets-small-multiples" class="slide level2">
 <h2>Facets = small multiples</h2>
-</section>
-<section id="graph-16-facet-by-sex" class="slide level2">
-<h2><code>graph 16</code>: Facet by sex</h2>
+<p><br></p>
+<div style="font-size: 0.85em;">
+<p>In the previous graph, we used multiple aesthetics (color, size, shape)</p>
+</div>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p><em>Can we explore these relationships by sex or species?</em></p>
+</div>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Store graph 15 in <code>ggp_penguin_measures</code></p>
 </div>
-<p><br> More text</p>
+<div style="font-size: 0.55em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>ggp15_l1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb51-3"><a href="#cb51-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb51-4"><a href="#cb51-4"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb51-5"><a href="#cb51-5"></a>      <span class="at">size =</span> body_mass_g),</span>
+<span id="cb51-6"><a href="#cb51-6"></a>    <span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div style="font-size: 0.55em;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>ggp_penguin_measures <span class="ot">&lt;-</span> ggp15_l1 <span class="sc">+</span></span>
+<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> big_penguins,</span>
+<span id="cb52-3"><a href="#cb52-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb52-4"><a href="#cb52-4"></a>      <span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb52-5"><a href="#cb52-5"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb52-6"><a href="#cb52-6"></a>      <span class="at">color =</span> source,</span>
+<span id="cb52-7"><a href="#cb52-7"></a>      <span class="at">size =</span> body_mass_g), </span>
+<span id="cb52-8"><a href="#cb52-8"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb52-9"><a href="#cb52-9"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g16-sol-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="graph-16-facet-by-sex" class="slide level2">
+<h2><code>graph 16</code>: Facet by sex</h2>
+<p><br></p>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p>Use <code>facet_wrap()</code> to view our previous graph by <code>sex</code></p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment">
+<div>
+<div style="font-size: 0.54em;">
+<p><code>facet_wrap()</code> uses <code>. ~ [var]</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>ggp_penguin_measures <span class="sc">+</span></span>
+<span id="cb53-2"><a href="#cb53-2"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
+<span id="cb53-3"><a href="#cb53-3"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb53-4"><a href="#cb53-4"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb53-5"><a href="#cb53-5"></a>      <span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb53-6"><a href="#cb53-6"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb53-7"><a href="#cb53-7"></a>      <span class="at">label =</span> label),</span>
+<span id="cb53-8"><a href="#cb53-8"></a>    <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="co"># adjust size</span></span>
+<span id="cb53-9"><a href="#cb53-9"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> sex) <span class="sc">+</span> <span class="co"># facet by sex</span></span>
+<span id="cb53-10"><a href="#cb53-10"></a>  <span class="co"># labels</span></span>
+<span id="cb53-11"><a href="#cb53-11"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:2%;">
 
+</div><div class="column" style="width:58%;">
+<div class="fragment">
+<div style="font-size: 0.70em;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g16-sol-2-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2429,30 +2856,49 @@
 </section>
 <section id="graph-17-facet-by-species" class="slide level2">
 <h2><code>graph 17</code>: Facet by species</h2>
+<p><br></p>
+<div class="fragment">
+<div style="font-size: 0.85em;">
+<p>Change <code>facet_wrap()</code> to build graphs by <code>species</code> and add theme</p>
+</div>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:38%;">
+<div class="column" style="width:40%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
-<p><br> Some text</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="co"># some code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Change <code>facet_wrap()</code> to <code>~ species</code><br>
+Add <code>theme_minimal()</code> and labels</p>
 </div>
-<p><br> More text</p>
+<div style="font-size: 0.50em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="co"># more code </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="|9|11|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>ggp_penguin_measures <span class="sc">+</span></span>
+<span id="cb54-2"><a href="#cb54-2"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
+<span id="cb54-3"><a href="#cb54-3"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb54-4"><a href="#cb54-4"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb54-5"><a href="#cb54-5"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb54-6"><a href="#cb54-6"></a>      <span class="at">label =</span> label),</span>
+<span id="cb54-7"><a href="#cb54-7"></a>    <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb54-8"><a href="#cb54-8"></a>  <span class="co"># change to species</span></span>
+<span id="cb54-9"><a href="#cb54-9"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> species) <span class="sc">+</span></span>
+<span id="cb54-10"><a href="#cb54-10"></a>  <span class="co"># add theme</span></span>
+<span id="cb54-11"><a href="#cb54-11"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb54-12"><a href="#cb54-12"></a>  <span class="co"># labels</span></span>
+<span id="cb54-13"><a href="#cb54-13"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
-
+<div class="cell-output-display">
+<p><img data-src="slides_files/figure-revealjs/g17-sol-1.png" width="960"></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -2464,11 +2910,46 @@
 <h1>Recap</h1>
 
 </section>
-<section id="what-weve-covered" class="slide level2">
+<section id="what-weve-covered" class="slide level2 smaller">
 <h2>What we’ve covered</h2>
+<p><br><br></p>
+<div class="columns">
+<div class="column" style="width:50%&quot;;">
+<div class="fragment">
+<div>
+<div style="font-size: 1.25em;">
+<ol type="1">
+<li class="fragment">Build labels (<em>set your expectations</em>)<br>
+</li>
+<li class="fragment">View data before building any graphs<br>
+</li>
+<li class="fragment">Building graphs layer-by-layer (<em>data, mapping, geoms</em>)</li>
+</ol>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<div>
+<div style="font-size: 1.25em;">
+<ol start="4" type="1">
+<li class="fragment">Mapping variables to graph elements (<em>color, position, size, etc.</em>)<br>
+</li>
+<li class="fragment">Extending graphs by combining layers<br>
+</li>
+<li class="fragment">Using facets to explore relationships</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section id="thanks" class="title-slide slide level1 center">
 <h1>Thanks!</h1>
+<p><a href="http://twitter.com/mjfrigaard">Twitter <span class="citation" data-cites="mjfrigaard">@mjfrigaard</span></a></p>
+<p><a href="http://github.com/mjfrigaard">GitHub <span class="citation" data-cites="mjfrigaard">@mjfrigaard</span></a></p>
+<p><a href="mailto:mjfrigaard@pm.me">Email <span class="citation" data-cites="mjfrigaard">@mjfrigaard</span></a></p>
 
 
 <img src="../img/ODSC_Logo_2020.png" class="slide-logo r-stretch"><div class="footer footer-default">
