@@ -384,9 +384,6 @@
       margin-right: 0; 
     }
   </style>
-  
-  <link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-  <script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -871,7 +868,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/data-layer.png" style="width:95.0%;height:95.0%"></p>
+<p><img data-src="../img/data-layer.png" style="width:75.0%;height:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -910,7 +907,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/mapping-layer.png" style="width:95.0%;height:95.0%"></p>
+<p><img data-src="../img/mapping-layer.png" style="width:75.0%;height:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -951,7 +948,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/geom-layer.png" style="width:95.0%;height:95.0%"></p>
+<p><img data-src="../img/geom-layer.png" style="width:75.0%;height:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -999,7 +996,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/layers-layer.png" style="width:95.0%;height:95.0%"></p>
+<p><img data-src="../img/layers-layer.png" style="width:75.0%;height:75.0%"></p>
 </figure>
 </div>
 </div>
@@ -1125,14 +1122,14 @@
 <span id="cb8-4"><a href="#cb8-4"></a>    facet_<span class="sc">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div><div class="column" style="width:2%;">
+</div><div class="column" style="width:1%;">
 
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:41%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img/ggplot2-3layers-dark.png" style="width:60.0%;height:60.0%"></p>
+<p><img data-src="../img/ggplot2-3layers-dark.png" style="width:50.0%;height:50.0%"></p>
 </figure>
 </div>
 </div>
@@ -2071,7 +2068,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div class="column" style="width:40%;">
 <div class="fragment">
 <div>
-<div style="font-size: 0.70em;">
+<div style="font-size: 0.60em;">
 <p><em>Inside</em> the <code>aes()</code> function:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb31" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins,</span>
@@ -2087,7 +2084,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
 <div class="cell">
@@ -2152,11 +2149,13 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>Below we’ll look at the counts of <code>sex</code> vs.&nbsp;<code>species</code> of Palmer penguins</p>
 </div>
 <div class="columns">
-<div class="column" style="width:55%;">
+<div class="column" style="width:49%;">
 <div class="fragment">
 <div>
 <div style="font-size: 0.60em;">
 <p>First create labels!</p>
+</div>
+<div style="font-size: 0.55em;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>labs_sex_vs_species <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
 <span id="cb33-2"><a href="#cb33-2"></a>  <span class="at">title =</span> <span class="st">"Sex by species of Palmer penguins"</span>,</span>
@@ -2164,7 +2163,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <span id="cb33-4"><a href="#cb33-4"></a>  <span class="at">x =</span> <span class="st">"Sex"</span>,</span>
 <span id="cb33-5"><a href="#cb33-5"></a>  <span class="at">fill =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br> Create <code>penguins_no_miss</code> by removing missing values</p>
+</div>
+<div style="font-size: 0.60em;">
+<p>Create <code>penguins_no_miss</code> by removing missing values</p>
+</div>
+<div style="font-size: 0.55em;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>penguins_no_miss <span class="ot">&lt;-</span> <span class="fu">drop_na</span>(<span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2173,20 +2176,23 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:43%;">
+</div><div class="column" style="width:49%;">
 <div class="fragment">
-<div style="font-size: 0.70em;">
+<div style="font-size: 0.60em;">
 <p>View our data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(</span>
-<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">head</span>(penguins_no_miss, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["species"],"name":[1],"type":["fct"],"align":["left"]},{"label":["island"],"name":[2],"type":["fct"],"align":["left"]},{"label":["bill_length_mm"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["bill_depth_mm"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["flipper_length_mm"],"name":[5],"type":["int"],"align":["right"]},{"label":["body_mass_g"],"name":[6],"type":["int"],"align":["right"]},{"label":["sex"],"name":[7],"type":["fct"],"align":["left"]},{"label":["year"],"name":[8],"type":["int"],"align":["right"]}],"data":[{"1":"Adelie","2":"Torgersen","3":"39.1","4":"18.7","5":"181","6":"3750","7":"male","8":"2007"},{"1":"Adelie","2":"Torgersen","3":"39.5","4":"17.4","5":"186","6":"3800","7":"female","8":"2007"},{"1":"Adelie","2":"Torgersen","3":"40.3","4":"18.0","5":"195","6":"3250","7":"female","8":"2007"},{"1":"Adelie","2":"Torgersen","3":"36.7","4":"19.3","5":"193","6":"3450","7":"female","8":"2007"},{"1":"Adelie","2":"Torgersen","3":"39.3","4":"20.6","5":"190","6":"3650","7":"male","8":"2007"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">glimpse</span>(penguins_no_miss, <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 333
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie…
+$ island            &lt;fct&gt; Torgersen, Torgersen, …
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, 36.7…
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, 19.3…
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, 193, 19…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, 3450…
+$ sex               &lt;fct&gt; male, female, female, …
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007…</code></pre>
 </div>
 </div>
 </div>
@@ -2210,11 +2216,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div style="font-size: 0.60em;">
 <p>Build a bar-graph using <code>geom_bar()</code> by locally mapping <code>sex</code> to the <code>x</code> axis and <code>y</code> to <code>fill</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">geom_bar</span>(</span>
-<span id="cb36-3"><a href="#cb36-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
-<span id="cb36-4"><a href="#cb36-4"></a>                  <span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb36-5"><a href="#cb36-5"></a>    labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> </span>
+<span id="cb37-3"><a href="#cb37-3"></a>      <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
+<span id="cb37-4"><a href="#cb37-4"></a>      <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a>    labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br> Don’t forget the labels!</p>
 </div>
@@ -2251,11 +2257,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div style="font-size: 0.60em;">
 <p>Using the same code as graph 08, add the <code>position = "dodge"</code> argument outside the <code>aes()</code> function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
-<span id="cb37-3"><a href="#cb37-3"></a>    <span class="at">fill =</span> species),</span>
-<span id="cb37-4"><a href="#cb37-4"></a>    <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
-<span id="cb37-5"><a href="#cb37-5"></a>  labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> sex,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>    <span class="at">fill =</span> species),</span>
+<span id="cb38-4"><a href="#cb38-4"></a>    <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb38-5"><a href="#cb38-5"></a>  labs_sex_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2293,22 +2299,22 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.40em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>labs_bodymass_vs_species <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
-<span id="cb38-2"><a href="#cb38-2"></a>  <span class="at">title =</span> <span class="st">"Body mass by species of Palmer penguins"</span>,</span>
-<span id="cb38-3"><a href="#cb38-3"></a>  <span class="at">subtitle =</span> <span class="st">"Counts for adult foraging penguins"</span>,</span>
-<span id="cb38-4"><a href="#cb38-4"></a>  <span class="at">x =</span> <span class="st">"Body Mass (grams)"</span>,</span>
-<span id="cb38-5"><a href="#cb38-5"></a>  <span class="at">fill =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>labs_bodymass_vs_species <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb39-2"><a href="#cb39-2"></a>  <span class="at">title =</span> <span class="st">"Body mass by species of Palmer penguins"</span>,</span>
+<span id="cb39-3"><a href="#cb39-3"></a>  <span class="at">subtitle =</span> <span class="st">"Counts for adult foraging penguins"</span>,</span>
+<span id="cb39-4"><a href="#cb39-4"></a>  <span class="at">x =</span> <span class="st">"Body Mass (grams)"</span>,</span>
+<span id="cb39-5"><a href="#cb39-5"></a>  <span class="at">fill =</span> <span class="st">"Species"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div style="font-size: 0.60em;">
 <p>Create a histogram of <code>body_mass_g</code>, colored (filled) by <code>species</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">geom_histogram</span>(</span>
-<span id="cb39-3"><a href="#cb39-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb39-4"><a href="#cb39-4"></a>      <span class="at">x =</span> body_mass_g,</span>
-<span id="cb39-5"><a href="#cb39-5"></a>      <span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb39-6"><a href="#cb39-6"></a>    labs_bodymass_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="|4|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">geom_histogram</span>(</span>
+<span id="cb40-3"><a href="#cb40-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb40-4"><a href="#cb40-4"></a>      <span class="at">x =</span> body_mass_g,</span>
+<span id="cb40-5"><a href="#cb40-5"></a>      <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb40-6"><a href="#cb40-6"></a>    labs_bodymass_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2318,7 +2324,6 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div><div class="column" style="width:58%;">
 <div class="fragment">
 <div style="font-size: 0.70em;">
-<p>Result</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img data-src="slides_files/figure-revealjs/g10-sol-1.png" width="960"></p>
@@ -2344,15 +2349,15 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div>
 <div style="font-size: 0.60em;">
 <p>Create a density plot with <code>geom_density()</code></p>
-<p>Change the color saturation by setting <code>alpha</code> to <code>1/2</code></p>
+<p>Set the <code>alpha</code> (color saturation) to <code>1/2</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
-<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">geom_density</span>(</span>
-<span id="cb40-3"><a href="#cb40-3"></a>  <span class="at">mapping =</span> </span>
-<span id="cb40-4"><a href="#cb40-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g,</span>
-<span id="cb40-5"><a href="#cb40-5"></a>          <span class="at">fill =</span> species),</span>
-<span id="cb40-6"><a href="#cb40-6"></a>          <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb40-7"><a href="#cb40-7"></a>    labs_bodymass_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a>  <span class="fu">geom_density</span>(</span>
+<span id="cb41-3"><a href="#cb41-3"></a>  <span class="at">mapping =</span> </span>
+<span id="cb41-4"><a href="#cb41-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g,</span>
+<span id="cb41-5"><a href="#cb41-5"></a>          <span class="at">fill =</span> species),</span>
+<span id="cb41-6"><a href="#cb41-6"></a>          <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb41-7"><a href="#cb41-7"></a>    labs_bodymass_vs_species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2391,13 +2396,13 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.50em;">
 <div class="cell" data-layout-align="left">
-<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb41-3"><a href="#cb41-3"></a>    <span class="at">mapping =</span> </span>
-<span id="cb41-4"><a href="#cb41-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb41-5"><a href="#cb41-5"></a>          <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb41-6"><a href="#cb41-6"></a>          <span class="at">color =</span> sex)) <span class="sc">+</span> <span class="co"># inside</span></span>
-<span id="cb41-7"><a href="#cb41-7"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb42-3"><a href="#cb42-3"></a>    <span class="at">mapping =</span> </span>
+<span id="cb42-4"><a href="#cb42-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb42-5"><a href="#cb42-5"></a>          <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb42-6"><a href="#cb42-6"></a>          <span class="at">color =</span> sex)) <span class="sc">+</span> <span class="co"># inside</span></span>
+<span id="cb42-7"><a href="#cb42-7"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-left">
 <figure>
@@ -2418,13 +2423,13 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.50em;">
 <div class="cell" data-layout-align="right">
-<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb42-3"><a href="#cb42-3"></a>    <span class="at">mapping =</span> </span>
-<span id="cb42-4"><a href="#cb42-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
-<span id="cb42-5"><a href="#cb42-5"></a>          <span class="at">y =</span> flipper_length_mm),</span>
-<span id="cb42-6"><a href="#cb42-6"></a>          <span class="at">color =</span> <span class="st">"dodgerblue"</span>) <span class="sc">+</span> <span class="co"># outside</span></span>
-<span id="cb42-7"><a href="#cb42-7"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb43-2"><a href="#cb43-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb43-3"><a href="#cb43-3"></a>    <span class="at">mapping =</span> </span>
+<span id="cb43-4"><a href="#cb43-4"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm,</span>
+<span id="cb43-5"><a href="#cb43-5"></a>          <span class="at">y =</span> flipper_length_mm),</span>
+<span id="cb43-6"><a href="#cb43-6"></a>          <span class="at">color =</span> <span class="st">"dodgerblue"</span>) <span class="sc">+</span> <span class="co"># outside</span></span>
+<span id="cb43-7"><a href="#cb43-7"></a>      labs_bill_vs_flippper</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-right">
 <figure>
@@ -2467,11 +2472,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.37em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>labs_body_mass_vs_bill_depth <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
-<span id="cb43-2"><a href="#cb43-2"></a>  <span class="at">title =</span> <span class="st">"Body mass and bill depth of Palmer penguins"</span>,</span>
-<span id="cb43-3"><a href="#cb43-3"></a>  <span class="at">subtitle =</span> <span class="st">"Size measurements for adult foraging penguins"</span>,</span>
-<span id="cb43-4"><a href="#cb43-4"></a>  <span class="at">x =</span> <span class="st">"Body mass (mm)"</span>,</span>
-<span id="cb43-5"><a href="#cb43-5"></a>  <span class="at">y =</span> <span class="st">"Bill depth (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>labs_body_mass_vs_bill_depth <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">labs</span>(</span>
+<span id="cb44-2"><a href="#cb44-2"></a>  <span class="at">title =</span> <span class="st">"Body mass and bill depth of Palmer penguins"</span>,</span>
+<span id="cb44-3"><a href="#cb44-3"></a>  <span class="at">subtitle =</span> <span class="st">"Size measurements for adult foraging penguins"</span>,</span>
+<span id="cb44-4"><a href="#cb44-4"></a>  <span class="at">x =</span> <span class="st">"Body mass (mm)"</span>,</span>
+<span id="cb44-5"><a href="#cb44-5"></a>  <span class="at">y =</span> <span class="st">"Bill depth (mm)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div style="font-size: 0.60em;">
@@ -2479,13 +2484,13 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.60em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
-<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb44-3"><a href="#cb44-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb44-4"><a href="#cb44-4"></a>      <span class="at">x =</span> body_mass_g,</span>
-<span id="cb44-5"><a href="#cb44-5"></a>      <span class="at">y =</span> bill_depth_mm,</span>
-<span id="cb44-6"><a href="#cb44-6"></a>      <span class="at">color =</span> <span class="st">"firebrick"</span>)) <span class="sc">+</span></span>
-<span id="cb44-7"><a href="#cb44-7"></a>    labs_body_mass_vs_bill_depth</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins) <span class="sc">+</span></span>
+<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb45-3"><a href="#cb45-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb45-4"><a href="#cb45-4"></a>      <span class="at">x =</span> body_mass_g,</span>
+<span id="cb45-5"><a href="#cb45-5"></a>      <span class="at">y =</span> bill_depth_mm,</span>
+<span id="cb45-6"><a href="#cb45-6"></a>      <span class="at">color =</span> <span class="st">"firebrick"</span>)) <span class="sc">+</span></span>
+<span id="cb45-7"><a href="#cb45-7"></a>    labs_body_mass_vs_bill_depth</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2530,12 +2535,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.50em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>big_penguins <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
-<span id="cb45-2"><a href="#cb45-2"></a>  <span class="fu">slice_max</span>(penguins, bill_length_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
-<span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">slice_max</span>(penguins, bill_depth_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
-<span id="cb45-4"><a href="#cb45-4"></a>  <span class="fu">slice_max</span>(penguins, flipper_length_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
-<span id="cb45-5"><a href="#cb45-5"></a>  <span class="fu">slice_max</span>(penguins, body_mass_g, <span class="at">n =</span> <span class="dv">1</span>)</span>
-<span id="cb45-6"><a href="#cb45-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>big_penguins <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb46-2"><a href="#cb46-2"></a>  <span class="fu">slice_max</span>(penguins, bill_length_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">slice_max</span>(penguins, bill_depth_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
+<span id="cb46-4"><a href="#cb46-4"></a>  <span class="fu">slice_max</span>(penguins, flipper_length_mm, <span class="at">n =</span> <span class="dv">1</span>),</span>
+<span id="cb46-5"><a href="#cb46-5"></a>  <span class="fu">slice_max</span>(penguins, body_mass_g, <span class="at">n =</span> <span class="dv">1</span>)</span>
+<span id="cb46-6"><a href="#cb46-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2549,17 +2554,17 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.37em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>big_penguins <span class="ot">&lt;-</span> <span class="fu">mutate</span>(big_penguins,</span>
-<span id="cb46-2"><a href="#cb46-2"></a> <span class="at">label =</span> <span class="fu">case_when</span>(</span>
-<span id="cb46-3"><a href="#cb46-3"></a>  bill_length_mm <span class="sc">==</span> <span class="fl">59.6</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"long bill = "</span>, bill_length_mm),</span>
-<span id="cb46-4"><a href="#cb46-4"></a>  bill_depth_mm <span class="sc">==</span> <span class="fl">21.5</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"deep bill = "</span>, bill_depth_mm),</span>
-<span id="cb46-5"><a href="#cb46-5"></a>  flipper_length_mm <span class="sc">==</span> <span class="dv">231</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"big flipper = "</span>, flipper_length_mm),</span>
-<span id="cb46-6"><a href="#cb46-6"></a>  body_mass_g <span class="sc">==</span> <span class="dv">6300</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"big bird = "</span>, body_mass_g)),</span>
-<span id="cb46-7"><a href="#cb46-7"></a> <span class="at">source =</span> <span class="fu">case_when</span>(</span>
-<span id="cb46-8"><a href="#cb46-8"></a>  bill_length_mm <span class="sc">==</span> <span class="fl">59.6</span> <span class="sc">~</span> <span class="st">"max bill length"</span>,</span>
-<span id="cb46-9"><a href="#cb46-9"></a>  bill_depth_mm <span class="sc">==</span> <span class="fl">21.5</span> <span class="sc">~</span> <span class="st">"max bill depth"</span>,</span>
-<span id="cb46-10"><a href="#cb46-10"></a>  flipper_length_mm <span class="sc">==</span> <span class="dv">231</span> <span class="sc">~</span> <span class="st">"max flipper length"</span>,</span>
-<span id="cb46-11"><a href="#cb46-11"></a>  body_mass_g <span class="sc">==</span> <span class="dv">6300</span> <span class="sc">~</span> <span class="st">"max body mass"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>big_penguins <span class="ot">&lt;-</span> <span class="fu">mutate</span>(big_penguins,</span>
+<span id="cb47-2"><a href="#cb47-2"></a> <span class="at">label =</span> <span class="fu">case_when</span>(</span>
+<span id="cb47-3"><a href="#cb47-3"></a>  bill_length_mm <span class="sc">==</span> <span class="fl">59.6</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"long bill = "</span>, bill_length_mm),</span>
+<span id="cb47-4"><a href="#cb47-4"></a>  bill_depth_mm <span class="sc">==</span> <span class="fl">21.5</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"deep bill = "</span>, bill_depth_mm),</span>
+<span id="cb47-5"><a href="#cb47-5"></a>  flipper_length_mm <span class="sc">==</span> <span class="dv">231</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"big flipper = "</span>, flipper_length_mm),</span>
+<span id="cb47-6"><a href="#cb47-6"></a>  body_mass_g <span class="sc">==</span> <span class="dv">6300</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"big bird = "</span>, body_mass_g)),</span>
+<span id="cb47-7"><a href="#cb47-7"></a> <span class="at">source =</span> <span class="fu">case_when</span>(</span>
+<span id="cb47-8"><a href="#cb47-8"></a>  bill_length_mm <span class="sc">==</span> <span class="fl">59.6</span> <span class="sc">~</span> <span class="st">"max bill length"</span>,</span>
+<span id="cb47-9"><a href="#cb47-9"></a>  bill_depth_mm <span class="sc">==</span> <span class="fl">21.5</span> <span class="sc">~</span> <span class="st">"max bill depth"</span>,</span>
+<span id="cb47-10"><a href="#cb47-10"></a>  flipper_length_mm <span class="sc">==</span> <span class="dv">231</span> <span class="sc">~</span> <span class="st">"max flipper length"</span>,</span>
+<span id="cb47-11"><a href="#cb47-11"></a>  body_mass_g <span class="sc">==</span> <span class="dv">6300</span> <span class="sc">~</span> <span class="st">"max body mass"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2577,10 +2582,432 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div class="cell">
 <div class="cell-output-display">
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["species"],"name":[1],"type":["fct"],"align":["left"]},{"label":["island"],"name":[2],"type":["fct"],"align":["left"]},{"label":["bill_length_mm"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["bill_depth_mm"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["flipper_length_mm"],"name":[5],"type":["int"],"align":["right"]},{"label":["body_mass_g"],"name":[6],"type":["int"],"align":["right"]},{"label":["sex"],"name":[7],"type":["fct"],"align":["left"]},{"label":["year"],"name":[8],"type":["int"],"align":["right"]},{"label":["label"],"name":[9],"type":["chr"],"align":["left"]},{"label":["source"],"name":[10],"type":["chr"],"align":["left"]}],"data":[{"1":"Gentoo","2":"Biscoe","3":"59.6","4":"17.0","5":"230","6":"6050","7":"male","8":"2007","9":"long bill = 59.6","10":"max bill length"},{"1":"Adelie","2":"Torgersen","3":"46.0","4":"21.5","5":"194","6":"4200","7":"male","8":"2007","9":"deep bill = 21.5","10":"max bill depth"},{"1":"Gentoo","2":"Biscoe","3":"54.3","4":"15.7","5":"231","6":"5650","7":"male","8":"2008","9":"big flipper = 231","10":"max flipper length"},{"1":"Gentoo","2":"Biscoe","3":"49.2","4":"15.2","5":"221","6":"6300","7":"male","8":"2007","9":"big bird = 6300","10":"max body mass"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
+<div id="ripzlxveku" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#ripzlxveku) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#ripzlxveku) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#ripzlxveku) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#ripzlxveku) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#ripzlxveku) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#ripzlxveku) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#ripzlxveku) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#ripzlxveku) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#ripzlxveku) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#ripzlxveku) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#ripzlxveku) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#ripzlxveku) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#ripzlxveku) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#ripzlxveku) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#ripzlxveku) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#ripzlxveku) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#ripzlxveku) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#ripzlxveku) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#ripzlxveku) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#ripzlxveku) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#ripzlxveku) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#ripzlxveku) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#ripzlxveku) .gt_left {
+  text-align: left;
+}
+
+:where(#ripzlxveku) .gt_center {
+  text-align: center;
+}
+
+:where(#ripzlxveku) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#ripzlxveku) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#ripzlxveku) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#ripzlxveku) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#ripzlxveku) .gt_super {
+  font-size: 65%;
+}
+
+:where(#ripzlxveku) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#ripzlxveku) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#ripzlxveku) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#ripzlxveku) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#ripzlxveku) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#ripzlxveku) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#ripzlxveku) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">label</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">source</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">long bill = 59.6</td>
+<td class="gt_row gt_left">max bill length</td></tr>
+    <tr><td class="gt_row gt_left">deep bill = 21.5</td>
+<td class="gt_row gt_left">max bill depth</td></tr>
+    <tr><td class="gt_row gt_left">big flipper = 231</td>
+<td class="gt_row gt_left">max flipper length</td></tr>
+    <tr><td class="gt_row gt_left">big bird = 6300</td>
+<td class="gt_row gt_left">max body mass</td></tr>
+  </tbody>
+  
+  
+</table>
 </div>
 </div>
 </div>
@@ -2602,12 +3029,12 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.43em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>labs_bodymass_bill_depth_flipper_length <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
-<span id="cb47-2"><a href="#cb47-2"></a>  <span class="at">title =</span> <span class="st">"Body mass, flipper length &amp; bill depth"</span>,</span>
-<span id="cb47-3"><a href="#cb47-3"></a>  <span class="at">subtitle =</span> <span class="st">"Size measures Palmer penguins"</span>,</span>
-<span id="cb47-4"><a href="#cb47-4"></a>  <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>,</span>
-<span id="cb47-5"><a href="#cb47-5"></a>  <span class="at">y =</span> <span class="st">"Flipper length (mm)"</span>,</span>
-<span id="cb47-6"><a href="#cb47-6"></a>  <span class="at">size =</span> <span class="st">"Body mass (g)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>labs_bodymass_bill_depth_flipper_length <span class="ot">&lt;-</span> <span class="fu">labs</span>(</span>
+<span id="cb48-2"><a href="#cb48-2"></a>  <span class="at">title =</span> <span class="st">"Body mass, flipper length &amp; bill depth"</span>,</span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="at">subtitle =</span> <span class="st">"Size measures Palmer penguins"</span>,</span>
+<span id="cb48-4"><a href="#cb48-4"></a>  <span class="at">x =</span> <span class="st">"Bill depth (mm)"</span>,</span>
+<span id="cb48-5"><a href="#cb48-5"></a>  <span class="at">y =</span> <span class="st">"Flipper length (mm)"</span>,</span>
+<span id="cb48-6"><a href="#cb48-6"></a>  <span class="at">size =</span> <span class="st">"Body mass (g)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div style="font-size: 0.60em;">
@@ -2615,17 +3042,17 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.50em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48" data-code-line-numbers="5|6|7|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>ggp_13 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb48-2"><a href="#cb48-2"></a>  <span class="co"># layer 1</span></span>
-<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb48-4"><a href="#cb48-4"></a>    <span class="at">mapping =</span> </span>
-<span id="cb48-5"><a href="#cb48-5"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb48-6"><a href="#cb48-6"></a>          <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb48-7"><a href="#cb48-7"></a>          <span class="at">size =</span> body_mass_g),</span>
-<span id="cb48-8"><a href="#cb48-8"></a>      <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)</span>
-<span id="cb48-9"><a href="#cb48-9"></a>ggp_13 <span class="sc">+</span></span>
-<span id="cb48-10"><a href="#cb48-10"></a>    <span class="co"># labels</span></span>
-<span id="cb48-11"><a href="#cb48-11"></a>    labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="5|6|7|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>ggp_13 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb49-2"><a href="#cb49-2"></a>  <span class="co"># layer 1</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb49-4"><a href="#cb49-4"></a>    <span class="at">mapping =</span> </span>
+<span id="cb49-5"><a href="#cb49-5"></a>      <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb49-6"><a href="#cb49-6"></a>          <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb49-7"><a href="#cb49-7"></a>          <span class="at">size =</span> body_mass_g),</span>
+<span id="cb49-8"><a href="#cb49-8"></a>      <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb49-9"><a href="#cb49-9"></a>ggp_13 <span class="sc">+</span></span>
+<span id="cb49-10"><a href="#cb49-10"></a>    <span class="co"># labels</span></span>
+<span id="cb49-11"><a href="#cb49-11"></a>    labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2662,21 +3089,21 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.55em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="9|10|12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>ggp14 <span class="ot">&lt;-</span> ggp_13 <span class="sc">+</span></span>
-<span id="cb49-2"><a href="#cb49-2"></a>  <span class="co"># layer 2</span></span>
-<span id="cb49-3"><a href="#cb49-3"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb49-4"><a href="#cb49-4"></a>    <span class="at">data =</span> big_penguins,</span>
-<span id="cb49-5"><a href="#cb49-5"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb49-6"><a href="#cb49-6"></a>      <span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb49-7"><a href="#cb49-7"></a>      <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb49-8"><a href="#cb49-8"></a>      <span class="co"># color by source</span></span>
-<span id="cb49-9"><a href="#cb49-9"></a>      <span class="at">color =</span> source,</span>
-<span id="cb49-10"><a href="#cb49-10"></a>      <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb49-11"><a href="#cb49-11"></a>  <span class="co"># re-scale</span></span>
-<span id="cb49-12"><a href="#cb49-12"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>)) </span>
-<span id="cb49-13"><a href="#cb49-13"></a>ggp14 <span class="sc">+</span></span>
-<span id="cb49-14"><a href="#cb49-14"></a>  <span class="co"># labels</span></span>
-<span id="cb49-15"><a href="#cb49-15"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="|6|7|9|10|12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a>ggp14 <span class="ot">&lt;-</span> ggp_13 <span class="sc">+</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a>  <span class="co"># layer 2</span></span>
+<span id="cb50-3"><a href="#cb50-3"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb50-4"><a href="#cb50-4"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb50-5"><a href="#cb50-5"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb50-6"><a href="#cb50-6"></a>      <span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb50-7"><a href="#cb50-7"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb50-8"><a href="#cb50-8"></a>      <span class="co"># color by source</span></span>
+<span id="cb50-9"><a href="#cb50-9"></a>      <span class="at">color =</span> source,</span>
+<span id="cb50-10"><a href="#cb50-10"></a>      <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb50-11"><a href="#cb50-11"></a>  <span class="co"># re-scale</span></span>
+<span id="cb50-12"><a href="#cb50-12"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>)) </span>
+<span id="cb50-13"><a href="#cb50-13"></a>ggp14 <span class="sc">+</span></span>
+<span id="cb50-14"><a href="#cb50-14"></a>  <span class="co"># labels</span></span>
+<span id="cb50-15"><a href="#cb50-15"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2714,17 +3141,17 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.55em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb50-2"><a href="#cb50-2"></a>ggp15 <span class="ot">&lt;-</span> ggp14 <span class="sc">+</span></span>
-<span id="cb50-3"><a href="#cb50-3"></a>  <span class="co"># layer 3</span></span>
-<span id="cb50-4"><a href="#cb50-4"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
-<span id="cb50-5"><a href="#cb50-5"></a>    <span class="at">data =</span> big_penguins,</span>
-<span id="cb50-6"><a href="#cb50-6"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb50-7"><a href="#cb50-7"></a>      <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb50-8"><a href="#cb50-8"></a>      <span class="at">label =</span> label)) </span>
-<span id="cb50-9"><a href="#cb50-9"></a>ggp15 <span class="sc">+</span></span>
-<span id="cb50-10"><a href="#cb50-10"></a>  <span class="co"># labels</span></span>
-<span id="cb50-11"><a href="#cb50-11"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="|5|6|7|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb51-2"><a href="#cb51-2"></a>ggp15 <span class="ot">&lt;-</span> ggp14 <span class="sc">+</span></span>
+<span id="cb51-3"><a href="#cb51-3"></a>  <span class="co"># layer 3</span></span>
+<span id="cb51-4"><a href="#cb51-4"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
+<span id="cb51-5"><a href="#cb51-5"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb51-6"><a href="#cb51-6"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb51-7"><a href="#cb51-7"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb51-8"><a href="#cb51-8"></a>      <span class="at">label =</span> label)) </span>
+<span id="cb51-9"><a href="#cb51-9"></a>ggp15 <span class="sc">+</span></span>
+<span id="cb51-10"><a href="#cb51-10"></a>  <span class="co"># labels</span></span>
+<span id="cb51-11"><a href="#cb51-11"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2782,26 +3209,26 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 </div>
 <div style="font-size: 0.45em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>ggp15_l1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
-<span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb51-3"><a href="#cb51-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb51-4"><a href="#cb51-4"></a>      <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb51-5"><a href="#cb51-5"></a>      <span class="at">size =</span> body_mass_g),</span>
-<span id="cb51-6"><a href="#cb51-6"></a>    <span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>ggp15_l1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> penguins_no_miss) <span class="sc">+</span></span>
+<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb52-3"><a href="#cb52-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb52-4"><a href="#cb52-4"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb52-5"><a href="#cb52-5"></a>      <span class="at">size =</span> body_mass_g),</span>
+<span id="cb52-6"><a href="#cb52-6"></a>    <span class="at">alpha =</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">3</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div style="font-size: 0.55em;">
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>ggp_penguin_measures <span class="ot">&lt;-</span> ggp15_l1 <span class="sc">+</span></span>
-<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> big_penguins,</span>
-<span id="cb52-3"><a href="#cb52-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb52-4"><a href="#cb52-4"></a>      <span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb52-5"><a href="#cb52-5"></a>      <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb52-6"><a href="#cb52-6"></a>      <span class="at">color =</span> source,</span>
-<span id="cb52-7"><a href="#cb52-7"></a>      <span class="at">size =</span> body_mass_g), </span>
-<span id="cb52-8"><a href="#cb52-8"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb52-9"><a href="#cb52-9"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>ggp_penguin_measures <span class="ot">&lt;-</span> ggp15_l1 <span class="sc">+</span></span>
+<span id="cb53-2"><a href="#cb53-2"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> big_penguins,</span>
+<span id="cb53-3"><a href="#cb53-3"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb53-4"><a href="#cb53-4"></a>      <span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb53-5"><a href="#cb53-5"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb53-6"><a href="#cb53-6"></a>      <span class="at">color =</span> source,</span>
+<span id="cb53-7"><a href="#cb53-7"></a>      <span class="at">size =</span> body_mass_g), </span>
+<span id="cb53-8"><a href="#cb53-8"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb53-9"><a href="#cb53-9"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2837,17 +3264,17 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <div style="font-size: 0.54em;">
 <p><code>facet_wrap()</code> uses <code>. ~ [var]</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>ggp_penguin_measures <span class="sc">+</span></span>
-<span id="cb53-2"><a href="#cb53-2"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
-<span id="cb53-3"><a href="#cb53-3"></a>    <span class="at">data =</span> big_penguins,</span>
-<span id="cb53-4"><a href="#cb53-4"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb53-5"><a href="#cb53-5"></a>      <span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb53-6"><a href="#cb53-6"></a>      <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb53-7"><a href="#cb53-7"></a>      <span class="at">label =</span> label),</span>
-<span id="cb53-8"><a href="#cb53-8"></a>    <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="co"># adjust size</span></span>
-<span id="cb53-9"><a href="#cb53-9"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> sex) <span class="sc">+</span> <span class="co"># facet by sex</span></span>
-<span id="cb53-10"><a href="#cb53-10"></a>  <span class="co"># labels</span></span>
-<span id="cb53-11"><a href="#cb53-11"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="|9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>ggp_penguin_measures <span class="sc">+</span></span>
+<span id="cb54-2"><a href="#cb54-2"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
+<span id="cb54-3"><a href="#cb54-3"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb54-4"><a href="#cb54-4"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb54-5"><a href="#cb54-5"></a>      <span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb54-6"><a href="#cb54-6"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb54-7"><a href="#cb54-7"></a>      <span class="at">label =</span> label),</span>
+<span id="cb54-8"><a href="#cb54-8"></a>    <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="co"># adjust size</span></span>
+<span id="cb54-9"><a href="#cb54-9"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> sex) <span class="sc">+</span> <span class="co"># facet by sex</span></span>
+<span id="cb54-10"><a href="#cb54-10"></a>  <span class="co"># labels</span></span>
+<span id="cb54-11"><a href="#cb54-11"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -2886,19 +3313,19 @@ Add <code>theme_minimal()</code> and labels</p>
 </div>
 <div style="font-size: 0.50em;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="|9|11|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>ggp_penguin_measures <span class="sc">+</span></span>
-<span id="cb54-2"><a href="#cb54-2"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
-<span id="cb54-3"><a href="#cb54-3"></a>    <span class="at">data =</span> big_penguins,</span>
-<span id="cb54-4"><a href="#cb54-4"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
-<span id="cb54-5"><a href="#cb54-5"></a>      <span class="at">y =</span> flipper_length_mm,</span>
-<span id="cb54-6"><a href="#cb54-6"></a>      <span class="at">label =</span> label),</span>
-<span id="cb54-7"><a href="#cb54-7"></a>    <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb54-8"><a href="#cb54-8"></a>  <span class="co"># change to species</span></span>
-<span id="cb54-9"><a href="#cb54-9"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> species) <span class="sc">+</span></span>
-<span id="cb54-10"><a href="#cb54-10"></a>  <span class="co"># add theme</span></span>
-<span id="cb54-11"><a href="#cb54-11"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb54-12"><a href="#cb54-12"></a>  <span class="co"># labels</span></span>
-<span id="cb54-13"><a href="#cb54-13"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55" data-code-line-numbers="|9|11|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>ggp_penguin_measures <span class="sc">+</span></span>
+<span id="cb55-2"><a href="#cb55-2"></a>  ggrepel<span class="sc">::</span><span class="fu">geom_label_repel</span>(</span>
+<span id="cb55-3"><a href="#cb55-3"></a>    <span class="at">data =</span> big_penguins,</span>
+<span id="cb55-4"><a href="#cb55-4"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm,</span>
+<span id="cb55-5"><a href="#cb55-5"></a>      <span class="at">y =</span> flipper_length_mm,</span>
+<span id="cb55-6"><a href="#cb55-6"></a>      <span class="at">label =</span> label),</span>
+<span id="cb55-7"><a href="#cb55-7"></a>    <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb55-8"><a href="#cb55-8"></a>  <span class="co"># change to species</span></span>
+<span id="cb55-9"><a href="#cb55-9"></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> species) <span class="sc">+</span></span>
+<span id="cb55-10"><a href="#cb55-10"></a>  <span class="co"># add theme</span></span>
+<span id="cb55-11"><a href="#cb55-11"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb55-12"><a href="#cb55-12"></a>  <span class="co"># labels</span></span>
+<span id="cb55-13"><a href="#cb55-13"></a>  labs_bodymass_bill_depth_flipper_length</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>

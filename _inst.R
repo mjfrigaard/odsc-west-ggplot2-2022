@@ -7,5 +7,10 @@
 
 library(pagedown)
 library(fs)
+library(stringr)
+library(lubridate)
 fs::dir_create("pdfs")
-pagedown::chrome_print(input = "https://mjfrigaard.github.io/odsc-west-ggplot2-2022/slides/slides.html#/title-slide", "odsc-west-ggplot2-2022.pdf")
+tday <- stringr::str_replace_all(
+  string = stringr::str_remove_all(
+    lubridate::now(), ":"), " ", "-")
+pagedown::chrome_print(input = "https://mjfrigaard.github.io/odsc-west-ggplot2-2022/slides/slides.html#/title-slide", output = paste0("pdfs/", tday, "-odsc-west-ggplot2-2022.pdf"))

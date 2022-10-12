@@ -284,14 +284,14 @@
     "href": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
     "title": "Data Visualization with ggplot2",
     "section": "graph 08: Color vs. Fill (1 of 2)",
-    "text": "graph 08: Color vs. Fill (1 of 2)\n\n\n\nBelow we’ll look at the counts of sex vs. species of Palmer penguins\n\n\n\n\n\n\nFirst create labels!\n\nlabs_sex_vs_species <- ggplot2::labs(\n  title = \"Sex by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Sex\",\n  fill = \"Species\")\n\n Create penguins_no_miss by removing missing values\n\npenguins_no_miss <- drop_na(data = penguins)\n\n\n\n\n\n\n\n\n\nView our data:\n\nrmarkdown::paged_table(\n  head(penguins_no_miss, 5))"
+    "text": "graph 08: Color vs. Fill (1 of 2)\n\n\n\nBelow we’ll look at the counts of sex vs. species of Palmer penguins\n\n\n\n\n\n\nFirst create labels!\n\n\n\nlabs_sex_vs_species <- ggplot2::labs(\n  title = \"Sex by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Sex\",\n  fill = \"Species\")\n\n\n\nCreate penguins_no_miss by removing missing values\n\n\n\npenguins_no_miss <- drop_na(data = penguins)\n\n\n\n\n\n\n\n\n\nView our data:\n\nglimpse(penguins_no_miss, 50)\n\nRows: 333\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie…\n$ island            <fct> Torgersen, Torgersen, …\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, 36.7…\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, 19.3…\n$ flipper_length_mm <int> 181, 186, 195, 193, 19…\n$ body_mass_g       <int> 3750, 3800, 3250, 3450…\n$ sex               <fct> male, female, female, …\n$ year              <int> 2007, 2007, 2007, 2007…"
   },
   {
     "objectID": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
     "href": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
     "title": "Data Visualization with ggplot2",
     "section": "graph 08: Color vs. Fill (2 of 2)",
-    "text": "graph 08: Color vs. Fill (2 of 2)\n\n\n\nSome geom_*()functions take the fill argument instead of color\n\n\n\n\n\n\n\nBuild a bar-graph using geom_bar() by locally mapping sex to the x axis and y to fill\n\nggplot(data = penguins_no_miss) +\n  geom_bar(\n    mapping = aes(x = sex,\n                  fill = species)) +\n    labs_sex_vs_species\n\n Don’t forget the labels!"
+    "text": "graph 08: Color vs. Fill (2 of 2)\n\n\n\nSome geom_*()functions take the fill argument instead of color\n\n\n\n\n\n\n\nBuild a bar-graph using geom_bar() by locally mapping sex to the x axis and y to fill\n\nggplot(data = penguins_no_miss) +\n  geom_bar(mapping = \n      aes(x = sex,\n      fill = species)) +\n    labs_sex_vs_species\n\n Don’t forget the labels!"
   },
   {
     "objectID": "slides/slides.html#graph-09-bar-position",
@@ -305,14 +305,14 @@
     "href": "slides/slides.html#graph-10-histograms-special-bar-graphs",
     "title": "Data Visualization with ggplot2",
     "section": "graph 10: Histograms (special bar-graphs)",
-    "text": "graph 10: Histograms (special bar-graphs)\n\n\n\nThe geom_histogram() function uses ‘bins’ to represent counts for each value\n\n\n\n\n\n\n\nCreate new labels\n\n\n\nlabs_bodymass_vs_species <- ggplot2::labs(\n  title = \"Body mass by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Body Mass (grams)\",\n  fill = \"Species\")\n\n\n\nCreate a histogram of body_mass_g, colored (filled) by species\n\nggplot(data = penguins) +\n  geom_histogram(\n    mapping = aes(\n      x = body_mass_g,\n      fill = species)) +\n    labs_bodymass_vs_species\n\n\n\n\n\n\n\n\n\nResult"
+    "text": "graph 10: Histograms (special bar-graphs)\n\n\n\nThe geom_histogram() function uses ‘bins’ to represent counts for each value\n\n\n\n\n\n\n\nCreate new labels\n\n\n\nlabs_bodymass_vs_species <- ggplot2::labs(\n  title = \"Body mass by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Body Mass (grams)\",\n  fill = \"Species\")\n\n\n\nCreate a histogram of body_mass_g, colored (filled) by species\n\nggplot(data = penguins) +\n  geom_histogram(\n    mapping = aes(\n      x = body_mass_g,\n      fill = species)) +\n    labs_bodymass_vs_species"
   },
   {
     "objectID": "slides/slides.html#graph-11-density-plots",
     "href": "slides/slides.html#graph-11-density-plots",
     "title": "Data Visualization with ggplot2",
     "section": "graph 11: Density plots",
-    "text": "graph 11: Density plots\n\n\n\nDensity plots are also great for comparing overlapping distributions\n\n\n\n\n\n\n\nCreate a density plot with geom_density()\nChange the color saturation by setting alpha to 1/2\n\nggplot(data = penguins) +\n  geom_density(\n  mapping = \n      aes(x = body_mass_g,\n          fill = species),\n          alpha = 1/2) +\n    labs_bodymass_vs_species\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlso check out ridgeline plots"
+    "text": "graph 11: Density plots\n\n\n\nDensity plots are also great for comparing overlapping distributions\n\n\n\n\n\n\n\nCreate a density plot with geom_density()\nSet the alpha (color saturation) to 1/2\n\nggplot(data = penguins) +\n  geom_density(\n  mapping = \n      aes(x = body_mass_g,\n          fill = species),\n          alpha = 1/2) +\n    labs_bodymass_vs_species\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlso check out ridgeline plots"
   },
   {
     "objectID": "slides/slides.html#mapping-vs.-setting-1-of-2",
@@ -347,7 +347,7 @@
     "href": "slides/slides.html#our-label-dataset",
     "title": "Data Visualization with ggplot2",
     "section": "Our label dataset",
-    "text": "Our label dataset\n\n\nObjective: Create a scatter-plot to show the relationship between body mass, flipper length, and bill length."
+    "text": "Our label dataset\n\n\nObjective: Create a scatter-plot to show the relationship between body mass, flipper length, and bill length.\n\n\n\n\n\n\n\n\n  \n  \n    \n      label\n      source\n    \n  \n  \n    long bill = 59.6\nmax bill length\n    deep bill = 21.5\nmax bill depth\n    big flipper = 231\nmax flipper length\n    big bird = 6300\nmax body mass"
   },
   {
     "objectID": "slides/slides.html#graph-13-layer-1",

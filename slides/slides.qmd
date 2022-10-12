@@ -22,6 +22,7 @@ library(dplyr)
 library(tidyr)
 library(faux)
 library(palmerpenguins)
+library(gt)
 penguins <- palmerpenguins::penguins
 # the following creates a sample that has 100 observations of 2
 # variables, drawn from a population where 
@@ -534,7 +535,7 @@ ggplot(data = penguins)
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r data-layer, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
+```{r data-layer, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
 knitr::include_graphics("../img/data-layer.png")
 ```
 :::
@@ -575,7 +576,7 @@ ggplot(data = penguins,
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
+```{r mapping-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
 knitr::include_graphics("../img/mapping-layer.png")
 ```
 :::
@@ -617,7 +618,7 @@ ggplot(data = penguins,
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
+```{r geom-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
 knitr::include_graphics("../img/geom-layer.png")
 ```
 :::
@@ -667,7 +668,7 @@ ggplot(data = penguins,
 
 :::: {.column width="59%"}
 ::: {.fragment}
-```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='95%', out.width='95%'}
+```{r layers-layer.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='75%', out.width='75%'}
 knitr::include_graphics("../img/layers-layer.png")
 ```
 :::
@@ -801,11 +802,11 @@ ggplot(data = <DATA>) +
 :::
 
 
-::: {.column width="2%"}
+::: {.column width="1%"}
 :::
 
-::: {.column width="40%"}
-```{r ggplot2-3layers-dark, echo=FALSE, eval=TRUE, fig.align='center', out.height='60%', out.width='60%'}
+::: {.column width="41%"}
+```{r ggplot2-3layers-dark, echo=FALSE, eval=TRUE, fig.align='center', out.height='50%', out.width='50%'}
 knitr::include_graphics("../img/ggplot2-3layers-dark.png")
 ```
 :::
@@ -1789,7 +1790,7 @@ Map `color` to the `species` variable using **global** aesthetic mapping:
 :::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
-::: {style="font-size: 0.70em;"}
+::: {style="font-size: 0.60em;"}
 *Inside* the `aes()` function:
 ```{r g6-ex, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "5"
@@ -1807,7 +1808,7 @@ ggplot(data = penguins,
 ::::
 :::: {.column width="2%"}
 ::::
-:::: {.column width="50%"}
+:::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
 ```{r g6-sol, eval=TRUE, echo=FALSE}
@@ -1889,11 +1890,15 @@ Below we'll look at the counts of `sex` vs. `species` of Palmer penguins
 
 
 ::::: {.columns}
-:::: {.column width="55%"}
+:::: {.column width="49%"}
 ::: {.fragment}
 ::: {.incremental}
+
 ::: {style="font-size: 0.60em;"}
 First create labels! 
+:::
+
+::: {style="font-size: 0.55em;"}
 ```{r g8-ex-1, eval=TRUE, echo=TRUE}
 labs_sex_vs_species <- ggplot2::labs(
   title = "Sex by species of Palmer penguins",
@@ -1901,29 +1906,38 @@ labs_sex_vs_species <- ggplot2::labs(
   x = "Sex",
   fill = "Species")
 ```
-<br> 
+:::
+
+::: {style="font-size: 0.60em;"}
 Create `penguins_no_miss` by removing missing values
+:::
+
+::: {style="font-size: 0.55em;"}
 ```{r g8-ex-2, eval=TRUE, echo=TRUE}
 penguins_no_miss <- drop_na(data = penguins)
 ```
 :::
+
 :::
 :::
 ::::
+
 :::: {.column width="2%"}
 ::::
-:::: {.column width="43%"}
+
+:::: {.column width="49%"}
 ::: {.fragment}
-::: {style="font-size: 0.70em;"}
+::: {style="font-size: 0.60em;"}
 View our data:
 ```{r g8-sol, eval=TRUE, echo=TRUE}
-rmarkdown::paged_table(
-  head(penguins_no_miss, 5))
+glimpse(penguins_no_miss, 50)
 ```
 :::
 :::
 ::::
 :::::
+
+
 
 ## `graph 08`: Color vs. Fill (2 of 2)
 
@@ -1945,11 +1959,11 @@ Some `geom_*()`functions take the `fill` argument instead of `color`
 ::: {style="font-size: 0.60em;"}
 Build a bar-graph using `geom_bar()` by locally mapping `sex` to the `x` axis and `y` to `fill`  
 ```{r g8-ex-3, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "4"
+#| code-line-numbers: "|4"
 ggplot(data = penguins_no_miss) +
-  geom_bar(
-    mapping = aes(x = sex,
-                  fill = species)) +
+  geom_bar(mapping = 
+      aes(x = sex,
+      fill = species)) +
     labs_sex_vs_species
 ```
 <br> 
@@ -1994,7 +2008,7 @@ Stacked bar-graphs make it difficult to do side-by-side comparisons using the `y
 ::: {style="font-size: 0.60em;"}
 Using the same code as graph 08, add the `position = "dodge"` argument outside the `aes()` function
 ```{r g9-ex, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "4"
+#| code-line-numbers: "|4"
 ggplot(data = penguins_no_miss) +
   geom_bar(mapping = aes(x = sex,
     fill = species),
@@ -2057,7 +2071,7 @@ labs_bodymass_vs_species <- ggplot2::labs(
 Create a histogram of `body_mass_g`, colored (filled) by
 `species`
 ```{r g10-ex-2, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "4-5"
+#| code-line-numbers: "|4|5"
 ggplot(data = penguins) +
   geom_histogram(
     mapping = aes(
@@ -2077,7 +2091,6 @@ ggplot(data = penguins) +
 :::: {.column width="58%"}
 ::: {.fragment}
 ::: {style="font-size: 0.70em;"}
-Result 
 ```{r g10-sol, eval=TRUE, echo=FALSE}
 ggplot(data = penguins) +
   geom_histogram(
@@ -2111,10 +2124,10 @@ Density plots are also great for comparing overlapping distributions
 ::: {style="font-size: 0.60em;"}
 Create a density plot with `geom_density()` 
 
-Change the color saturation by setting `alpha` to `1/2`
+Set the `alpha` (color saturation) to `1/2`
 
 ```{r g11-ex, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "6"
+#| code-line-numbers: "|6"
 ggplot(data = penguins) +
   geom_density(
   mapping = 
@@ -2164,7 +2177,7 @@ Variables are mapped to aesthetics *inside* `aes()`
 :::
 ::: {style="font-size: 0.50em;"}
 ```{r map-vs-set-1, eval=TRUE, echo=TRUE, fig.align='left'}
-#| code-line-numbers: "6"
+#| code-line-numbers: "|6"
 ggplot(data = penguins_no_miss) +
   geom_point(
     mapping = 
@@ -2189,7 +2202,7 @@ Values are set outside the `aes()` function
 :::
 ::: {style="font-size: 0.50em;"}
 ```{r map-vs-set-2, eval=TRUE, echo=TRUE, fig.align='right'}
-#| code-line-numbers: "6"
+#| code-line-numbers: "|6"
 ggplot(data = penguins_no_miss) +
   geom_point(
     mapping = 
@@ -2254,7 +2267,7 @@ What color will the points be on this graph?
 
 ::: {style="font-size: 0.60em;"}
 ```{r g12-ex-2, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "6"
+#| code-line-numbers: "|6"
 ggplot(data = penguins) +
   geom_point(
     mapping = aes(
@@ -2368,8 +2381,9 @@ mass, flipper length, and bill length.
 
 . . .
 
-```{r paged_table-big_penguins, eval=TRUE, echo=FALSE}
-rmarkdown::paged_table(big_penguins)
+```{r gt-big_penguins, eval=TRUE, echo=FALSE}
+gt::gt(
+  select(big_penguins, label, source))
 ```
 
 
@@ -2473,7 +2487,7 @@ Use `scale_size()` to adjust point scaling
 
 ::: {style="font-size: 0.55em;"}
 ```{r g14-ex-1, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "9|10|12"
+#| code-line-numbers: "|6|7|9|10|12"
 ggp14 <- ggp_13 +
   # layer 2
   geom_point(
@@ -2547,7 +2561,7 @@ Add layer for `label`s in `big_penguins`
 
 ::: {style="font-size: 0.55em;"}
 ```{r g15-ex-1, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "|5|8"
+#| code-line-numbers: "|5|6|7|8"
 library(ggrepel)
 ggp15 <- ggp14 +
   # layer 3
@@ -2687,7 +2701,7 @@ Use `facet_wrap()` to view our previous graph by `sex`
 `facet_wrap()` uses `. ~ [var]`
 
 ```{r g16-ex-3, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "9"
+#| code-line-numbers: "|9"
 ggp_penguin_measures +
   ggrepel::geom_label_repel(
     data = big_penguins,
