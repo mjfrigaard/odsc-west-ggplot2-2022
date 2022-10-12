@@ -11,7 +11,14 @@
     "href": "index.html#workshop-materials",
     "title": "ODSC-ggplot2-west",
     "section": "Workshop Materials",
-    "text": "Workshop Materials\nThe exercises and solutions in the slides are available on RStudio.Cloud at the link below:\n\nODSC-west-2022 Workshop Materials\n\nWe recommend logging in with a GitHub account:\n\n\n\n\n\n\nRStudio.Cloud setup\n\n\n\n\n\n\n\n1. Head over to GitHub and set up a free account\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. Create your RStudio.Cloud account (also free!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. Use your GitHub credentials to log into RStudio.Cloud"
+    "text": "Workshop Materials\nThe exercises and solutions in the slides are available on RStudio.Cloud at the link below:\n\nODSC-west-2022 Workshop Materials\n\nWe recommend logging in with a GitHub account:"
+  },
+  {
+    "objectID": "index.html#rstudio.cloud-setup",
+    "href": "index.html#rstudio.cloud-setup",
+    "title": "ODSC-ggplot2-west",
+    "section": "RStudio.Cloud setup",
+    "text": "RStudio.Cloud setup\nFollow the steps below to get started with GitHub and RStudio.Cloud:\n\n\n\n\n\n\nNote\n\n\n\n\n\n1. Head over to GitHub and set up a free account\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. Create your RStudio.Cloud account (also free!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. Use your GitHub credentials to log into RStudio.Cloud"
   },
   {
     "objectID": "slides/slides.html#raw-data-dont-communicate-well",

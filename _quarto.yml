@@ -10,14 +10,19 @@ website:
         text: Home
       - href: about.qmd
         text: About
+    right:
       - href: slides/slides.qmd
         text: Slides
+      - icon: github
+        href: https://github.com/mjfrigaard/odsc-west-ggplot2-2022
+      - icon: twitter
+        href: https://twitter.com/mjfrigaard
 
 format:
   html:
     theme:
-      light: [minty, styles-dark.scss]
       dark: [cyborg, styles.scss]
+      light: [minty, styles-dark.scss]
     css: styles.css
     toc: true
 
