@@ -2,13 +2,19 @@
 title: "About"
 ---
 
-## Website
+## Website:
 
 This is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-## Slides
+:::{.callout-tip}
 
-I built the slides following the [excellent tutorial by Thomas Mock](https://jthomasmock.github.io/quarto-2hr-webinar/), and the very [thorough documentation](https://quarto.org/docs/reference/projects/websites.html). The themes were inspired by [Mine Çetinkaya-Rundel's post](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/).
+## Slides design:
+
+I built the slides following the [excellent tutorial by Thomas Mock](https://jthomasmock.github.io/quarto-2hr-webinar/), and the very [thorough documentation](https://quarto.org/docs/reference/projects/websites.html). The themes were inspired by [Mine Çetinkaya-Rundel's post](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/17-dark-mode/)
+
+:::
+
+:::{.callout-note}
 
 ## Packages used:
 
@@ -20,8 +26,14 @@ I built the slides following the [excellent tutorial by Thomas Mock](https://jth
 
 [`ggrepel`](https://cran.r-project.org/web/packages/ggrepel/vignettes/ggrepel.html) : labeling data points
 
-### Worth mentioning 
+:::
+
+:::{.callout-tip}
+
+### Worth mentioning:
 
 [`patchwork`](https://patchwork.data-imaginist.com/) : for combining plots
 
 [`ggridges`](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html) : better density plots
+
+:::

@@ -223,13 +223,15 @@ others."*
 
 # An Exploratory Mindset
 
-## Exploration requires a Bayesian Mindset (1 of 3)
+## Exploration requires a Bayesian Mindset (1 of 3) {.smaller}
 
 . . .
 
 <br>
 
+::: {style="font-size: 1.50em;"}
 We all have implicit beliefs, or priors, about the world
+:::
 
 . . .
 
@@ -237,7 +239,7 @@ We all have implicit beliefs, or priors, about the world
 
 ::: columns
 ::: {.column width="40%"}
-::: {style="font-size: 1.05em; color: #3D9CD8;"}
+::: {style="font-size: 1.25em; color: #3D9CD8;"}
 *What we think we know (i.e.,our expectations)*
 :::
 :::
@@ -249,13 +251,15 @@ knitr::include_graphics("../img/bayesian-eda-priors.png")
 :::
 :::
 
-## Exploration requires a Bayesian Mindset (2 of 3)
+## Exploration requires a Bayesian Mindset (2 of 3) {.smaller}
 
 . . .
 
 <br>
 
+::: {style="font-size: 1.50em;"}
 When we encounter new information or data, our priors get updated
+:::
 
 . . .
 
@@ -263,26 +267,28 @@ When we encounter new information or data, our priors get updated
 
 ::: columns
 ::: {.column width="40%"}
-::: {style="font-size: 1.05em; color: #3D9CD8;"}
+::: {style="font-size: 1.25em; color: #3D9CD8;"}
 *Our expectations + new data (i.e., what we see)*
 :::
 :::
 
 ::: {.column width="60%"}
-```{r bayesian-eda-new-png, echo=FALSE, eval=TRUE, fig.align='center', out.height='65%', out.width='65%'}
+```{r bayesian-eda-new-png, echo=FALSE, eval=TRUE, fig.align='center', out.height='59%', out.width='59%'}
 knitr::include_graphics("../img/bayesian-eda-new.png")
 ```
 :::
 :::
 
-## Exploration requires a Bayesian Mindset (3 of 3)
+## Exploration requires a Bayesian Mindset (3 of 3) {.smaller}
 
 . . .
 
 <br>
 
+::: {style="font-size: 1.50em;"}
 Our updated beliefs, or posteriors, depend on our priors ***and*** our
 perceptions of the new information
+:::
 
 . . .
 
@@ -290,13 +296,13 @@ perceptions of the new information
 
 ::: columns
 ::: {.column width="40%"}
-::: {style="font-size: 1.05em; color: #3D9CD8;"}
+::: {style="font-size: 1.25em; color: #3D9CD8;"}
 *What we expect + what we see = what we've learned*
 :::
 :::
 
 ::: {.column width="60%"}
-```{r bayesian-eda-posteriors.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='68%', out.width='68%'}
+```{r bayesian-eda-posteriors.png, echo=FALSE, eval=TRUE, fig.align='center', out.height='60%', out.width='60%'}
 knitr::include_graphics("../img/bayesian-eda-posteriors.png")
 ```
 :::
@@ -595,8 +601,9 @@ knitr::include_graphics("../img/mapping-layer.png")
 ::: {style="font-size: 0.60em;"}
 ```{r geom-layer-code, eval=FALSE, echo=TRUE}
 ggplot(data = penguins,
-  mapping = aes(x = flipper_length_mm, 
-                y = bill_length_mm)) +
+  mapping = aes(
+    x = flipper_length_mm, 
+    y = bill_length_mm)) +
   geom_point()
 ```
 :::
@@ -635,6 +642,7 @@ We can have multiple layers (data, mappings, geoms) in a single graph
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
 ```{r layers-layer-code, eval=FALSE, echo=TRUE}
+#| code-line-numbers: "|3|4|5|9|10|11|12"
 ggplot(data = penguins,
  # layer 1
   mapping = aes(
@@ -1026,12 +1034,15 @@ knitr::include_graphics("../img/rscloud-solutions.png")
 
 <br>
 
-- Create a `title`, `subtitle` (with data source), and `x`/`y` axis labels
+Create a `title`, `subtitle` (with data source), and `x`/`y` axis labels
 
 . . .
 
+<br>
+
 ::: columns
-::: {.column width="79%"}
+::: {.column width="60%"}
+::: {style="font-size: 0.60em"}
 ```{r labs_pengiuns, eval=TRUE, echo=TRUE}
 labs_pengiuns <- ggplot2::labs(
   title = "Flipper vs. Bill Length",
@@ -1040,13 +1051,14 @@ labs_pengiuns <- ggplot2::labs(
   y = "bill length (mm)")
 ```
 :::
+:::
 
 ::: {.column width="2%"}
 
 :::
 
-::: {.column width="19%"}
-::: {style="font-size: 0.75em; color: #ff0202;"}
+::: {.column width="38%"}
+::: {style="font-size: 0.95em; color: #ff0202;"}
 **<- expectations**
 :::
 :::
@@ -1216,7 +1228,7 @@ knitr::include_graphics("../img/rscloud-view-peng.png")
 :::: {.column width="20%"}
 ::: {.fragment}
 ::: {.incremental}
-::: {style="font-size: 0.60em;"}
+::: {style="font-size: 0.50em;"}
 ```{r glimpse-code, echo=TRUE, eval=FALSE}
 glimpse(penguins)
 ```
@@ -1320,7 +1332,7 @@ We want to build the labels first:
 ::::
 :::: {.column width="70%"}
 ::: {.fragment}
-::: {style="font-size: 0.70em; color: #05ffa1;"}
+::: {style="font-size: 0.50em; color: #05ffa1;"}
 ```{r labs_bill_vs_flippper, eval=TRUE, echo=TRUE}
 # build labels
 labs_bill_vs_flippper <- ggplot2::labs(
@@ -1395,19 +1407,20 @@ We have our data and labels--we just need to add our variables!
 <br>
 Map `bill_length_mm` to `x`
 ```{r g2-ex, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "2"
+#| code-line-numbers: "3"
 ggplot(data = penguins,
-    mapping = aes(x = bill_length_mm, 
-  
+    mapping = aes(
+      x = bill_length_mm, 
             ))
 ```
 <br> 
 Map `flipper_length_mm` to `y`
 ```{r g2-ex-2, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "2-3"
+#| code-line-numbers: "3-4"
 ggplot(data = penguins,
-  mapping = aes(x = bill_length_mm,
-                y = flipper_length_mm))
+  mapping = aes(
+    x = bill_length_mm,
+    y = flipper_length_mm))
 ```
 :::
 :::
@@ -1447,12 +1460,13 @@ Add the `geom_point()` function with the `+` symbol
 :::: {.column width="40%"}
 ::: {.fragment}
 ::: {.incremental}
-::: {style="font-size: 0.60em;"}
+::: {style="font-size: 0.50em;"}
 ```{r g3-ex, eval=FALSE, echo=TRUE}
 #| code-line-numbers: "4"
 ggplot(data = penguins,
-  mapping = aes(x = bill_length_mm,
-                y = flipper_length_mm)) +
+  mapping = aes(
+    x = bill_length_mm,
+    y = flipper_length_mm)) +
   geom_point()
 ```
 
@@ -1497,14 +1511,15 @@ Finally, we want to add the labels we created (`labs_bill_vs_flippper`)
 ::: {.fragment}
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
-<br>
 Add labels with `+` 
-
+:::
+::: {style="font-size: 0.50em;"}
 ```{r g4-ex, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "5"
+#| code-line-numbers: "6"
 ggplot(data = penguins,
-  mapping = aes(x = bill_length_mm,
-                y = flipper_length_mm)) +
+  mapping = aes(
+    x = bill_length_mm,
+    y = flipper_length_mm)) +
   geom_point() +
   labs_bill_vs_flippper
 ```
@@ -1522,8 +1537,9 @@ And we have our first graph!
 
 ```{r g4-sol, eval=TRUE, echo=FALSE}
 ggplot(data = penguins,
-  mapping = aes(x = bill_length_mm,
-                y = flipper_length_mm)) +
+  mapping = aes(
+    x = bill_length_mm,
+    y = flipper_length_mm)) +
   geom_point() +
   labs_bill_vs_flippper
 ```
@@ -1555,10 +1571,11 @@ The previous graphs mapped aesthetics globally
 <br>
 
 ```{r global-aes-ex, eval=FALSE, echo=TRUE}
-#| code-line-numbers: "2-3"
+#| code-line-numbers: "3-4"
 ggplot(data = penguins,
-  mapping = aes(x = bill_length_mm,
-                y = flipper_length_mm)) 
+  mapping = aes(
+    x = bill_length_mm,
+    y = flipper_length_mm)) 
 ```
 :::
 :::
@@ -1601,11 +1618,12 @@ Mapping aesthetics globally and then adding the `geom_*()` function results in t
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
 ```{r local-map-ex, eval=TRUE, echo=TRUE}
-#| code-line-numbers: "2-3"
+#| code-line-numbers: "|2|3|4"
 ggplot(data = penguins,
-  mapping = aes(x = bill_length_mm,
-                y = flipper_length_mm)) +
-    geom_point() +
+  mapping = aes(
+    x = bill_length_mm,
+    y = flipper_length_mm)) +
+  geom_point() +
     labs_bill_vs_flippper
 ```
 :::
@@ -2219,7 +2237,7 @@ Change the code below to make the points `"firebrick"` red
 Create labels
 :::
 
-::: {style="font-size: 0.40em;"}
+::: {style="font-size: 0.37em;"}
 ```{r g12-ex-1, eval=TRUE, echo=TRUE}
 labs_body_mass_vs_bill_depth <- ggplot2::labs(
   title = "Body mass and bill depth of Palmer penguins",
@@ -2297,6 +2315,8 @@ Each `geom_*()` function also has a `data` argument, so we can supply new data a
 ::: {.incremental}
 ::: {style="font-size: 0.60em;"}
 Create a dataset of the max bill length and depth, body mass and flipper length (`big_penguins`):
+:::
+::: {style="font-size: 0.50em;"}
 ```{r big_penguins, eval=TRUE, echo=TRUE}
 big_penguins <- bind_rows(
   slice_max(penguins, bill_length_mm, n = 1),
@@ -2318,22 +2338,19 @@ big_penguins <- bind_rows(
 ::: {style="font-size: 0.60em;"}
 Create data `label` and `source`
 :::
-::: {style="font-size: 0.40em;"}
+::: {style="font-size: 0.37em;"}
 ```{r label-source, eval=TRUE, echo=TRUE}
 big_penguins <- mutate(big_penguins,
-  label = case_when(
-    bill_length_mm == 59.6 ~ paste0("long bill = ", bill_length_mm),
-    bill_depth_mm == 21.5 ~ paste0("deep bill = ", bill_depth_mm),
-    flipper_length_mm == 231 ~ paste0("big flipper = ", flipper_length_mm),
-    body_mass_g == 6300 ~ paste0("big bird = ", body_mass_g)
-  ),
-  source = case_when(
-    bill_length_mm == 59.6 ~ "max bill length",
-    bill_depth_mm == 21.5 ~ "max bill depth",
-    flipper_length_mm == 231 ~ "max flipper length",
-    body_mass_g == 6300 ~ "max body mass"
-  )
-)
+ label = case_when(
+  bill_length_mm == 59.6 ~ paste0("long bill = ", bill_length_mm),
+  bill_depth_mm == 21.5 ~ paste0("deep bill = ", bill_depth_mm),
+  flipper_length_mm == 231 ~ paste0("big flipper = ", flipper_length_mm),
+  body_mass_g == 6300 ~ paste0("big bird = ", body_mass_g)),
+ source = case_when(
+  bill_length_mm == 59.6 ~ "max bill length",
+  bill_depth_mm == 21.5 ~ "max bill depth",
+  flipper_length_mm == 231 ~ "max flipper length",
+  body_mass_g == 6300 ~ "max body mass"))
 ```
 :::
 :::
@@ -2608,7 +2625,7 @@ In the previous graph, we used multiple aesthetics (color, size, shape)
 ::: {style="font-size: 0.60em;"}
 Store graph 15 in `ggp_penguin_measures`
 :::
-::: {style="font-size: 0.55em;"}
+::: {style="font-size: 0.45em;"}
 ```{r g16-ex-1, eval=TRUE, echo=TRUE}
 ggp15_l1 <- ggplot(data = penguins_no_miss) +
   geom_point(

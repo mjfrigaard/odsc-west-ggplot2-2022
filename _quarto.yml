@@ -16,10 +16,10 @@ website:
 format:
   html:
     theme:
-      dark: [darkly, styles-dark.scss]
-      light: [litera, styles.scss]
+      dark: [cyborg, styles.scss]
+      light: [minty, styles-dark.scss]
     css: styles.css
     toc: true
 
-editor: visual
+editor: source
 

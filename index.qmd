@@ -4,6 +4,8 @@ title: "ODSC-ggplot2-west"
 
 Welcome to the `ggplot2` workshop!
 
+:::{.callout-tip}
+
 ## Important links:
 
 -   [Conference website](https://odsc.com/california/)
@@ -12,9 +14,14 @@ Welcome to the `ggplot2` workshop!
 
 -   [Medium post](https://odsc.medium.com/a-beginners-guide-to-ggplot2-82586d116c70)
 
+:::
+
+
 ## Workshop Materials
 
 The exercises and solutions in the slides will be available on [RStudio.Cloud](https://rstudio.cloud/). We recommend logging in with a GitHub account:
+
+:::{.callout-note collapse="true"}
 
 ## RStudio.Cloud setup
 
@@ -47,3 +54,5 @@ knitr::include_graphics("img/rstudio-cloud-signup.png")
 ```{r rscloud-github-cred-png, echo=FALSE, fig.align='center', out.height='100%', out.height='100%'}
 knitr::include_graphics("img/rscloud-github-cred.png")
 ```
+
+:::
