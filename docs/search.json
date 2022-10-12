@@ -1,0 +1,422 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ODSC-ggplot2-west",
+    "section": "",
+    "text": "Welcome to the ggplot2 workshop!"
+  },
+  {
+    "objectID": "index.html#workshop-materials",
+    "href": "index.html#workshop-materials",
+    "title": "ODSC-ggplot2-west",
+    "section": "Workshop Materials",
+    "text": "Workshop Materials\nThe exercises and solutions in the slides are available on RStudio.Cloud at the link below:\n\nODSC-west-2022 Workshop Materials\n\nWe recommend logging in with a GitHub account:"
+  },
+  {
+    "objectID": "index.html#rstudio.cloud-setup",
+    "href": "index.html#rstudio.cloud-setup",
+    "title": "ODSC-ggplot2-west",
+    "section": "RStudio.Cloud setup",
+    "text": "RStudio.Cloud setup\nFollow the steps below to get started with GitHub and RStudio.Cloud:\n\n\n\n\n\n\nNote\n\n\n\n\n\n1. Head over to GitHub and set up a free account\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. Create your RStudio.Cloud account (also free!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. Use your GitHub credentials to log into RStudio.Cloud"
+  },
+  {
+    "objectID": "slides/slides.html#raw-data-dont-communicate-well",
+    "href": "slides/slides.html#raw-data-dont-communicate-well",
+    "title": "Data Visualization with ggplot2",
+    "section": "Raw data don’t communicate well",
+    "text": "Raw data don’t communicate well\n\n\n\nIt’s hard to make sense of millions of rows and/or thousands of columns\n\n\n\n\n\nFortunately, we are excellent at seeing patterns:\n\n\n\n\n\n“the human brain has a superior ability to mentally manipulate animate and inanimate patterns into a myriad of intangible symbols that can then be recombined to produce new images of the world;”\n\n\n\n\n\n“we therefore live partly in worlds of our own mental creation, super-imposed upon or distinct from the natural world.”\n\n\n\n\n\n- Source: Superior pattern processing is the essence of the evolved human brain"
+  },
+  {
+    "objectID": "slides/slides.html#exploratory-data-analysis",
+    "href": "slides/slides.html#exploratory-data-analysis",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\n“Exploratory Data Analysis (EDA)” first coined by American mathematician John Tukey in 1977\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“The greatest value of a picture is when it forces us to notice what we never expected to see.”\n\n\n\n\n\n\n- John Tukey, 1977"
+  },
+  {
+    "objectID": "slides/slides.html#exploration-requires-a-bayesian-mindset-1-of-3",
+    "href": "slides/slides.html#exploration-requires-a-bayesian-mindset-1-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploration requires a Bayesian Mindset (1 of 3)",
+    "text": "Exploration requires a Bayesian Mindset (1 of 3)\n\n\n\nWe all have implicit beliefs, or priors, about the world\n\n\n\n\n\n\n\nWhat we think we know (i.e.,our expectations)"
+  },
+  {
+    "objectID": "slides/slides.html#exploration-requires-a-bayesian-mindset-2-of-3",
+    "href": "slides/slides.html#exploration-requires-a-bayesian-mindset-2-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploration requires a Bayesian Mindset (2 of 3)",
+    "text": "Exploration requires a Bayesian Mindset (2 of 3)\n\n\n\nWhen we encounter new information or data, our priors get updated\n\n\n\n\n\n\n\nOur expectations + new data (i.e., what we see)"
+  },
+  {
+    "objectID": "slides/slides.html#exploration-requires-a-bayesian-mindset-3-of-3",
+    "href": "slides/slides.html#exploration-requires-a-bayesian-mindset-3-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Exploration requires a Bayesian Mindset (3 of 3)",
+    "text": "Exploration requires a Bayesian Mindset (3 of 3)\n\n\n\nOur updated beliefs, or posteriors, depend on our priors and our perceptions of the new information\n\n\n\n\n\n\n\nWhat we expect + what we see = what we’ve learned"
+  },
+  {
+    "objectID": "slides/slides.html#graphs-can-confirm-our-expectations",
+    "href": "slides/slides.html#graphs-can-confirm-our-expectations",
+    "title": "Data Visualization with ggplot2",
+    "section": "Graphs can confirm our expectations",
+    "text": "Graphs can confirm our expectations\n\n\n\n\nWhat if our expectation was that X is related to Y?\n\n\n\n\n\n\n\n …then we graphed the data…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe would say our expectations have been confirmed"
+  },
+  {
+    "objectID": "slides/slides.html#graphs-can-refute-our-expectations",
+    "href": "slides/slides.html#graphs-can-refute-our-expectations",
+    "title": "Data Visualization with ggplot2",
+    "section": "Graphs can refute our expectations",
+    "text": "Graphs can refute our expectations\n\n\n\n\nWhat if our expectation was that X is related to Y?\n\n\n\n\n\n\n\n …then we graphed the data…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe would say our expectations have been refuted"
+  },
+  {
+    "objectID": "slides/slides.html#grammar",
+    "href": "slides/slides.html#grammar",
+    "title": "Data Visualization with ggplot2",
+    "section": "Grammar",
+    "text": "Grammar\n\n\nThe system of rules for any given language\n\n\n\nIncludes:\n\n\nWord meanings\nInternal structure\nWord arrangement"
+  },
+  {
+    "objectID": "slides/slides.html#syntax",
+    "href": "slides/slides.html#syntax",
+    "title": "Data Visualization with ggplot2",
+    "section": "Syntax",
+    "text": "Syntax\n\n\n\nThe form, structure and order for constructing statements\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[[students][[cook][and][serve grandparents]]]\n\n\n\n[[students][[cook and serve][grandparents]]]"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-a-layered-language-for-graphs",
+    "href": "slides/slides.html#ggplot2-a-layered-language-for-graphs",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: a layered language for graphs",
+    "text": "ggplot2: a layered language for graphs\n\n\nggplot2 is comprised of layers\n\n\n\n\nData\nMapping\nStatistics\nGeometric objects\n\nPosition adjustments"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-data",
+    "href": "slides/slides.html#ggplot2-data",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: data",
+    "text": "ggplot2: data\n\n\n\nThe data layer consists of a rectangular object (like a spreadsheet) with columns and rows\n\n\n\n\n\n\n\n\nggplot(data = penguins)"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-mapping",
+    "href": "slides/slides.html#ggplot2-mapping",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: mapping",
+    "text": "ggplot2: mapping\n\n\n\nThe mapping layer assigns columns (variables) from the data to a visual property (i.e. graph ’aes’thetic)\n\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = \n    aes(x = flipper_length_mm, \n      y = bill_length_mm))"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-geoms",
+    "href": "slides/slides.html#ggplot2-geoms",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: geoms",
+    "text": "ggplot2: geoms\n\n\n\ngeom_*() functions include statistical transformations, shapes, and position adjustments for how to ‘draw’ the data on the graph\n\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = aes(\n    x = flipper_length_mm, \n    y = bill_length_mm)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-layers",
+    "href": "slides/slides.html#ggplot2-layers",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: layers",
+    "text": "ggplot2: layers\n\n\n\nWe can have multiple layers (data, mappings, geoms) in a single graph\n\n\n\n\n\n\n\n\nggplot(data = penguins,\n # layer 1\n  mapping = aes(\n    x = flipper_length_mm, \n    y = bill_length_mm)) +\n  geom_point()\n# layer 2\n  geom_smooth(\n    mapping = aes(\n      x = flipper_length_mm,\n      y = bill_length_mm,\n      color = species))"
+  },
+  {
+    "objectID": "slides/slides.html#templates-infinitely-extensible",
+    "href": "slides/slides.html#templates-infinitely-extensible",
+    "title": "Data Visualization with ggplot2",
+    "section": "Templates = infinitely extensible!",
+    "text": "Templates = infinitely extensible!\n\n\nThemes\n\n\nggplot(data = <DATA>) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    facet_* +\n    theme_*\n\n\n\n\nDon’t forget labels!\n\n\nggplot(data = <DATA>) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) +\n    facet_* +\n    theme_* +\n    labs()"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-1-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-1-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (1 of 4)",
+    "text": "RStudio.Cloud: Set up (1 of 4)\n\n\n\n\n\nHead to RStudio.Cloud, you will see the following:\n\n\n\n\n\n\n\n\n\n\n\n\n\n Log in with your GitHub credentials"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-2-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-2-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (2 of 4)",
+    "text": "RStudio.Cloud: Set up (2 of 4)\n\n\n\n\n\nOn the top of the RStudio IDE, you will see the following:\n\n\n\n\n\n\n\n\n\n\n\n\n\n Click on Save a Permanent Copy to add this project to your workspace"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-3-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-3-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (3 of 4)",
+    "text": "RStudio.Cloud: Set up (3 of 4)\n\n\n\n\n\nIn the Files pane, click on the inst.R file to open it"
+  },
+  {
+    "objectID": "slides/slides.html#rstudio.cloud-set-up-4-of-4",
+    "href": "slides/slides.html#rstudio.cloud-set-up-4-of-4",
+    "title": "Data Visualization with ggplot2",
+    "section": "RStudio.Cloud: Set up (4 of 4)",
+    "text": "RStudio.Cloud: Set up (4 of 4)\n\n\n\n\n\nIn the Source pane, click on the Source icon to run inst.R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis sends the code in inst.R to the Console"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-build-the-labels-first",
+    "href": "slides/slides.html#ggplot2-build-the-labels-first",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: build the labels first!",
+    "text": "ggplot2: build the labels first!\n\n\nCreate a title, subtitle (with data source), and x/y axis labels\n\n\n\n\n\n\n\nlabs_pengiuns <- ggplot2::labs(\n  title = \"Flipper vs. Bill Length\",\n  subtitle = \"source: palmerpenguins::penguins\",\n  x = \"flipper length (mm)\",\n  y = \"bill length (mm)\")\n\n\n\n\n\n\n<- expectations"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-build-graph-check-labels",
+    "href": "slides/slides.html#ggplot2-build-graph-check-labels",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: build graph, check labels",
+    "text": "ggplot2: build graph, check labels\n\n\n\nBuild labels, build graphs, then check labels!\n\n\n\n\n\n\n\n\nlabs_pengiuns <- ggplot2::labs(\n  title = \"Flipper vs. Bill Length\",\n  subtitle = \"source: palmerpenguins::penguins\",\n  x = \"flipper length (mm)\",\n  y = \"bill length (mm)\")\nggp_peng_point <- ggplot(data = penguins,\n    mapping = aes(x = bill_length_mm,\n                  y = flipper_length_mm)) +\n  labs_pengiuns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat’s wrong here?"
+  },
+  {
+    "objectID": "slides/slides.html#ggplot2-build-graph-check-labels-revise",
+    "href": "slides/slides.html#ggplot2-build-graph-check-labels-revise",
+    "title": "Data Visualization with ggplot2",
+    "section": "ggplot2: build graph, check labels, revise",
+    "text": "ggplot2: build graph, check labels, revise\n\n\n\nx and y are flipped!\n\n\n\n\n\n\n\n\nlabs_pengiuns <- ggplot2::labs(\n  title = \"Flipper vs. Bill Length\",\n  subtitle = \"source: palmerpenguins::penguins\",\n  x = \"flipper length (mm)\",\n  y = \"bill length (mm)\")\nggp_peng_point <- ggplot(data = penguins,\n    mapping = aes(x = flipper_length_mm, \n                  y = bill_length_mm)) +\n                labs_pengiuns \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFixed!"
+  },
+  {
+    "objectID": "slides/slides.html#on-the-importance-of-revision",
+    "href": "slides/slides.html#on-the-importance-of-revision",
+    "title": "Data Visualization with ggplot2",
+    "section": "On the importance of revision:",
+    "text": "On the importance of revision:\n\n\nRevision Sharpens Thinking:\n\n\n\n\n“More particularly, rewriting is the key to improved thinking. It demands a real open-mindedness and objectivity.”\n\n\n\n\n“It demands a willingness to cull verbiage so that ideas stand out clearly. And it demands a willingness to meet logical contradictions head on and trace them to the premises that have created them.”\n\n\n\n\n“In short, it forces a writer to get up his courage and expose his thinking process to his own intelligence.”\n\n\n\n\n\n- Source: — Marvin H. Swift, HBR Clear Writing Means Clear Thinking Means…"
+  },
+  {
+    "objectID": "slides/slides.html#viewing-data-1-of-3",
+    "href": "slides/slides.html#viewing-data-1-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Viewing data (1 of 3)",
+    "text": "Viewing data (1 of 3)\n\n\nView() opens the RStudio data viewer"
+  },
+  {
+    "objectID": "slides/slides.html#viewing-data-2-of-3",
+    "href": "slides/slides.html#viewing-data-2-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Viewing data (2 of 3)",
+    "text": "Viewing data (2 of 3)\n\n\nglimpse() and str() are displayed in the console\n\n\n\n\n\n\n\nglimpse(penguins)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRows: 344\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               <fct> male, female, female, NA, female, male, female, male…\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "slides/slides.html#viewing-data-3-of-3",
+    "href": "slides/slides.html#viewing-data-3-of-3",
+    "title": "Data Visualization with ggplot2",
+    "section": "Viewing data (3 of 3)",
+    "text": "Viewing data (3 of 3)\n\n\nglimpse() and str() are displayed in the console\n\n\n\n\n\n\n\nstr(penguins)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntibble [344 × 8] (S3: tbl_df/tbl/data.frame)\n $ species          : Factor w/ 3 levels \"Adelie\",\"Chinstrap\",..: 1 1 1 1 1 1 1 1 1 1 ...\n $ island           : Factor w/ 3 levels \"Biscoe\",\"Dream\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...\n $ sex              : Factor w/ 2 levels \"female\",\"male\": 2 1 1 NA 1 2 1 2 NA NA ...\n $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ..."
+  },
+  {
+    "objectID": "slides/slides.html#graph-01-labels",
+    "href": "slides/slides.html#graph-01-labels",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 01: LABELS!",
+    "text": "graph 01: LABELS!\n\n\nWe want to build the labels first:\n\n\n\n\n\n\n\ntitle = “Bill and flipper length of Palmer penguins”\n\nsubtitle = “Size measurements for adult foraging penguins”\n\nx = “Bill length (mm)”\n\ny = “Flipper length (mm)”\n\n\n\n\n\n\n\n\n\n\n# build labels\nlabs_bill_vs_flippper <- ggplot2::labs(\n  title = \"Bill and flipper length of Palmer penguins\",\n  subtitle = \"Size measurements for adult foraging penguins\",\n  x = \"Bill length (mm)\",\n  y = \"Flipper length (mm)\")"
+  },
+  {
+    "objectID": "slides/slides.html#graph-01-initialize-plot-with-data",
+    "href": "slides/slides.html#graph-01-initialize-plot-with-data",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 01: Initialize plot with data",
+    "text": "graph 01: Initialize plot with data\n\n\n\nThe ggplot2::ggplot() function initializes the plot:\n\n\n\n\n\n\n\n Place penguins in the data argument\n\nggplot(data = penguins)\n\n\n\n\n\n\n\n\n\nThis gives us a blank canvas!"
+  },
+  {
+    "objectID": "slides/slides.html#graph-02-map-variables-to-positions",
+    "href": "slides/slides.html#graph-02-map-variables-to-positions",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 02: Map variables to positions",
+    "text": "graph 02: Map variables to positions\n\n\n\nWe have our data and labels–we just need to add our variables!\n\n\n\n\n\n\n\n Map bill_length_mm to x\n\nggplot(data = penguins,\n    mapping = aes(\n      x = bill_length_mm, \n            ))\n\n Map flipper_length_mm to y\n\nggplot(data = penguins,\n  mapping = aes(\n    x = bill_length_mm,\n    y = flipper_length_mm))\n\n\n\n\n\n\n\n\n\nNow our canvas has x and y axes"
+  },
+  {
+    "objectID": "slides/slides.html#graph-03-adding-geoms",
+    "href": "slides/slides.html#graph-03-adding-geoms",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 03: Adding geoms",
+    "text": "graph 03: Adding geoms\n\n\n\nAdd the geom_point() function with the + symbol\n\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = aes(\n    x = bill_length_mm,\n    y = flipper_length_mm)) +\n  geom_point()\n\n\nDon’t confuse this with the pipes (|> or %>%)\n\n\n\n\n\n\n\n\nThe geom_point() function tells R we want to see the points (or dots) on our canvas:"
+  },
+  {
+    "objectID": "slides/slides.html#graph-04-dont-forget-the-labels",
+    "href": "slides/slides.html#graph-04-dont-forget-the-labels",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 04: Don’t forget the labels!",
+    "text": "graph 04: Don’t forget the labels!\n\n\n\nFinally, we want to add the labels we created (labs_bill_vs_flippper)\n\n\n\n\n\n\nAdd labels with +\n\n\n\nggplot(data = penguins,\n  mapping = aes(\n    x = bill_length_mm,\n    y = flipper_length_mm)) +\n  geom_point() +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\nAnd we have our first graph!"
+  },
+  {
+    "objectID": "slides/slides.html#global-mapping",
+    "href": "slides/slides.html#global-mapping",
+    "title": "Data Visualization with ggplot2",
+    "section": "Global mapping",
+    "text": "Global mapping\n\n\n\nThe previous graphs mapped aesthetics globally\n\n\n\n\n\n\nGlobal = aesthetics are mapped when the graph is initialized with ggplot():\n\n\nggplot(data = penguins,\n  mapping = aes(\n    x = bill_length_mm,\n    y = flipper_length_mm)) \n\n\n\n\n\n\n\n\n\nRecall the layers from Part 1:\n\n\n\n\n\n\n\n\n\nIf we map aesthetics in ggplot(), all the following geom_*() layers will inherit these aesthetics"
+  },
+  {
+    "objectID": "slides/slides.html#local-mapping",
+    "href": "slides/slides.html#local-mapping",
+    "title": "Data Visualization with ggplot2",
+    "section": "Local mapping",
+    "text": "Local mapping\n\n\n\nMapping aesthetics globally and then adding the geom_*() function results in the same graph as when we map aesthetics locally (inside the geom_*() function)\n\n\n\n\n\n\n\nggplot(data = penguins,\n  mapping = aes(\n    x = bill_length_mm,\n    y = flipper_length_mm)) +\n  geom_point() +\n    labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins) +\n  geom_point(mapping = \n      aes(x = bill_length_mm,\n          y = flipper_length_mm)) +\n  labs_bill_vs_flippper"
+  },
+  {
+    "objectID": "slides/slides.html#the-ggplot2-templates-refresher",
+    "href": "slides/slides.html#the-ggplot2-templates-refresher",
+    "title": "Data Visualization with ggplot2",
+    "section": "The ggplot2 templates (refresher)",
+    "text": "The ggplot2 templates (refresher)\n\n\n\nThe template from part 1 uses local mappings (i.e. aesthetic mappings are set inside the geom_* function).\n\n\n\n\n\n# Recall our template from Part 1\nggplot(data = <DATA>) +\n  geom_*(mapping = aes(<AESTHETIC MAPPINGS>))\n\n\n\n\n\n\nBelow we’ve adjusted the template to include global mappings (and the option to include aesthetic mappings locally)\n\n\n\n\n\n# Adjusted template\nggplot(data = <DATA>,\n  mapping = aes(<AESTHETIC MAPPINGS>)) + # global mappings\n  geom_*(mapping = aes(<AESTHETIC MAPPINGS>)) # local mappings\n\n\n\nRead more here."
+  },
+  {
+    "objectID": "slides/slides.html#graph-05-convert-global-to-local-mappings",
+    "href": "slides/slides.html#graph-05-convert-global-to-local-mappings",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 05: Convert global to local mappings",
+    "text": "graph 05: Convert global to local mappings\n\n\n\nFor graph-05.R, convert the global aesthetics to local aesthetics inside the geom_point() function\n\n\n\n\n\n\n\nGlobal\n\nggplot(data = penguins,\n  mapping = aes(x = bill_length_mm,\n                y = flipper_length_mm)) +\n  geom_point() +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\nLocal\n\nggplot(data = penguins) +\ngeom_point(mapping = \n    aes(x = bill_length_mm,\n        y = flipper_length_mm)) +\n      labs_bill_vs_flippper"
+  },
+  {
+    "objectID": "slides/slides.html#what-are-visual-encodings",
+    "href": "slides/slides.html#what-are-visual-encodings",
+    "title": "Data Visualization with ggplot2",
+    "section": "What are visual encodings?",
+    "text": "What are visual encodings?\n\n\n\nVisual encodings are what we see on the graph\n\n\n\n\n\nThings like position, size, shape, color, etc.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRanked by accuracy"
+  },
+  {
+    "objectID": "slides/slides.html#graph-06-adding-color-global",
+    "href": "slides/slides.html#graph-06-adding-color-global",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 06: Adding color (global)",
+    "text": "graph 06: Adding color (global)\n\n\n\nMap color to the species variable using global aesthetic mapping:\n\n\n\n\n\n\nInside the aes() function:\n\nggplot(data = penguins,\n  mapping =\n    aes(x = bill_length_mm,\n        y = flipper_length_mm,\n        color = species)) +\n  geom_point() +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 includes a legend by default"
+  },
+  {
+    "objectID": "slides/slides.html#graph-07-adding-color-local",
+    "href": "slides/slides.html#graph-07-adding-color-local",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 07: Adding color (local)",
+    "text": "graph 07: Adding color (local)\n\n\n\nMap color to the species variable using local aesthetic mapping\n\n\n\n\n\n\nThe x and y aesthetics are inherited from the ggplot() function…\n\nggplot(data = penguins,\n  mapping =\n    aes(x = bill_length_mm,\n        y = flipper_length_mm)) +\n  geom_point(\n    aes(color = species)) +\n  labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n…but the color aesthetic comes from the geom_point() layer"
+  },
+  {
+    "objectID": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
+    "href": "slides/slides.html#graph-08-color-vs.-fill-1-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 08: Color vs. Fill (1 of 2)",
+    "text": "graph 08: Color vs. Fill (1 of 2)\n\n\n\nBelow we’ll look at the counts of sex vs. species of Palmer penguins\n\n\n\n\n\n\nFirst create labels!\n\n\n\nlabs_sex_vs_species <- ggplot2::labs(\n  title = \"Sex by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Sex\",\n  fill = \"Species\")\n\n\n\nCreate penguins_no_miss by removing missing values\n\n\n\npenguins_no_miss <- drop_na(data = penguins)\n\n\n\n\n\n\n\n\n\nView our data:\n\nglimpse(penguins_no_miss, 50)\n\nRows: 333\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie…\n$ island            <fct> Torgersen, Torgersen, …\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, 36.7…\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, 19.3…\n$ flipper_length_mm <int> 181, 186, 195, 193, 19…\n$ body_mass_g       <int> 3750, 3800, 3250, 3450…\n$ sex               <fct> male, female, female, …\n$ year              <int> 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
+    "href": "slides/slides.html#graph-08-color-vs.-fill-2-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 08: Color vs. Fill (2 of 2)",
+    "text": "graph 08: Color vs. Fill (2 of 2)\n\n\n\nSome geom_*()functions take the fill argument instead of color\n\n\n\n\n\n\n\nBuild a bar-graph using geom_bar() by locally mapping sex to the x axis and y to fill\n\nggplot(data = penguins_no_miss) +\n  geom_bar(mapping = \n      aes(x = sex,\n      fill = species)) +\n    labs_sex_vs_species\n\n Don’t forget the labels!"
+  },
+  {
+    "objectID": "slides/slides.html#graph-09-bar-position",
+    "href": "slides/slides.html#graph-09-bar-position",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 09: Bar position",
+    "text": "graph 09: Bar position\n\n\n\nStacked bar-graphs make it difficult to do side-by-side comparisons using the y axis\n\n\n\n\n\n\n\nUsing the same code as graph 08, add the position = \"dodge\" argument outside the aes() function\n\nggplot(data = penguins_no_miss) +\n  geom_bar(mapping = aes(x = sex,\n    fill = species),\n    position = \"dodge\") +\n  labs_sex_vs_species"
+  },
+  {
+    "objectID": "slides/slides.html#graph-10-histograms-special-bar-graphs",
+    "href": "slides/slides.html#graph-10-histograms-special-bar-graphs",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 10: Histograms (special bar-graphs)",
+    "text": "graph 10: Histograms (special bar-graphs)\n\n\n\nThe geom_histogram() function uses ‘bins’ to represent counts for each value\n\n\n\n\n\n\n\nCreate new labels\n\n\n\nlabs_bodymass_vs_species <- ggplot2::labs(\n  title = \"Body mass by species of Palmer penguins\",\n  subtitle = \"Counts for adult foraging penguins\",\n  x = \"Body Mass (grams)\",\n  fill = \"Species\")\n\n\n\nCreate a histogram of body_mass_g, colored (filled) by species\n\nggplot(data = penguins) +\n  geom_histogram(\n    mapping = aes(\n      x = body_mass_g,\n      fill = species)) +\n    labs_bodymass_vs_species"
+  },
+  {
+    "objectID": "slides/slides.html#graph-11-density-plots",
+    "href": "slides/slides.html#graph-11-density-plots",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 11: Density plots",
+    "text": "graph 11: Density plots\n\n\n\nDensity plots are also great for comparing overlapping distributions\n\n\n\n\n\n\n\nCreate a density plot with geom_density()\nSet the alpha (color saturation) to 1/2\n\nggplot(data = penguins) +\n  geom_density(\n  mapping = \n      aes(x = body_mass_g,\n          fill = species),\n          alpha = 1/2) +\n    labs_bodymass_vs_species\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlso check out ridgeline plots"
+  },
+  {
+    "objectID": "slides/slides.html#mapping-vs.-setting-1-of-2",
+    "href": "slides/slides.html#mapping-vs.-setting-1-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "Mapping vs. setting (1 of 2)",
+    "text": "Mapping vs. setting (1 of 2)\n\n\n\n\n\n\nVariables are mapped to aesthetics inside aes()\n\n\n\nggplot(data = penguins_no_miss) +\n  geom_point(\n    mapping = \n      aes(x = bill_length_mm,\n          y = flipper_length_mm,\n          color = sex)) + # inside\n      labs_bill_vs_flippper\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValues are set outside the aes() function\n\n\n\nggplot(data = penguins_no_miss) +\n  geom_point(\n    mapping = \n      aes(x = bill_length_mm,\n          y = flipper_length_mm),\n          color = \"dodgerblue\") + # outside\n      labs_bill_vs_flippper"
+  },
+  {
+    "objectID": "slides/slides.html#mapping-vs.-setting-2-of-2",
+    "href": "slides/slides.html#mapping-vs.-setting-2-of-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "Mapping vs. setting (2 of 2)",
+    "text": "Mapping vs. setting (2 of 2)\n\n\nFrom ggplot2 book\n\n\n\n\n“If you want appearance to be governed by a variable, put the specification inside aes(); if you want override the default size or colour, put the value outside of aes().”"
+  },
+  {
+    "objectID": "slides/slides.html#graph-12-setting-graph-aesthetics",
+    "href": "slides/slides.html#graph-12-setting-graph-aesthetics",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 12: Setting graph aesthetics",
+    "text": "graph 12: Setting graph aesthetics\n\n\nChange the code below to make the points \"firebrick\" red\n\n\n\n\n\n\n\nCreate labels\n\n\n\nlabs_body_mass_vs_bill_depth <- ggplot2::labs(\n  title = \"Body mass and bill depth of Palmer penguins\",\n  subtitle = \"Size measurements for adult foraging penguins\",\n  x = \"Body mass (mm)\",\n  y = \"Bill depth (mm)\")\n\n\n\nWhat color will the points be on this graph?\n\n\n\nggplot(data = penguins) +\n  geom_point(\n    mapping = aes(\n      x = body_mass_g,\n      y = bill_depth_mm,\n      color = \"firebrick\")) +\n    labs_body_mass_vs_bill_depth\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTIP: the legend tells us geom_point() is looking for a mapped variable in the penguins dataset named \"firebrick\""
+  },
+  {
+    "objectID": "slides/slides.html#graph-13-new-layer-new-data-no-problem",
+    "href": "slides/slides.html#graph-13-new-layer-new-data-no-problem",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 13: New layer, new data, no problem",
+    "text": "graph 13: New layer, new data, no problem\n\n\n\nEach geom_*() function also has a data argument, so we can supply new data at each layer\n\n\n\n\n\n\n\nCreate a dataset of the max bill length and depth, body mass and flipper length (big_penguins):\n\n\n\nbig_penguins <- bind_rows(\n  slice_max(penguins, bill_length_mm, n = 1),\n  slice_max(penguins, bill_depth_mm, n = 1),\n  slice_max(penguins, flipper_length_mm, n = 1),\n  slice_max(penguins, body_mass_g, n = 1)\n)\n\n\n\n\n\n\n\n\n\nCreate data label and source\n\n\n\nbig_penguins <- mutate(big_penguins,\n label = case_when(\n  bill_length_mm == 59.6 ~ paste0(\"long bill = \", bill_length_mm),\n  bill_depth_mm == 21.5 ~ paste0(\"deep bill = \", bill_depth_mm),\n  flipper_length_mm == 231 ~ paste0(\"big flipper = \", flipper_length_mm),\n  body_mass_g == 6300 ~ paste0(\"big bird = \", body_mass_g)),\n source = case_when(\n  bill_length_mm == 59.6 ~ \"max bill length\",\n  bill_depth_mm == 21.5 ~ \"max bill depth\",\n  flipper_length_mm == 231 ~ \"max flipper length\",\n  body_mass_g == 6300 ~ \"max body mass\"))"
+  },
+  {
+    "objectID": "slides/slides.html#our-label-dataset",
+    "href": "slides/slides.html#our-label-dataset",
+    "title": "Data Visualization with ggplot2",
+    "section": "Our label dataset",
+    "text": "Our label dataset\n\n\nObjective: Create a scatter-plot to show the relationship between body mass, flipper length, and bill length.\n\n\n\n\n\n\n\n\n  \n  \n    \n      label\n      source\n    \n  \n  \n    long bill = 59.6\nmax bill length\n    deep bill = 21.5\nmax bill depth\n    big flipper = 231\nmax flipper length\n    big bird = 6300\nmax body mass"
+  },
+  {
+    "objectID": "slides/slides.html#graph-13-layer-1",
+    "href": "slides/slides.html#graph-13-layer-1",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 13: Layer 1",
+    "text": "graph 13: Layer 1\n\n\n\nCreate layer 1 with penguins_no_miss data and geom_point()\n\n\n\n\n\n\nCreate labels\n\n\n\nlabs_bodymass_bill_depth_flipper_length <- labs(\n  title = \"Body mass, flipper length & bill depth\",\n  subtitle = \"Size measures Palmer penguins\",\n  x = \"Bill depth (mm)\",\n  y = \"Flipper length (mm)\",\n  size = \"Body mass (g)\")\n\n\n\nAssign x, y, size, and alpha\n\n\n\nggp_13 <- ggplot(data = penguins_no_miss) +\n  # layer 1\n  geom_point(\n    mapping = \n      aes(x = bill_depth_mm,\n          y = flipper_length_mm,\n          size = body_mass_g),\n      alpha = 1/2)\nggp_13 +\n    # labels\n    labs_bodymass_bill_depth_flipper_length"
+  },
+  {
+    "objectID": "slides/slides.html#graph-14-layer-2",
+    "href": "slides/slides.html#graph-14-layer-2",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 14: Layer 2",
+    "text": "graph 14: Layer 2\n\n\n\nCreate layer 2 with another geom_point() using color and size\n\n\n\n\n\n\nUse scale_size() to adjust point scaling\n\n\n\nggp14 <- ggp_13 +\n  # layer 2\n  geom_point(\n    data = big_penguins,\n    mapping = aes(\n      x = bill_depth_mm,\n      y = flipper_length_mm,\n      # color by source\n      color = source,\n      size = body_mass_g)) +\n  # re-scale\n  scale_size(range = c(1, 5)) \nggp14 +\n  # labels\n  labs_bodymass_bill_depth_flipper_length"
+  },
+  {
+    "objectID": "slides/slides.html#graph-15-label-3-max-values",
+    "href": "slides/slides.html#graph-15-label-3-max-values",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 15: Label 3 (max values)",
+    "text": "graph 15: Label 3 (max values)\n\n\n\nAdd layer 3 with the geom_label_repel() function from ggrepel\n\n\n\n\n\n\n\nAdd layer for labels in big_penguins\n\n\n\nlibrary(ggrepel)\nggp15 <- ggp14 +\n  # layer 3\n  ggrepel::geom_label_repel(\n    data = big_penguins,\n    mapping = aes(x = bill_depth_mm,\n      y = flipper_length_mm,\n      label = label)) \nggp15 +\n  # labels\n  labs_bodymass_bill_depth_flipper_length"
+  },
+  {
+    "objectID": "slides/slides.html#small-multiples",
+    "href": "slides/slides.html#small-multiples",
+    "title": "Data Visualization with ggplot2",
+    "section": "Small multiples",
+    "text": "Small multiples\n\n\nFrom ggplot2 book\n\n\n\n\n“Small multiples are a powerful tool for exploratory data analysis: you can rapidly compare patterns in different parts of the data and see whether they are the same or different.”"
+  },
+  {
+    "objectID": "slides/slides.html#facets-small-multiples",
+    "href": "slides/slides.html#facets-small-multiples",
+    "title": "Data Visualization with ggplot2",
+    "section": "Facets = small multiples",
+    "text": "Facets = small multiples\n\n\nIn the previous graph, we used multiple aesthetics (color, size, shape)\n\n\n\nCan we explore these relationships by sex or species?\n\n\n\n\n\n\nStore graph 15 in ggp_penguin_measures\n\n\n\nggp15_l1 <- ggplot(data = penguins_no_miss) +\n  geom_point(\n    mapping = aes(x = bill_depth_mm,\n      y = flipper_length_mm,\n      size = body_mass_g),\n    alpha = 1 / 3) \n\n\n\n\n\nggp_penguin_measures <- ggp15_l1 +\n  geom_point(data = big_penguins,\n    mapping = aes(\n      x = bill_depth_mm,\n      y = flipper_length_mm,\n      color = source,\n      size = body_mass_g), \n    show.legend = FALSE) +\n  scale_size(range = c(1, 5))"
+  },
+  {
+    "objectID": "slides/slides.html#graph-16-facet-by-sex",
+    "href": "slides/slides.html#graph-16-facet-by-sex",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 16: Facet by sex",
+    "text": "graph 16: Facet by sex\n\n\n\nUse facet_wrap() to view our previous graph by sex\n\n\n\n\n\n\n\nfacet_wrap() uses . ~ [var]\n\nggp_penguin_measures +\n  ggrepel::geom_label_repel(\n    data = big_penguins,\n    mapping = aes(\n      x = bill_depth_mm,\n      y = flipper_length_mm,\n      label = label),\n    size = 2) + # adjust size\n  facet_wrap(. ~ sex) + # facet by sex\n  # labels\n  labs_bodymass_bill_depth_flipper_length"
+  },
+  {
+    "objectID": "slides/slides.html#graph-17-facet-by-species",
+    "href": "slides/slides.html#graph-17-facet-by-species",
+    "title": "Data Visualization with ggplot2",
+    "section": "graph 17: Facet by species",
+    "text": "graph 17: Facet by species\n\n\n\nChange facet_wrap() to build graphs by species and add theme\n\n\n\n\n\n\n\nChange facet_wrap() to ~ species\nAdd theme_minimal() and labels\n\n\n\nggp_penguin_measures +\n  ggrepel::geom_label_repel(\n    data = big_penguins,\n    mapping = aes(x = bill_depth_mm,\n      y = flipper_length_mm,\n      label = label),\n    size = 2) +\n  # change to species\n  facet_wrap(. ~ species) +\n  # add theme\n  theme_minimal() +\n  # labels\n  labs_bodymass_bill_depth_flipper_length"
+  },
+  {
+    "objectID": "slides/slides.html#what-weve-covered",
+    "href": "slides/slides.html#what-weve-covered",
+    "title": "Data Visualization with ggplot2",
+    "section": "What we’ve covered",
+    "text": "What we’ve covered\n\n\n\n\n\n\n\nBuild labels (set your expectations)\n\nView data before building any graphs\n\nBuilding graphs layer-by-layer (data, mapping, geoms)\n\n\n\n\n\n\n\n\n\nMapping variables to graph elements (color, position, size, etc.)\n\nExtending graphs by combining layers\n\nUsing facets to explore relationships"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is a Quarto website. To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n\n\n\n\n\nSlides design:\n\n\n\nI built the slides following the excellent tutorial by Thomas Mock, and the very thorough documentation. The themes were inspired by Mine Çetinkaya-Rundel’s post\n\n\n\n\n\n\n\n\nPackages used:\n\n\n\nggplot2: For data visualizations\npalmerpenguins : for data\ndplyr : for data manipulations\nggrepel : labeling data points\n\n\n\n\n\n\n\n\nWorth mentioning:\n\n\n\npatchwork : for combining plots\nggridges : better density plots"
+  }
+]

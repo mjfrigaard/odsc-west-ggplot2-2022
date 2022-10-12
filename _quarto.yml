@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "ODSC-ggplot2-west"
@@ -7,15 +8,23 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+    right:
       - href: slides/slides.qmd
         text: Slides
+      - icon: github
+        href: https://github.com/mjfrigaard/odsc-west-ggplot2-2022
+      - icon: twitter
+        href: https://twitter.com/mjfrigaard
 
 format:
   html:
-    theme: cosmo
+    theme:
+      dark: [cyborg, styles.scss]
+      light: [minty, styles-dark.scss]
     css: styles.css
     toc: true
 
-editor: visual
+editor: source
 
