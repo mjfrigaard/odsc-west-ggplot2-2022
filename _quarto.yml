@@ -16,8 +16,8 @@ website:
 format:
   html:
     theme:
-      dark: [cyborg, styles.scss]
       light: [minty, styles-dark.scss]
+      dark: [cyborg, styles.scss]
     css: styles.css
     toc: true
 

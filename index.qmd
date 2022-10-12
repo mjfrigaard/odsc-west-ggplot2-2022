@@ -19,7 +19,11 @@ Welcome to the `ggplot2` workshop!
 
 ## Workshop Materials
 
-The exercises and solutions in the slides will be available on [RStudio.Cloud](https://rstudio.cloud/). We recommend logging in with a GitHub account:
+The exercises and solutions in the slides are available on [RStudio.Cloud](https://rstudio.cloud/) at the link below: 
+
+- [ODSC-west-2022 Workshop Materials](https://rstudio.cloud/spaces/293254/join?access_code=IjR8t0DwW6UR5-ZATACudnyx7hfuYAxwy9XLuPD_) 
+
+We recommend logging in with a GitHub account:
 
 :::{.callout-note collapse="true"}
 
