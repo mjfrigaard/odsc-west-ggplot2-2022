@@ -1,6 +1,6 @@
 ---
 title: "Data Visualization with `ggplot2`"
-subtitle: "ODSC West"
+subtitle: "ODSC West: https://bit.ly/odscw-ggp2"
 logo: "../img/ODSC_Logo_2020.png"
 format: 
   revealjs: 
@@ -12,6 +12,8 @@ format:
     slide-number: true
     chalkboard: true
     scrollable: true
+    pdf-separate-fragments: false
+    
 from: markdown+emoji
 editor: source
 ---
