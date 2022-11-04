@@ -23,6 +23,8 @@ The exercises and solutions in the slides are available on [RStudio.Cloud](https
 
 - [ODSC-west-2022 Workshop Materials](https://rstudio.cloud/spaces/293254/join?access_code=IjR8t0DwW6UR5-ZATACudnyx7hfuYAxwy9XLuPD_) 
 
+- [Slides as PDF](https://github.com/mjfrigaard/odsc-west-ggplot2-2022/raw/gh-pages/pdfs/ODSC-ggplot2-west%20-%20Data%20Visualization%20with%20ggplot2.pdf)
+
 We recommend logging in with a GitHub account:
 
 ## RStudio.Cloud setup
